@@ -1,0 +1,25 @@
+/*para impedir erros de acentuação*/
+@charset "UTF-8";
+
+body {
+  background-color: blanchedalmond;
+}
+
+.lado-a-lado{
+  display: table;
+}
+
+img {
+  display: table-cell;
+  float: left;
+  width: 75%;
+  margin: 10px;
+}
+
+p {
+  display: table-cell;
+  float: left;
+  width: 200px;
+  font-size: 20px;
+}
+

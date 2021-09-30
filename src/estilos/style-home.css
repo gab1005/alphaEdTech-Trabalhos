@@ -1,0 +1,15 @@
+/*para evitar sinalizacao de erros durante a escrita */
+@charset "UTF-8";
+
+body {
+  background-color: blanchedalmond;
+}
+
+nav {
+  font-size: 28px;
+  color: brown;
+}
+
+nav li a {
+  color: black;
+}
