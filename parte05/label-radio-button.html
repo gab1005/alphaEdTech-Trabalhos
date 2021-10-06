@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>label e radio button</title>
+</head>
+
+<body>
+  <p><i>escolha um pokemon</i></p>
+
+  <p><b>bulbasaur</b></p>
+  <img src="./public/bulbasaur.png" alt="bulbasaur" width="25%">
+
+  <p><b>charmander</b></p>
+  <img src="./public/charmander.jpg" alt="charmander" width="25%">
+
+  <p><b>squirtle</b></p>
+  <img src="./public/squirtle.jpeg" alt="squirtle" width="25%">
+
+  <form action="/send" method="GET">
+    <!--<label for="bulbasaur"></label>bulbasaur:-->
+    <label> bulbasaur <input type="radio" name="pokemon-bulbasaur" id="bulbasaur"> </label> <br>
+    <label> charmander <input type="radio" name="pokemon-charmander" id="charmander"> </label> <br>
+    <label> squirtle <input type="radio" name="pokemon-squirtle" id="squirtle"> </label> <br>
+
+    <input type="submit" value="enviar">
+  </form>
+</body>
+
+</html>
