@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fieldset | Forms</title>
+</head>
+
+<body>
+  <h2><i>Formulario de Inscrição</i></h2>
+
+  <form action="/send/teste.php" method="GET">
+    <fieldset style="color: darkcyan;">
+      <legend><b>Informações Pessoais</b></legend>
+
+      <label for="user-name">Nome: </label>
+      <input type="text" name="nome" id="user-name">
+
+      <label for="user-password">Senha: </label>
+      <input type="password" name="senha" id="user-password">
+
+      <label for="user-date">Data de nascimento: </label>
+      <input type="date" name="nascimento" id="user-date">
+
+    </fieldset>
+
+    <br>
+    <fieldset style="color: darkred;">
+      <legend><b>Outras Informações</b></legend>
+
+      Experiência Com Programação: <br>
+      <label for="experiencia-0">nenhuma</label>
+      <input type="radio" name="experiencia" id="experiencia-0" value="0"> <br>
+
+      <label for="experiencia-1-2">1 a 2 anos</label>
+      <input type="radio" name="experiencia" id="experiencia-1-2" value="1_2"> <br>
+
+      <label for="experiencia-3-4">3 a 4 anos</label>
+      <input type="radio" name="experiencia" id="experiencia-3-4" value="3_4"> <br>
+
+      <label for="experiencia-5-max">5 ou mais anos</label>
+      <input type="radio" name="experiencia" id="experiencia-5-max" value="5_max"> <br>
+
+      <br>
+      Competencias:
+      <label for="user-html">HTML</label>
+      <input type="checkbox" name="html" value="on" id="user-html">
+
+      <label for="user-css">CSS</label>
+      <input type="checkbox" name="css" value="on" id="user-css">
+
+      <label for="user-js">JavaScript</label>
+      <input type="checkbox" name="js" value="on" id="user-js">
+
+      <label for="user-back-end">noções de back-end</label>
+      <input type="checkbox" name="back-end" value="on" id="user-back-end">
+
+      <label for="user-react">React JS</label>
+      <input type="checkbox" name="react" value="on" id="user-react">
+    </fieldset>
+
+    <br>
+    <fieldset style="color:forestgreen;">
+      <legend>Finalizando: </legend>
+      <input type="reset">
+
+      <input type="submit" value="enviar">
+
+    </fieldset>
+
+  </form>
+</body>
+
+</html>

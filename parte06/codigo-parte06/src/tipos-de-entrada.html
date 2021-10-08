@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>forms testes</title>
+</head>
+
+<body>
+  <p>testando forms com atributos de entrada</p>
+
+  <form action="/send" method="GET">
+    Nome: <input type="text" name="user-name" placeholder="digite seu nome"> <br />
+    <br>
+
+    Senha: <input type="password" name="user-password" placeholder="digite sua senha"> <br />
+    <br>
+
+    Data de nascimento: <input type="date" name="user-date"> <br />
+    <br>
+
+    Em quanto tempo deseja estar no mercado de trabario: <br>
+    <input type="radio" name="user-radio" value="1_3"> 1 a 3 anos <br />
+    <input type="radio" name="user-radio" value="4_5"> 4 a 5 anos <br>
+    <input type="radio" name="user-radio" value="mais6"> acima de 6 anos <br>
+    <br>
+
+    Quais veículos você possue? <br>
+    <input type="checkbox" name="user-veiculo-01" value="bicicleta"> bicicleta <br>
+    <input type="checkbox" name="user-veiculo-02" value="moto"> moto <br>
+    <input type="checkbox" name="user-veiculo-03" value="carro"> carro <br>
+    <input type="checkbox" name="user-veiculos-04" value="jato"> jato muito rapido <br>
+    <br>
+
+    Defina seu nivel de conhecimento em programação web: <br>
+    pouco
+    <input type="range" name="user-conhecimento-programacao" min="0" max="10">
+    muito
+    <br>
+
+    <input type="reset">
+    <br>
+
+    <br> <br>
+    <input type="submit" value="enviar"> <br />
+  </form>
+</body>
+
+</html>
