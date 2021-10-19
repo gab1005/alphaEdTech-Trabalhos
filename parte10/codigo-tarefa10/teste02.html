@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste 02</title>
+
+  <style type="text/css">
+    canvas {
+      border: 2px #777 solid;
+    }
+  </style>
+
+  <script>
+    //moceTo >> diz o ponto de partida do 'lapis'.
+    //lineTo >> desenha ate o ponto indicado.
+    //stroke() >> cria borda, ou da cor a linha.
+
+    //testando nomes diferentes para as funções.
+    function ronaldo123() {
+      //testando const em vez de var.
+      const canvas = document.getElementById('desenho02');
+      const ctx = canvas.getContext('2d');
+
+      ctx.fillStyle = 'red';
+      ctx.moveTo(100, 100);
+
+      ctx.lineTo(150, 50);
+      ctx.lineTo(200, 100);
+      ctx.lineTo(100, 100);
+      ctx.stroke();
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Desenhando linhas</h1>
+
+  <canvas class='estiloCanvas' id='desenho02' width='400' height='400'>
+    Seu navegador não suporta canvas.
+  </canvas>
+
+  <script>ronaldo123()</script>
+</body>
+
+</html>
