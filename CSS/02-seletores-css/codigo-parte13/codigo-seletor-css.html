@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seletor CSS</title>
+
+  <style>
+    /*body apenas com estilizações basicas, não faz parte da resposta da questão*/
+    body {
+      background-color: gray;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /*seletor por  id*/
+    #id01 {
+      color: rgba(200, 30, 30, 1);
+      background-color: rgba(0, 0, 0, 0.7);
+      border: 1px solid black;
+      border-radius: 5px;
+      width: 200px;
+      margin-bottom: 5px;
+    }
+
+    /*seletor por  classe*/
+    .class01 {
+      color: rgba(30, 200, 30, 1);
+      background-color: rgba(255, 255, 255, 0.7);
+      border: 1px solid black;
+      border-radius: 5px;
+      width: 200px;
+      margin-bottom: 5px;
+    }
+
+    /*seletor por atributo por nomear atributo*/
+    div[title] {
+      background-color: rgba(0, 0, 0, 0.7);
+      border: 1px solid black;
+      border-radius: 5px;
+      width: 200px;
+      margin-bottom: 5px;
+    }
+
+    /*seletor por atributo por atributo e valor*/
+    h3[title="tag-h3"] {
+      color: rgba(30, 30, 200, 1);
+    }
+
+    /*seletor por atributo por atributo e operador "$=" para buscar valor com o sufixo especificado, no caso
+    o sufixo é "pt-BR/""
+    */
+    a[href$="pt-BR/"] {
+      color: orange;
+      text-decoration: none;
+    }
+
+    .container04 {
+      color: rgba(200, 30, 30, 1);
+      background-color: rgba(255, 255, 255, 0.7);
+      border: 1px solid black;
+      border-radius: 5px;
+      width: 200px;
+      margin-bottom: 5px;
+    }
+
+    .pseudo-class {
+      text-decoration: none;
+      color: orange;
+    }
+
+    /*pseudo classe*/
+    .pseudo-class:hover {
+      color: blue;
+      text-transform: uppercase;
+    }
+
+    .container05 {
+      color: rgba(30, 200, 30, 1);
+      background-color: rgba(0, 0, 0, 0.7);
+      border: 1px solid black;
+      border-radius: 5px;
+      width: 200px;
+      margin-bottom: 5px;
+    }
+
+    /*pseudo elemento*/
+    .container05::before {
+      content: "";
+      display: block;
+      width: 200px;
+      height: 5px;
+      background-color: pink;
+      border-radius: 5px;
+    }
+
+    .container05::after {
+      content: "";
+      display: block;
+      width: 200px;
+      height: 5px;
+      background-color: pink;
+      border-radius: 5px;
+    }
+
+    .container06 {
+      background-color: rgba(255, 255, 255, 0.7);
+      border: 1px solid black;
+      border-radius: 5px;
+      width: 200px;
+      margin-bottom: 5px;
+    }
+
+    div h2 p {
+      color: blue;
+    }
+
+    h2~h3 {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <!--
+    SELETORES UTILIZADOS:
+    ID
+    class
+    seletor de atributo
+    pseudo classe
+    pseudo elemento
+    combinações
+  -->
+
+  <div id="id01">
+    <p>Seletor por ID</p>
+  </div>
+  <div class="class01">
+    <p>Seletor por class</p>
+  </div>
+
+  <div title="seletor-atributo">
+    <h3 title="tag-h3">Seletor por atributos</h3>
+    <a target="_blank" href="https://developer.mozilla.org/pt-BR/">Developer Mozila</a>
+  </div>
+
+  <div class="container04">
+    <p>Utilizando seletor de pseudo classe</p>
+    <a class="pseudo-class" target="_blank" href="https://www.google.com/">Google</a>
+  </div>
+  <div class="container05">
+    <p>pseudo elemento</p>
+  </div>
+
+  <div class="container06">
+    <h2> Seletores combinados
+      <p>exemplo 1 (usando seletor descedente)</p>
+    </h2>
+    <h3>exemplo 2 (usando seletor geral de irmão)</h3>
+  </div>
+</body>
+
+</html>

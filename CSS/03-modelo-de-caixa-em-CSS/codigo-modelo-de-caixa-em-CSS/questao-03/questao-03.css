@@ -1,0 +1,38 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: gray;
+  color: #eee;
+}
+div {
+  background-color: rgba(230,20,20,0.5);
+  width: 300px;
+
+  border: 1px solid black;
+  border-radius: 5px;
+
+  margin-bottom: 50px;
+}
+
+.formato01{
+  overflow: visible;
+  width: 100px;
+  height: 100px;
+}
+.formato02{
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+}
+
+.formato03{
+  overflow: scroll;
+  width: 100px;
+  height: 100px;
+}
+
+.formato04{
+  overflow: auto;
+  width: 100px;
+  height: 100px;
+}
+

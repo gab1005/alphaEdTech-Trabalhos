@@ -1,0 +1,26 @@
+body{
+  background-color: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* div{
+  width: 500px;
+  height: auto;
+  
+  color: #ccc;
+  background-color: #222;
+
+  border: 1px solid turquoise;
+  border-radius: 10px;
+
+  margin-bottom: 10px;
+  padding: 4px;
+}
+
+.box02{
+  writing-mode: vertical-rl;
+}
+
+.box03{
+  writing-mode: vertical-lr;
+}

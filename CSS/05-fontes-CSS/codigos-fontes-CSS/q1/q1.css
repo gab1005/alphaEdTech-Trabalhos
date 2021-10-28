@@ -1,0 +1,64 @@
+body {
+  background-color: azure;
+}
+
+body div{
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+h2{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-decoration: crimson underline;
+}
+
+.box01{
+  width: 300px;
+  height: auto;
+
+  background-color: bisque;
+
+  border: 2px double pink;
+  border-radius: 10px;
+  
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.box02{
+  width: 300px;
+  height: auto;
+
+  background-color: lightblue;
+
+  border: 4px solid blue;
+  border-radius: 10px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  text-decoration: underline green;
+  font-weight: bold;
+}
+
+.box03{
+  width: 300px;
+  height: auto;
+
+  background-color: cornsilk;
+
+  border: 5px red ridge;
+  border-radius: 10px;
+  
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  text-decoration: underline wavy turquoise;
+  font-weight: lighter;
+  font-style: italic;
+
+}
+

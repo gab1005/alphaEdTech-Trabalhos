@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "oswald";
+  src: url(fontes/Oswald/Oswald-VariableFont_wght.ttf) format("truetype");
+}
+
+body{
+  background-color: rgb(250, 126, 112);
+  color: aliceblue;
+  font-family: oswald, Arial, Helvetica, sans-serif;
+}
+
+main {
+  width: 700px;
+  background-color: rgba(0,0,0,0.5);
+
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 20px 10px rgb(255, 176, 162);
+
+  margin-left: 20px;
+  margin-bottom: 40px;
+  padding: 10px;
+}
+
+footer{
+  width: 400px;
+  background-color: rgba(0,0,0,0.3);
+
+
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 10px 5px rgb(255, 176, 162);
+
+  margin-left: 20px;
+  padding: 10px;
+}
+
+a:link{
+  color: pink;
+}
+
+a:visited{
+  color: aqua;
+}
+
+a:hover{
+  color: coral;
+  font-size: x-large;
+}
+
+a:active{
+  color: red;
+  font-size: x-small;
+}

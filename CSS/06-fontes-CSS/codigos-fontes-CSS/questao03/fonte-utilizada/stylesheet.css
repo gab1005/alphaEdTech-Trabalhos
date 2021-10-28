@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Over The Rainbow';
+    src: url('OverTheRainbow.woff2') format('woff2'),
+        url('OverTheRainbow.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

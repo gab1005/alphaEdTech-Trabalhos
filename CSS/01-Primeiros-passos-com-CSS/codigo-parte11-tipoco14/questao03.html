@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Questão 03</title>
+
+  <style type="text/css">
+    h4 p {
+      color: rgba(50, 200, 50, 0.8);
+    }
+
+    h4 p b {
+      color: rgba(255, 255, 255);
+    }
+
+    .texto01 {
+      color: purple;
+      background: chocolate;
+    }
+
+    .texto01 i {
+      color: white;
+    }
+
+    #texto-id-01 {
+      color: rgba(50, 50, 200, 0.7);
+
+    }
+  </style>
+
+  <link rel="stylesheet" href="./questao03.css">
+</head>
+
+<body>
+  <h1>Formas de implementar CSS no HTML</h1>
+
+  <div style='background: red; width: 700px; color:black'>
+    <p>INLINE (em linha): <br> dessa forma a estilização vai dentro da tag.<br>
+      &ltdiv style="background: red; width: 700px; color:black"&gt &lt/div&gt
+    </p>
+  </div>
+
+  <hr>
+  <h4>
+    <p>INTERNAL (interno): <br> nesse caso o comando de estilização fica no &lt head &gt <br>
+      existem duas formas de trabalhar o CSS internal, dentro da tag &lt style &gt colocada na tag
+      &lt head &gt se escreve o nome das tags que deseja alterar ou ou nome da <b>classe</b> ou <b>id</b>
+      <br> <br>
+
+    <p>escrevendo o nomes das tags diretamente:</p>
+    &lt style type="text/css"><br>
+    h4 p {<br>
+    color: rgba(50, 200, 50, 0.8);<br>
+    } <br>
+    <br>
+    h4 p b { <br>
+    color: rgba(255, 255, 255); <br>
+    } <br>
+    &lt/style&gt <br>
+    </p>
+
+    <hr>
+    <p class="texto01">por classe <br>
+      nesse caso se passa o atributo <i>class="nome-da-classe"</i> <br>
+      e no <i>style</i> dentro de <i>head</i> se coloca o estilo "apontando" para a classe.
+      <br> <br>
+
+      na tag: <i>&ltp class="texto01"&gt</i>.
+      <br> <br>
+
+      no <i>head</i>:
+      <br> <br>
+
+      .texto01 { <br>
+      color: crimson; <br>
+      background: chocolate; <br>
+      } <br>
+      <br>
+      .texto01 i { <br>
+      color: white; <br>
+      } <br>
+    </p>
+
+    <hr>
+    <p id="texto-id-01">por id: <br>
+      semelhante ao classe, o que muda é que pode existir apenas um id no codigo, via de regra, podem surgir conflitos
+      se ele não for usado de forma correta, tanto que se recomenda o uso de classes na maioria da situações.
+      <br> <br>
+
+      na tag <b>&ltp id="texto-id-01"&gt</b>.
+      <br> <br>
+
+      no <b>style</b> dentro de <b>head</b>: <br> <br>
+      #texto-id-01 { <br>
+      color: rgba(50,50,200,0.7); <br>
+      } <br>
+    </p>
+  </h4>
+
+  <hr>
+
+  <p class="texto02">EXTERNAL (externo): <br>
+    até agora, todos os CSS foram colocados no proprio arquivos HTML a ser estilizado, agora no external
+    o CSS fica em outro arquivo com extenção ".css", o arquivo a ser estilizado html chama o ".css" e acontece
+    a estilização da pagina, da mesma forma do internal, se pode alterar os objetos escrevendo diretamente
+    as tags, ou por meio de "apontar" a classe ou id a ser modificada.
+    <br> <br>
+
+
+    na tag <b> &lt p class="texto02"&gt </b>. <br> <br>
+    na arquivo ".ccs" externo: <br>
+    <b>
+      .texto02 { <br>
+      color:aqua; <br>
+      background: black; <br>
+      } <br>
+      <br>
+      .texto02 b { <br>
+      color: white; <br>
+      } <br>
+    </b>
+  </p>
+</body>
+
+</html>

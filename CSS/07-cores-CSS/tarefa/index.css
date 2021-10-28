@@ -1,0 +1,66 @@
+body{
+  background-color: aliceblue;
+  color: hsl(22, 74%, 51%);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body article, header, section {
+  width: 700px;
+  background-color: lightblue;
+
+  border: 2px solid orange;
+  border-radius: 10px;
+  box-shadow: 10px 10px hsl(39, 100%, 50%,0.3);
+
+  margin-bottom: 20px;
+  padding: 10px;
+  
+}
+
+section{
+  width: 500px;
+}
+
+.HEXA{
+  color: white;
+  background-color: #a52a2a;
+}
+
+.HEXA-a{
+  color: white;
+  background-color: #a52a2a80;
+}
+
+.RGB{
+  color: white;
+  background-color: rgb(128, 255, 0);
+}
+
+.RGBa{
+  color: white;
+  background-color: rgba(128, 255, 0,0.5);
+}
+
+.HSL{
+  color: white;
+  background-color: hsl(240, 100%, 27%);
+}
+
+.HSLa{
+  color: white;
+  background-color: hsla(240, 100%, 27%,0.5);
+}
+
+footer{
+  background-color: darkmagenta;
+  width: 300px;
+}
+
+footer a{
+  color: white;
+}
+
+footer a:hover{
+  color: cadetblue;
+  font-size: 18px;
+}

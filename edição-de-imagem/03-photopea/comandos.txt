@@ -1,0 +1,3 @@
+- alt+clique para conectar duas camadas
+
+- ctrl + i inverte a seleção das cores

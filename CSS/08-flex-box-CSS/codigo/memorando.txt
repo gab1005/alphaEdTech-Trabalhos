@@ -1,0 +1,23 @@
+ELEMENTOS:
+flex container
+flex item
+
+ATRIBUTOS DO FLEX-CONTAINER:
+display: flex; | inline-flex
+flex-direction: row | row-reverse | column | column-reverse
+flex-wrap: nowrap | wrap | wrap-reverse
+flex-flow: row nowrap | row wrap | column nowrap | column wrap
+
+justify-content:flex-start | flex-end | center | space-between |space-around | space-evenly
+align-items: stretch | flex-start |flex-end | center | baseline
+align-content: flex-start | flex-end | center | space-between | space-around | stretch
+
+PROPRIEDADES PARA ELEMENTOS-FILHOS:
+order: <numero> /*padrao zedo 0
+
+flex-grow: <numero>; /* o valor default(padrão) é 0 */
+flex-shrink: <número>; /* o valor padrão é 0 */
+flex-basis: flex-basis:  | auto; /* o valor padrão é auto */
+flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+
+align-self: auto | flex-start | flex-end | center | baseline | stretch;

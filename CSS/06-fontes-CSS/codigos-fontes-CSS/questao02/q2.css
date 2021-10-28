@@ -1,0 +1,41 @@
+body{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: darkseagreen;
+}
+
+h1{
+  color: darkslateblue;
+}
+
+article {
+  background-color: palegreen;
+  width: 400px;
+
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 5px;
+
+}
+
+
+
+a:link{
+  color: red;
+}
+
+a:visited{
+  color: gray;
+}
+
+a:active{
+  color: yellow;
+}
+
+a:hover{
+  color: blue;
+  text-decoration: underline white;
+}
+
+a:focus{
+  color: green;
+}
