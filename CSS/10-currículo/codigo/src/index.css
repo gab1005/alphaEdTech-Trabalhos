@@ -1,0 +1,77 @@
+body {
+  background-color: #f8f8f8;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  font-style: italic;
+}
+
+main article dl dd {
+  margin-bottom: 20px;
+}
+
+header {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+/*icone github e linkedin*/
+
+.links-externos {
+  align-self: flex-end;
+}
+
+.links-externos a {
+  margin-right: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/*foto de perdil e nome do candidato*/
+
+.perfil-nome {
+  align-self: center;
+  width: 200px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.perfil-nome h2 {
+  text-align: center;
+}
+
+.foto-perfil {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: 0px 0px;
+  border-radius: 50%;
+}
+
+main {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+main article {
+  align-self: center;
+  width: 70%;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+  margin: 20px;
+  padding-left: 10px;
+}
+
+main article dl {
+  padding: 10px;
+}
+
+main article:hover {
+  background-color: aliceblue;
+  border: 3px solid rgb(218, 225, 255);
+  box-shadow: 15px 15px 5px rgba(0, 0, 0, 0.1);
+  margin: 17px;
+}

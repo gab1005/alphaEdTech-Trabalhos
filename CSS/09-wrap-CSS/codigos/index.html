@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>wrap em flexbox</title>
+
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <h1>testando wrap em flex box</h1>
+
+  <h2>utilização do wrap mais simples, flex-direction: row; flex-wrap: wrap;</h2>
+  <div class="box01">
+    <p>texto 01</p>
+    <p>texto 02</p>
+    <p>texto 03</p>
+    <p>texto 04</p>
+    <p>texto 05</p>
+    <p>texto 06</p>
+    <p>texto 07</p>
+    <p>texto 08</p>
+    <p>texto 09</p>
+    <p>texto 10</p>
+  </div>
+
+
+  <hr>
+  <h2>flex-direction: column; flex-wrap: wrap</h2>
+  <div class="box02">
+    <p>texto 01</p>
+    <p>texto 02</p>
+    <p>texto 03</p>
+    <p>texto 04</p>
+    <p>texto 05</p>
+    <p>texto 06</p>
+    <p>texto 07</p>
+    <p>texto 08</p>
+    <p>texto 09</p>
+    <p>texto 10</p>
+  </div>
+
+  <hr>
+  <h2>flex-direction: row-reverse; flex-wrap: wrap</h2>
+  <div class="box03">
+    <p>texto 01</p>
+    <p>texto 02</p>
+    <p>texto 03</p>
+    <p>texto 04</p>
+    <p>texto 05</p>
+    <p>texto 06</p>
+    <p>texto 07</p>
+    <p>texto 08</p>
+    <p>texto 09</p>
+    <p>texto 10</p>
+  </div>
+
+  <hr>
+  <h2>usando display: grid; e grid-template-columns; podemos dimencionar cada elemento no container de forma relativa a
+    tela</h2>
+  <div class="box04">
+    <p>texto 01</p>
+    <p>texto 02</p>
+    <p>texto 03</p>
+    <p>texto 04</p>
+    <p>texto 05</p>
+    <p>texto 06</p>
+    <p>texto 07</p>
+    <p>texto 08</p>
+    <p>texto 09</p>
+    <p>texto 10</p>
+  </div>
+
+  <hr>
+  <h2>No container utilizando "display: flex; flex-wrap: wrap;" e no elemento filho utilizando "flex: 0 0 33.3333%;"
+    podemos tambem ajustar de forma semelhante ao "display: grid"</h2>
+
+  <p><i>No caso, utilizei "32.3333%" no lugar de "33.3333%"; por utilizar borda de 1px na tag "p" tive que diminuir a
+      precição do meu atributo flex-basic em 1%. </i></p>
+  <div class="box05">
+    <p>texto 01</p>
+    <p>texto 02</p>
+    <p>texto 03</p>
+    <p>texto 04</p>
+    <p>texto 05</p>
+    <p>texto 06</p>
+    <p>texto 07</p>
+    <p>texto 08</p>
+    <p>texto 09</p>
+    <p>texto 10</p>
+  </div>
+
+  <hr>
+  <h2>Usando o atributo em CSS "visibility: collapse;" podemos esconder um elemento do "container", mas manter seu
+    espaço ocupado na aplicação, como se fosse uma lacuna ou algo do genero.</h2>
+  <div class="box06">
+    <p>texto 01</p>
+    <p>texto 02</p>
+    <p>texto 03</p>
+    <p>texto 04</p>
+    <p>texto 05</p>
+    <p>texto 06</p>
+    <p>texto 07</p>
+    <p class="hide">texto 08</p>
+    <p>texto 09</p>
+    <p>texto 10</p>
+  </div>
+
+</body>
+
+</html>

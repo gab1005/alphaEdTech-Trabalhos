@@ -1,0 +1,96 @@
+body {
+  background-color: aliceblue;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+div {
+  width: 700px;
+  height: 350px;
+  background-color: aqua;
+  border: 1px solid black;
+}
+
+.box01 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box01>p {
+  background-color: burlywood;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  flex: 1 1 200px;
+  margin: 0;
+}
+
+.box02 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.box02>p {
+  background-color: burlywood;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  flex: 1 1 100px;
+  margin: 0;
+}
+
+.box03 {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+}
+
+.box03>p {
+  background-color: burlywood;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  flex: 1 1 200px;
+  margin: 0;
+}
+
+.box04 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.box04>p {
+  background-color: burlywood;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  flex: 1 1 200px;
+  margin: 0;
+}
+
+.box05 {
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box05>p {
+  background-color: burlywood;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  flex: 0 0 32.3333%;
+  margin: 0;
+}
+
+.box06 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box06>p {
+  background-color: burlywood;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  flex: 1 1 200px;
+  margin: 0;
+}
+
+.hide {
+  visibility: collapse;
+}
