@@ -1,0 +1,16 @@
+      <svg preserveAspectRatio="xMidYMid meet" data-bbox="85 92 29 17" viewBox="85 92 29 17"
+        xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" width="34px"
+        height="41">
+        <defs>
+          <style>
+            #comp-j7ekj3y3 svg [data-color="1"] {
+              fill: #181818;
+            }
+          </style>
+        </defs>
+        <g>
+          <path fill="#2c2d34" d="M114 92v3H85v-3h29z" data-color="1"></path>
+          <path fill="#2c2d34" d="M114 99v3H94v-3h20z" data-color="1"></path>
+          <path fill="#2c2d34" d="M114 106v3H85v-3h29z" data-color="1"></path>
+        </g>
+      </svg>

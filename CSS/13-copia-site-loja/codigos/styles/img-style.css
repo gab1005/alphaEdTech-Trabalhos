@@ -1,0 +1,172 @@
+.retangulo-preto {
+  width: 19px;
+  height: 9px;
+  background-color: black;
+}
+
+.container-principal {
+  width: 1019px;
+  height: 660px;
+  background-image: url(../public/capa-principal.webp);
+  background-size: cover;
+}
+
+/*style produtos/bones */
+
+.container-produtos {
+  width: 800px;
+}
+
+.container-produtos ul li a button {
+  visibility: hidden;
+}
+
+.container-produtos ul li a button:hover {
+  visibility: visible;
+}
+
+.container-produtos ul li a div {
+  width: 185px;
+  height: 139px;
+  background-size: cover;
+}
+
+.bone01-img {
+  background-image: url(../public/produtos/bone01-posicao01.webp);
+}
+
+.bone01-img:hover {
+  transition-duration: 0.2s;
+  background-image: url(../public/produtos/bone01-posicao02.webp);
+}
+
+.bone02-img {
+  background-image: url(../public/produtos/bone02-posicao01.webp);
+}
+
+.bone02-img:hover {
+  transition-duration: 0.2s;
+  background-image: url(../public/produtos/bone02-posicao02.webp);
+}
+
+.bone03-img {
+  background-image: url(../public/produtos/bone03-posicao01.webp);
+}
+
+.bone03-img:hover {
+  transition-duration: 0.2s;
+  background-image: url(../public/produtos/bone03-posicao02.webp);
+}
+
+.bone04-img {
+  background-image: url(../public/produtos/bone04-posicao01.webp);
+}
+
+.bone04-img:hover {
+  transition-duration: 0.2s;
+  background-image: url(../public/produtos/bone04-posicao02.webp);
+}
+
+.bone05-img {
+  background-image: url(../public/produtos/bone05-posicao01.webp);
+}
+
+.bone05-img:hover {
+  transition-duration: 0.2s;
+  background-image: url(../public/produtos/bone05-posicao02.webp);
+}
+
+.bone06-img {
+  background-image: url(../public/produtos/bone06-posicao01.webp);
+}
+
+.bone06-img:hover {
+  transition-duration: 0.2s;
+  background-image: url(../public/produtos/bone06-posicao02.webp);
+}
+
+.bone07-img {
+  background-image: url(../public/produtos/bone07-posicao01.webp);
+}
+
+.bone07-img:hover {
+  transition-duration: 0.2s;
+  background-image: url(../public/produtos/bone07-posicao02.webp);
+}
+
+.bone08-img {
+  background-image: url(../public/produtos/bone08-posicao01.webp);
+}
+
+.bone08-img:hover {
+  transition-duration: 0.2s;
+  background-image: url(../public/produtos/bone08-posicao02.webp);
+}
+
+/*style instagram*/
+
+.container-instagram div {
+  width: 160px;
+  height: 160px;
+  background-size: cover;
+}
+
+.container-instagram p {
+  visibility: hidden;
+}
+
+.container-instagram p:hover {
+  visibility: visible;
+}
+
+.insta01 {
+  background-image: url(../public/instagram/insta01.jpg);
+}
+
+.insta02 {
+  background-image: url(../public/instagram/insta02.jpg);
+}
+
+.insta03 {
+  background-image: url(../public/instagram/insta03-maior.jpg);
+  width: 320px;
+  height: 320px;
+}
+
+.insta04 {
+  background-image: url(../public/instagram/insta04.jpg);
+}
+
+.insta05 {
+  background-image: url(../public/instagram/insta05.jpg);
+}
+
+.insta06 {
+  background-image: url(../public/instagram/insta06.jpg);
+}
+
+.insta07 {
+  background-image: url(../public/instagram/insta07-maior.jpg);
+  width: 320px;
+  height: 320px;
+}
+
+.insta08 {
+  background-image: url(../public/instagram/insta08.jpg);
+}
+
+.insta09 {
+  background-image: url(../public/instagram/insta09.jpg);
+}
+
+.insta10 {
+  background-image: url(../public/instagram/insta10.jpg);
+}
+
+.insta11 {
+  background-image: url(../public/instagram/insta11.jpg);
+}
+
+.insta12 {
+  background-image: url(../public/instagram/insta12.jpg);
+}

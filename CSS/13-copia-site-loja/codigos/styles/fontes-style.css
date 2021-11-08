@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Anton";
+  src: url("../public/fontes/Anton/Anton-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: inherit;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("../public/fontes/Avenir-Font/avenir_ff/AvenirLTStd-Roman.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: inherit;
+}
+
+body {
+  font-family: "Avenir";
+  font-style: italic;
+}
+
+.font-Anton {
+  font-family: "Anton";
+  font-style: normal;
+}
+
+.font-Arial {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container-produtos h3 {
+  font-family: "Avenir";
+  font-weight: bold;
+  font-style: normal;
+}
