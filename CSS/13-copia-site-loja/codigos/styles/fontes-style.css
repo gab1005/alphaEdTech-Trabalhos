@@ -1,27 +1,25 @@
 @font-face {
   font-family: "Anton";
   src: url("../public/fontes/Anton/Anton-Regular.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   font-display: inherit;
 }
 
 @font-face {
   font-family: "Avenir";
-  src: url("../public/fontes/Avenir-Font/avenir_ff/AvenirLTStd-Roman.otf") format("opentype");
-  font-weight: normal;
+  src: url("../public/fontes/Avenir LT 35 Light.ttf") format("truetype");
+  font-weight: 400;
   font-style: normal;
   font-display: inherit;
 }
 
 body {
   font-family: "Avenir";
-  font-style: italic;
 }
 
 .font-Anton {
   font-family: "Anton";
-  font-style: normal;
 }
 
 .font-Arial {
@@ -30,6 +28,98 @@ body {
 
 .container-produtos h3 {
   font-family: "Avenir";
-  font-weight: bold;
-  font-style: normal;
+}
+
+header div h6 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #a6a2a2;
+}
+
+.raw {
+  /*font-family: "Anton";*/
+  color: #181818;
+  font-size: 32px;
+}
+
+.etc {
+  /*font-family: "Anton";*/
+  color: #181818;
+  font-size: 15px;
+}
+
+.container-carrinho {
+  font-size: 10px;
+  color: #000000;
+}
+
+main .container-principal h1 {
+  color: #ffffff;
+  font-size: 78px;
+  line-height: 86px;
+}
+
+main .container-principal p {
+  color: #ffffff;
+  font-size: 15px;
+}
+
+main .container-principal button {
+  width: 80px;
+  height: 30px;
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 21px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+}
+
+main .container-principal button:hover {
+  background-color: #fff;
+  color: #181818;
+  border: none;
+}
+
+main article h2 span {
+  font-size: 25px;
+  color: #181818
+}
+
+.container-produtos ul li a div button {
+  color: #181818;
+  font-size: 15px;
+  line-height: 50px;
+}
+
+.container-produtos ul li a h3 {
+  color: #181818;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.container-produtos ul li a span {
+  color: #2e2d2d;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.button-ver-tudo button {
+  width: 80px;
+  height: 30px;
+  color: #000;
+  font-size: 15px;
+  line-height: 21px;
+  background: transparent;
+  border: 1px solid #000;
+}
+
+.button-ver-tudo button:hover {
+  background-color: #000;
+  color: #fff;
+  border: none;
+}
+
+.article-intagram h2 span {
+  color: #181818;
+  font-size: 25px;
 }

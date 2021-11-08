@@ -1,0 +1,74 @@
+header div h6 {
+  display: flex;
+  justify-content: center;
+  background-color: #181818;
+  margin-top: 0px;
+  padding: 8px;
+}
+
+header .container-raw {
+  width: 50px;
+  height: 40px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+}
+
+/*alinhar depois*/
+
+header .header-bloco {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+header .header-bloco02 {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+header .header-bloco02 .container-carrinho {
+  margin-right: 10px;
+}
+
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+main .container-principal {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-produtos ul {
+  width: 100%;
+  height: 320px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.container-produtos ul li a {
+  width: 160px;
+  height: 160px;
+}
+
+.article-02 {
+  display: flex;
+  flex-flow: column;
+}
+
+.button-ver-tudo {
+  align-self: center;
+}
+
+.article-instagram {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  height: 500px;
+}

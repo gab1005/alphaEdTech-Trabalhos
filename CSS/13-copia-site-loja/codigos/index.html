@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="./styles/main-style.css">
   <link rel="stylesheet" href="./styles/img-style.css">
   <link rel="stylesheet" href="./styles/fontes-style.css">
+  <link rel="stylesheet" href="./styles/display-style.css">
 </head>
 
 <body>
@@ -18,22 +19,27 @@
       <h6 class="font-Anton"><span>FRETE INTERNACIONAL GRÁTIS</span></h6>
     </div>
 
-    <div class="container-raw" class="font-Anton">
-      <a href="">RAW</a>
-      <a href="">ETC</a>
-      <div class="retangulo-preto"></div>
+    <div class="header-bloco">
+      <div class="header-bloco01 container-raw font-Anton">
+        <a class="raw" href="">RAW</a>
+        <a class="etc" href="">ETC</a>
+        <div class="retangulo-preto"></div>
+      </div>
+
+      <div class="header-bloco02">
+        <div class="container-carrinho">
+          <a href="">
+            <p>CARRINHO <span>0</span></p>
+          </a>
+        </div>
+
+        <div class="container-svg-list">
+          <img src="./public/icons/meu-cardapio.svg" alt="">
+        </div>
+      </div>
     </div>
 
-    <div class="container-carrinho">
-      <a href="">
-        <p>CARRINHO</p>
-        <P>0</P>
-      </a>
-    </div>
 
-    <div class="container-svg-list">
-      <img src="./public/icons/meu-cardapio.svg" alt="">
-    </div>
   </header>
 
   <main>
@@ -41,11 +47,10 @@
       <h1 class="font-Anton">SEJA SEMPRE ORIGINAL</h1>
       <p class="font-Anton">NOVOS ITENS DISPONÍVEIS AQUI</p>
 
-      <!--<input type="button" value="enviar">-->
       <button type="submit">Comprar</button>
     </article>
 
-    <article>
+    <article class="article-02">
       <h2 class="font-Anton"><span>COLEÇÃO DE EDIÇÃO LIMITADA</span></h2>
 
       <div class="container-produtos">
@@ -122,19 +127,17 @@
               <span>R$ 25,00</span>
             </a>
           </li>
-
-          <!--adicionar mais 7-->
         </ul>
       </div>
 
-      <a href="">
-        <span>Ver tudo</span>
+      <a href="" class="button-ver-tudo">
+        <button>Ver tudo</button>
       </a>
     </article>
 
-    <article>
+    <article class="article-instagram">
       <h2 class="font-Anton"><span>#INSTAGRAM</span></h2>
-      <div class="container-instagram" class="font-Arial">
+      <div class="container-instagram font-Arial">
         <a href="" class="link-instagram-01">
           <div class="insta01">
             <p>@wix: #wix, #website, #freewebsite, #websitetemplate, #wix.com</p>
@@ -195,9 +198,6 @@
             <p>@wix: #wix, #website, #freewebsite, #websitetemplate, #wix.com</p>
           </div>
         </a>
-
-
-        <!--adicionar mais 11-->
       </div>
     </article>
   </main>
