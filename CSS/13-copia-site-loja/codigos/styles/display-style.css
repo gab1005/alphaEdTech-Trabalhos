@@ -45,30 +45,167 @@ main .container-principal {
   align-items: center;
 }
 
-.container-produtos ul {
-  width: 100%;
-  height: 320px;
+.article-02 h2 {
   display: flex;
-  flex-flow: row wrap;
+  justify-content: center;
 }
 
-.container-produtos ul li a {
-  width: 160px;
-  height: 160px;
+.container-produtos {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-produtos ul {
+  width: 80%;
+  height: 700px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
 .article-02 {
   display: flex;
-  flex-flow: column;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
-.button-ver-tudo {
-  align-self: center;
+/*organizando o tamanho das img do instagram*/
+
+.container-instagram section a div {
+  width: 200px;
+  height: 200px;
 }
 
-.article-instagram {
+.article-instagram .container-instagram section a .insta03 {
+  width: 400px;
+  height: 400px;
+}
+
+.article-instagram .container-instagram section a .insta07 {
+  width: 400px;
+  height: 400px;
+}
+
+.article-instagram .container-instagram section a {
+  width: 200px;
+  height: 200px;
+}
+
+.article-instagram .container-instagram section .link-instagram-03 {
+  width: 400px;
+  height: 400px;
+}
+
+.article-instagram .container-instagram section .link-instagram-07 {
+  width: 400px;
+  height: 400px;
+}
+
+/*organizando o tamanho das img do instagram*/
+
+.article-instagram h2 {
   display: flex;
-  flex-flow: column wrap;
-  width: 100%;
+  justify-content: center;
+}
+
+.container-instagram {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  width: 1200px;
   height: 500px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.container-instagram section {
+  height: 600px;
+}
+
+.container-1-instagram {
+  display: flex;
+  flex-flow: row wrap;
+  width: 400px;
+  height: 600px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.container-2-instagram {
+  display: flex;
+  flex-flow: row wrap;
+  width: 200px;
+  height: 600px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.container-3-instagram {
+  display: flex;
+  flex-flow: row wrap;
+  width: 400px;
+  height: 600px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.container-4-instagram {
+  display: flex;
+  flex-flow: row wrap;
+  width: 200px;
+  height: 600px;
+  margin: 0px;
+  padding: 0px;
+}
+
+/*problema na borda superior das img, resolver depois*/
+
+.separar-main-footer {
+  display: block;
+  background-color: transparent;
+  width: 100%;
+  height: 200px;
+}
+
+footer {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+footer .container-footer-01 {
+  background-color: #181818;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+footer .links-contato {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+footer .links-contato p {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+footer .associar-se-redes-sociaies {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+footer .associar-se-redes-sociaies ul {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+footer .footer-02 {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  background-color: #2E2D2D;
 }

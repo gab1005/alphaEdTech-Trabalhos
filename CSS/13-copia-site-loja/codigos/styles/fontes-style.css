@@ -123,3 +123,17 @@ main article h2 span {
   color: #181818;
   font-size: 25px;
 }
+
+footer .container-footer-01 * {
+  color: #a6a2a2;
+}
+
+footer .footer-02 * {
+  color: #a6a2a2;
+}
+
+footer .footer-02 button {
+  border: 1px solid #a6a2a2;
+  background: transparent;
+  color: #fff;
+}

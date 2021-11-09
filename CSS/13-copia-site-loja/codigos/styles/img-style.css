@@ -14,7 +14,7 @@
 /*style produtos/bones */
 
 .container-produtos {
-  width: 800px;
+  width: 100%;
 }
 
 .container-produtos ul li a button {
@@ -25,9 +25,14 @@
   visibility: visible;
 }
 
+.container-bone01 a {
+  width: 350px;
+  height: 300px;
+}
+
 .container-produtos ul li a div {
-  width: 185px;
-  height: 139px;
+  width: 240px;
+  height: 200px;
   background-size: cover;
 }
 
@@ -105,9 +110,11 @@
 
 /*style instagram*/
 
-.container-instagram div {
-  width: 160px;
-  height: 160px;
+.container-instagram section a div {
+  /*  
+  width: 200px;
+  height: 200px;
+  */
   background-size: cover;
 }
 
@@ -129,8 +136,10 @@
 
 .insta03 {
   background-image: url(../public/instagram/insta03-maior.jpg);
-  width: 320px;
-  height: 320px;
+  /*
+    width: 400px;
+  height: 400px;
+  */
 }
 
 .insta04 {
@@ -147,8 +156,10 @@
 
 .insta07 {
   background-image: url(../public/instagram/insta07-maior.jpg);
-  width: 320px;
-  height: 320px;
+  /*
+    width: 400px;
+  height: 400px;
+  */
 }
 
 .insta08 {
