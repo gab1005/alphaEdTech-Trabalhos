@@ -1,0 +1,16 @@
+header .header-logo img {
+  width: 12px;
+  height: 12px;
+}
+
+main #home {
+  width: 100%;
+  height: 756px;
+  background-image: url("../public/imagens-capa/dog-olho-azul.png");
+  background-size: cover;
+}
+
+main #sobreAClinica {
+  background-image: url("../public/imagens-capa/plano-de-fundo-02.webp");
+  background-size: cover;
+}

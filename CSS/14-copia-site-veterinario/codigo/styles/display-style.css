@@ -1,0 +1,165 @@
+header .ligue-nos {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  background-color: #EEEEEE;
+}
+
+header .barra-principal {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+}
+
+header .barra-principal .header.logo {
+  display: flex;
+  justify-content: column nowrap;
+}
+
+header .barra-principal .header.logo div {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+/*temporario ate o svg*/
+
+header .menu-navegacao {
+  display: flex;
+}
+
+header .menu-navegacao li {
+  margin-right: 10px;
+}
+
+main aside {
+  width: 400px;
+  height: 756px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+main aside section {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+main #home aside {
+  background-color: rgba(150, 150, 150, 0.4);
+}
+
+main #nossosServicos {
+  background-color: #fff;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+main #nossosServicos aside {
+  background-color: rgba(150, 150, 150, 0.4);
+  width: 400px;
+}
+
+main #nossosServicos aside section {
+  display: flex;
+  flex-flow: column;
+}
+
+main #nossosServicos section {
+  width: 50%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+main #nossosServicos section div dl {
+  margin: 10px;
+}
+
+main #nossosServicos section div dl dd {
+  margin: 20px;
+}
+
+main #sobreAClinica {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+main #sobreAClinica aside {
+  margin-right: 400px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+mains #sobreAClinica section {
+  width: auto;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+main #sobreAClinica section p {
+  width: 400px;
+}
+
+main #entreEmContato {
+  background-color: rgba(150, 150, 150, 0.4);
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+main #entreEmContato aside {
+  background-color: #fff;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-end;
+  margin-right: 20px;
+  padding: 20px;
+}
+
+main #entreEmContato section {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+main #entreEmContato section .linha-01 {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+main .linha-02 {
+  width: 400px;
+  height: 200px;
+  background-color: khaki;
+}
+
+main #entreEmContato .separando-caixa-de-contato {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+main #entreEmContato .separando-caixa-de-contato div {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+main #entreEmContato .separando-caixa-de-contato div input {
+  background-color: #eee;
+  margin: 5px;
+}
+
+main #entreEmContato .separando-caixa-de-contato div inpute-digite-sua-mensagem {
+  width: 200px;
+  height: 200px;
+}

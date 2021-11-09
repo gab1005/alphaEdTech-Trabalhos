@@ -1,0 +1,106 @@
+@font-face {
+  font-family: "OpenSans";
+  src: url(../public/fontes/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf) format(truetype);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url(../public/fontes/Raleway/Raleway-VariableFont_wght.ttf) format(truetype);
+}
+
+body {
+  font-family: "OpenSans";
+}
+
+.font-Raleway-400 {
+  font-family: "Raleway";
+  font-weight: 400;
+}
+
+.font-Raleway-700 {
+  font-family: "Raleway";
+  font-weight: 700;
+}
+
+.font-OpensSans-700 {
+  font-family: "OpenSans";
+  font-weight: 700;
+}
+
+body header .ligue-nos p {
+  color: #ec4a34;
+  font-size: 13px;
+}
+
+header .barra-principal div div {
+  color: #555555;
+  font-size: 25px;
+  line-height: 25px;
+}
+
+header nav .menu-navegacao {
+  color: #297692;
+  font-size: 13px;
+  line-height: 39px;
+}
+
+main #home .texto-side-home {
+  color: #000000;
+  font-size: 45px;
+  line-height: 45px;
+}
+
+main #home section p {
+  color: #000000;
+  font-size: 16px;
+}
+
+main #home section button {
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+main #nossosServicos aside {
+  color: #000000;
+  font-size: 45px;
+  line-height: 45px;
+}
+
+main #nossosServicos section div dl dt {
+  color: #555555;
+  font-size: 20px
+}
+
+main #nossosServicos section div dl dd {
+  color: #000;
+  font-size: 14px;
+}
+
+main #sobreAClinica aside {
+  color: #fff;
+  font-size: 45px;
+  line-height: 45px;
+}
+
+main #sobreAClinica section p {
+  color: #FFF;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+main #entreEmContato aside {
+  color: #000;
+  font-size: 45px;
+  line-height: 45px;
+}
+
+main #entreEm Contato section {
+  font-size: 14px;
+}
+
+main #entreEmContato section .entreEmContato-texto-maior {
+  font-size: 20px;
+}
