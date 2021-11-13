@@ -1,0 +1,103 @@
+#Home {
+  background-image: url("../public/fundo-principal.png");
+  background-size: cover;
+}
+
+#Quem-Faz {
+  background-image: url("../public/background-quem-faz.png");
+  background-size: auto;
+  background-repeat: repeat;
+  background-position: center center;
+  background-color: #68ACB0;
+}
+
+#Galeria {
+  display: flex;
+  flex-flow: row;
+}
+
+#Galeria .img-1 {
+  width: 30%;
+  opacity: 0.75;
+  background-repeat: no-repeat;
+}
+
+#Galeria .img-2 {
+  width: 40%;
+  height: 460px;
+  opacity: 1;
+  background-repeat: no-repeat;
+  background-position: 50% center;
+}
+
+#Galeria .img-3 {
+  width: 30%;
+  opacity: 0.75;
+  background-repeat: no-repeat;
+}
+
+#Contato {
+  height: 500px;
+  background-color: #362E26;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#Contato .container-titulo-texto {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#Contato .container-titulo-texto div {
+  margin: 20px;
+}
+
+#Contato .container-titulo-texto h2 {
+  margin: 0px;
+}
+
+#Contato .container-titulo-texto p {
+  margin: 0px;
+}
+
+#Contato .container-caixa-envio {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#Contato .container-caixa-envio input {
+  background-color: gray;
+  color: white;
+  margin: 5px;
+}
+
+#Contato .container-caixa-envio input::placeholder {
+  color: white;
+}
+
+#Contato .container-caixa-envio button {
+  background-color: red;
+  color: white;
+}
+
+hr {
+  margin: 0px;
+  height: 2px;
+  background-color: white;
+  border-color: none;
+  border: 0px;
+}
+
+footer {
+  background-color: #362E26;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}

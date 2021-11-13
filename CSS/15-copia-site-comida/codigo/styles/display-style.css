@@ -1,0 +1,124 @@
+header {
+  background-color: #362E26;
+}
+
+header nav ul {
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0px;
+}
+
+header nav li {
+  margin: 10px 20px;
+}
+
+#Home {
+  height: 600px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#Home h1 {
+  margin: 10px;
+}
+
+#Home img {
+  width: 140px;
+}
+
+#Sobre {
+  background-color: antiquewhite;
+  height: 460px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+}
+
+#Sobre .Sobre-titulo {
+  width: 300px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#Sobre .Sobre-titulo h2 {
+  margin: 5px;
+}
+
+#Sobre .Sobre-texto {
+  width: 600px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#Nossos-Sabores {
+  height: 660px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#Nossos-Sabores .container-titulo {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#Nossos-Sabores .container-titulo h2 {
+  margin-bottom: 10px;
+}
+
+#Nossos-Sabores .container-titulo img {
+  width: 133px;
+  margin-bottom: 30px;
+}
+
+#Nossos-Sabores .container-texto {
+  width: 900px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#Nossos-Sabores .container-texto p {
+  margin: 2px 10px;
+}
+
+#Nossos-Sabores .brigadeiro-1 {
+  width: 178px;
+}
+
+#Nossos-Sabores .brigadeiro-2 {
+  width: 178px;
+}
+
+#Nossos-Sabores .brigadeiro-3 {
+  width: 140px;
+}
+
+#Quem-Faz {
+  height: 660px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#Quem-Faz .titulo-texto {
+  width: 450px;
+}
+
+#Quem-Faz .imagem img {
+  width: 450px;
+  height: 450px;
+}

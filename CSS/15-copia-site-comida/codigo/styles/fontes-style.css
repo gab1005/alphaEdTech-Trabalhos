@@ -1,0 +1,93 @@
+@font-face {
+  font-family: "Helvetica";
+  src: url("../public/fontes/Helvetica-fonte/Helvetica-W01-Roman/Helvetica\ W01\ Roman.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Proxima";
+  src: url("../public/fontes/proxima-fonte/Proxima-N-W01-Reg/Proxima\ N\ W01\ Reg.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Cookie";
+  src: url("../public/fontes/Cookie/Cookie-Regular.ttf") format("truetype");
+}
+
+body {
+  font-family: "Helvetica";
+}
+
+.fonte-Proxima {
+  font-family: "Proxima";
+}
+
+.fonte-Cookie {
+  font-family: "Cookie";
+}
+
+header nav {
+  color: #dad2ca;
+  font-size: 15px;
+  line-height: 36px;
+}
+
+#Home h1 {
+  color: #fff;
+  font-size: 172px;
+  line-height: 138px;
+}
+
+#Home p {
+  color: #fff;
+  font-size: 25px;
+}
+
+#Sobre .Sobre-titulo {
+  color: #fff;
+  font-size: 28px;
+}
+
+#Sobre .Sobre-texto {
+  color: #605e5e;
+  font-size: 15px;
+  line-height: 21px;
+}
+
+#Nossos-Sabores section h2 {
+  color: #362e26;
+  font-size: 28px;
+}
+
+#Nossos-Sabores .container-texto {
+  color: #605e5e;
+  font-size: 15px;
+  line-height: 21px;
+}
+
+#Quem-Faz section h2 {
+  color: #fff;
+  font-size: 28px;
+}
+
+#Quem-Faz section p {
+  color: #fff;
+  font-size: 15px;
+  line-height: 21px;
+}
+
+#Contato section .fonte-Proxima {
+  color: #fff;
+  font-size: 28px;
+  line-height: ;
+}
+
+#Contato .texto-02 {
+  color: #fff;
+  font-size: 15px;
+  line-height: 21px;
+}
+
+footer {
+  color: #90857b;
+  font-size: 14px;
+}
