@@ -1,0 +1,110 @@
+/*
+* {
+  margin: 0px;
+  padding: 0px;
+}
+*/
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+@font-face {
+  font-family: roboto;
+  src: url(./public/fontes/Roboto/Roboto-Regular.ttf) format(truetype);
+}
+
+body {
+  background-color: rgb(192, 155, 61);
+  font-family: roboto;
+}
+
+p, h1, h2, h3, li, img {
+  margin-bottom: 10px;
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.container-lofi img {
+  width: 70vw;
+}
+
+body main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-user {
+  width: 80vw;
+  display: flex;
+  align-items: flex-end;
+  background-color: rgba(179, 192, 61, 0.473);
+}
+
+.container-user .picture {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background-position: 50%;
+  object-position: 0px -20px;
+
+}
+
+.container-lofi {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-lofi p {
+  width: 80vw;
+  text-align: center;
+}
+
+.main-content img {
+  margin-bottom: 10px;
+}
+
+.container-lofi .main-content {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-lofi .playlist {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.playlist .music01 {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.playlist .music02 {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-lofi .reference-container li {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
