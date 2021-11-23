@@ -1,0 +1,69 @@
+:root {
+  --background-main: #deb887;
+  --text-color: #222;
+}
+
+@font-face {
+  font-family: "font-main";
+  src: url(./public/fontes/Roboto/Roboto-Regular.ttf) format(truetype);
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+}
+
+body {
+  background-color: var(--background-main);
+  font-family: "font-main";
+  color: var(--text-color);
+}
+
+/*limitando tamanho dos "container's"*/
+
+header, .habitat-container, .description-container, footer {
+  width: 75vw;
+}
+
+/*aplicando flex box*/
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
+
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+main .habitat-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
+
+main .description-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
+
+
+footer {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+footer a {
+  margin-bottom: 10px;
+}
