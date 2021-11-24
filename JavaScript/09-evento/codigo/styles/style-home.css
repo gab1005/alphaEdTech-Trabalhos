@@ -1,0 +1,17 @@
+:root {
+  --main-background: #ffe4c4;
+}
+
+@font-face {
+  font-family: "main-font";
+  src: url(./public/fonts/Roboto/Roboto-Regular.ttf) format(truetype);
+}
+
+body {
+  font-family: "main-font";
+  background-color: var(--main-background);
+}
+
+img {
+  width: 50vw;
+}

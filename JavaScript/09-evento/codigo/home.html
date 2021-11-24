@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./styles/style-home.css">
+
+  <title>09 tarefa js | evento onClick</title>
+</head>
+
+<body>
+  <header>
+    <h1>Custeleta do Jorge</h1>
+  </header>
+  <main>
+    <form class="pesquisa" action="result.html" method="get">
+      <img class="sabor-img" src="" alt="">
+      <label class="sabor-label" for="sabor">sabor da comida: </label>
+
+      <div>
+        <label for="">ruim</label>
+        <input class="sabor-input" id="sabor" type="range" min="1" max="5" step="1" name="avaliacao-sabor" value="">
+        <label for="">bom</label>
+      </div>
+
+      <img class="atendimento-img" src="" alt="">
+      <label class="atendimento-label" for="atendimento">como está noso atendimento:</label>
+      <div>
+        <label for="">ruim</label>
+        <input class="atendimento-input" id="atendimento" type="range" min="1" max="5" step="1"
+          name="avaliacao-atendimento" value="">
+        <label for="">bom</label>
+      </div>
+
+      <img class="preco-img" src="" alt="">
+      <label class="preco-label" for="preco">nosso preço no seu bolso:</label>
+      <div>
+        <label for="">caro</label>
+        <input class="preco-input" id="preco" type="range" min="1" max="5" step="1" name="avaliacao-preco"
+          value="avaliacao-preco">
+        <label for="">barato</label>
+      </div>
+
+    </form>
+
+    <button form="pesquisa" type="submit" onclick="enviar()">enviar</button>
+  </main>
+  <footer>
+    <h2 class="resultado-pesquisa"></h2>
+
+    <p class="re-sabor"></p>
+    <p class="re-atendimento"></p>
+    <p class="re-preco"></p>
+  </footer>
+
+  <script src="./scripts/script-home.js"></script>
+</body>
+
+</html>
