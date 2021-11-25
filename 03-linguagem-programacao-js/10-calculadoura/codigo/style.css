@@ -1,0 +1,22 @@
+:root {
+  --imagem-fundo: url(./public/images/fundo-verde-03.png);
+}
+
+@font-face {
+  font-family: "fonte-principal";
+  src: url(./public/fonts/Roboto/Roboto-Regular.ttf);
+}
+
+body {
+  font-family: "fonte-principal";
+  background-image: var(--imagem-fundo);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+}
