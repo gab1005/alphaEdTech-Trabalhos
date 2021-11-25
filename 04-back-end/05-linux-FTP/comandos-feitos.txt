@@ -1,0 +1,19 @@
+ftp
+open ubuntu.alphaedtech.org.br
+gabrielsousa
+*********
+lcd C:\Users\gab01\Documents\Alpha-EdTech\Hard-Skills\04-back-end\05-linux-FTP\arquivos
+ls
+cd www
+mkdir nova-pasta
+cd nova-pasta
+put texto01.txt
+put texto02.txt
+ls
+help
+rename texto01.txt texto01-ftp.txt
+ls
+rename texto02.txt texto02-ttp.txt
+get texto01-ftp.txt
+get texto02-ftp.txt
+ls

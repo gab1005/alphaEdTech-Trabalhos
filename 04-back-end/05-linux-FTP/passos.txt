@@ -1,0 +1,4 @@
+criação de pasta,
+mudança de pasta,
+envio e recebimento de arquivos,
+mudança de modo de transmissão.
