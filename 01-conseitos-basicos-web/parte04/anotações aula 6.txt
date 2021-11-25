@@ -1,0 +1,11 @@
+dns round-robin (bom para balanço de  carga)
+
+no-ip (dynamic dns)
+
+ssh para ocntrolar computador a distancia, tambem se  pode
+atravez de portas livres controlar a maquina a distancia
+
+static dynamic ip
+################
+modelo cliente-servidor
+irc internet relay chat

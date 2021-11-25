@@ -1,0 +1,135 @@
+QUALQUER DUVIDA CONSULTA "listas de comandos úteis do GIT" no google <https://gist.github.com/leocomelli/2545add34e4fec21ec16>
+
+teoria basica do git:
+file>>>>(git add)>>>>>>container>>>>>>(commit)>>>>>.git
+
+COMANDOS PRINCIPAIS:############################################################
+git config --global user.email "email"  (salvo o email)
+git config --global user.name "name"    (salvo o nome do usuario)
+
+git config user.email "email"           (salva email de forma local)
+git config user.name "Mona Lisa"        (nome para o repositório específico)
+
+cat .gitconfig  (indica nome e email cadastrado)
+
+git rm file.txt     (remove arquivo/é bom >>>>>>>>>>git commit -m "file.txt removido")
+git rm --cached file.txt    (caso o primeiro codigo não funcione é bom usar este como alternativo)
+git rm -r diretorio     (para remover pastas)
+
+git init
+git status
+git add
+git commit -m ""
+
+git remote
+git clone
+git push
+git pull
+COMANDOS PRINCIPAIS:############################################################
+
+git config --global core.editor vim     (define editor)
+
+clear (limpa a tela do terminal)
+cd	dir	ls	pwd	(comandos para naegação)
+ls -a (informa arquivos/pastas ocultas)
+
+mkdir (maike/fazer um diretorio)
+touch (cria um arquivo)
+touch a.txt b.txt (cria multiplos arquivos)
+touch pasta/arquivo (segue o caminho ate cria um arquivo)
+
+git version (informa a verção do git)
+
+git config --global user.name "" (salva o nome do usuario)
+git config --global user.email "" (salva email do usuario)
+
+git config user.name (informa o nome do usuario)
+git config user.email (informa email do usuario)
+
+git config core.editor informa editor padrão)
+git config --global core.editor vim     (define editor)
+git config --global core.editor "" (entrada: caminho do executavel do editor, serve para selecionar o editor padrao)
+
+
+
+
+CRIAÇÃO E MANIPULAÇÃO DE ARQUIVOS.##############################################
+git init (cria o .git)		"()" esta servindo como notação de comentario
+
+(exemplo):
+		PROJETO(pastas e arquivos)
+
+git add <file> (comadno: adiciona ao container)		CONTAINER(arquiva todas as mudanças)	git status(comando: verifica o container e arquivos fora do container)
+git add . (adiciona todos)
+git add * (adiciona todos)
+
+					git commit -m "comentario"(comando: trasfere do container para o repositorio local, .git, com um cometnario como "etiqueta")
+					git commit -am "comentario" (comando: commit + add | funciona apenas para arquivos ja adicionados ao "container)
+		.git(é o repositorio, vão ser armazenado containers)
+
+
+
+master >>>>>>>>>>>> head   (master é o primeiro arquivo criado, os heads sao os arquivos seguintes)
+
+CRIAÇÃO E MANIPULAÇÃO DE ARQUIVOS.##############################################
+
+git log (exibe os comentarios dos commits e detales de data, etc)
+git log --oneline (exibe basicamente os commits)
+git log --graph (exibe um grafico semplificado da relação do master e do head)
+git log --oneline --graph (se junta os codigos.....)
+code . (abre o editor padrão no diretorio daquel momento)
+
+git branch (identifica o ramo/nó/head que o projeto se encontra)
+git checkout N. DE IDENTIFICAÇÃO (modifica o arquivo para uma verção de um nó)
+git checkout master (muda o arquivo para a ultima verção)
+
+git diff (mostra de forma mais detalhada o que foi modificado; não serve depois de adicionar ao container (git add))
+
+git checkout <file> (funciona; para descartar mudanças; isto antes de add e commit; ensinado no curso de github)
+git restore <file> (funciona; para discartar mudanças no diretorio de trabalho, presente numa linha de ajuda do git)
+
+git reset HEAD <file> (retira o arquivo do container (depois do git add), ensinado no curso online)
+git restore --staged <file> (restaurar depois que esta no container (depois do git add), na linha de ajuda no git)
+
+git reset --hard <id do arquivo> (retira do commit)
+
+
+RAMIFICAÇÕES:###################################################################
+git checkout -b <nome>	(se cria um ramo/galho novo)
+
+git log --oneline --graph --all (serve para ver todos os ramos)
+git log --graph --all	(mostra os ramos de foram mais detalhada)
+
+	PARA JUNTAR UM RAMO AO MASTER:
+git merge <nome do ramo>	(junta o ramo ao master)
+	OBS: Em caso de conflitos, o git ira informar em quais arquivos existe
+	este conflito.
+git merge  --abort	(desiste da uniao dos ramos)
+
+	PARA EMPURRAR UM REPOSITORIO LOCAL AO GITHUB:
+OBS: no propio github existe os comandos
+git remote	(verifica se existe repositorio remoto)
+git remote add origin <https://		>	(cria ligação com repositorio remoto)
+git remote -v	(tras mais detales sobre os repositorios remotos)
+git push -u origin master	(os arquivos locais são enviados)
+	OBS: para que o comando git push funcione o usuario deve estar logado em sua conta github
+	PARA CLONAR UM ARUIVO DO GITHUB NO PC:
+git clone <https://		>	(clona do github para o pc)
+	PARA ENVIAR AS AUTERAÇÕES:
+git push	(envia todas as modificações para o github)
+	PARA PUCHAR ALTERAÇÕES:
+git pull	(baixa alterações do github para o pc)
+RAMIFICAÇÕES:###################################################################
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Loading complete

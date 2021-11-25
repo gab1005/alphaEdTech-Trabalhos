@@ -1,0 +1,15 @@
+Multiplexação de mensagens: https://pt.wikibooks.org/wiki/Introdu%C3%A7%C3%A3o_%C3%A0_comunica%C3%A7%C3%A3o_entre_computadores_e_tecnologias_de_rede/M%C3%A9todos_de_multiplexa%C3%A7%C3%A3o
+
+O que é SSL / TLS e HTTPS?: https://www.hostinger.com.br/tutoriais/o-que-e-ssl-tls-https
+
+POP3, IMAP e SMTP: https://www.hostinger.com.br/tutoriais/portas-pop3-smtp-e-imap
+
+Domain Name System: https://www.youtube.com/watch?v=i4KMcl0tuEg
+
+Documentação de Redes: https://gitbook.ganeshicmc.com/redes/pacote-protocolo-arp
+
+
+hosts http: https://www.speedcheck.org/pt/wiki/host/
+
+
+ftp e http: https://www.speedcheck.org/pt/wiki/ftp/

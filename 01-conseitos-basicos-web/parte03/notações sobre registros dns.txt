@@ -1,0 +1,78 @@
+>>>resources records:
+
+>>registros de endereços: A e AAAA:
+- definem o endereço IP de um host
+- mapeiam FQDN para IP
+- são os registros mais consultados para resolução de nomes
+- A: endereço IPv4
+- AAAA: endereço IPv6
+
+ex: www.bosontreinamentos.com.br. IN A 186.202.153.82 (o ip é um registro do tipo A)
+IN significa a classe, no caso de internet.
+
+>>registro SOA (Start Of Authority)
+>toda zona contém um registro SOA. Esse registro contém:
+- camposTTL, classe e tipo
+- servidor autoritativo
+- pessoa responsável
+- serial number, refresh, retry, expire, TTL mínimo
+
+OBS: TTL = Time To Live.
+
+>mais detales sobre SOA
+- serial number:monstra quantas vezes a zona foi atualizado, ele
+é usado basicamente para ver se é necessário fazer uma transferencia
+do servidos primario para o servirdor secundaario. Isso se dar dessa
+forma: o s1 não informa o s2 de atualizações, mas sim o s2 pergunta
+para o s1 por meio do serial number, caso hajá diferença, o s2 faz
+alterações para ficar tal qual o s1.
+
+- refresh: medido em segundo, verifica de quanto em quanto tempo o s2
+vai verificar se o s1 foi atualizado por meio do serial number.
+
+- retry:caso o s2 solicite ao s1 e de erro, retry informa o tempo
+apos requisição para fazer um novo pedido.
+
+- expire: apos solicicar ao s1, o s2 tem esse tempo de expire para
+não solicitar mais à atualização.
+
+- TTl mínimo:caso não exista um TTL no propio registro de  recurso
+usa-se o TTL mínimo.
+
+>>registro de nameserver (NS):
+- indica  os servidores autoritativos para a zona
+- indica os servidores primários e secundários especificados no RR
+SOA
+- também índica servidores para as zonas delegas.
+- toda zona tem ao menos um registro NS na zona raiz (root).
+
+>>CNAME (canonical name):
+- nome canônico
+- Alias (apelido) de um outro registro; nomes secundários
+- útil para registara diversos serviços em um mesmo servidor
+no banco de dados do DNS.
+
+>>mail exchanger (MX):
+- nome de domínio DNS para um servidor de email
+
+>>pointer record - PTR
+- registro reverso para A ou AAAA [pesquiso o ip, e ele me retorna o nome de dominio)
+- mapeia IP para FQDN
+-presente em um arquivo de zona reversa
+OBS: curioso que o caminho sequido é inverso, no caso os IPs ficam
+ao contrario, ja que ele vai da maquina para o IP público.
+
+>>SRV (service resource record):
+- permite especificar a localização de servidores para um protocolo
+- por exemplo, registros que especificam quais hosts são os servidores
+web em uma rede
+- formato:
+  _serviço_protocolo.nome TTL classe SRV prioridade peso porta alvo
+
+  _http._tcp.teste.com. 32 IN SRV 10 0 80 webserver.fabio.teste.com
+
+>>TXT
+- permite associar um texto arbitrário com um hostname
+- é possivel ter varios registos TXT para um mesmo hostname
+
+OBS: como se fosse um comentario

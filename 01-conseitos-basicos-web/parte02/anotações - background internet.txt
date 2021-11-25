@@ -1,0 +1,13 @@
+OSI (Open Systems Interconnection) - foi criado em 1971 e formalizado em 1983
+
+TCP (Transmission Control Protocol)
+IP (Internet Protocol) - criados pelo Departamento de Defesa dos
+Estados Unidos, desenvolvido em 1969 como recurso de comunicação da ARPANET
+
+"Ele deveria possuir a capacidade de decidir qual a melhor rota a seguir 
+dentro da malha de rede formada pelas organizações envolvidas. 
+Em 1983, com a formalização do modelo OSI, o TCP/IP 
+foi adequado ao modelo e definido como padrão de comunicação de redes.
+ Depois, expandindo-se para a interligação externa dessas redes e constituindo 
+o padrão de comunicação da Internet."
+link: https://www.infonova.com.br/artigo/o-que-e-tcp-ip-e-como-funciona/

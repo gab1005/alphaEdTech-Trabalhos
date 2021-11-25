@@ -1,0 +1,50 @@
+QUESTÃO 01:
+>>>Arquitetura cliente-servidor:
+- existe um processo que é responsável pela manutenção da informação
+(servidores) e outro responsável pela obtenção dos dados (os clientes).
+
+>>Cliente:
+- solicitam um determinado serviço, através do envio de uma mensagem
+ao servidor. Enquanto o processo servidor está trabalhando a solici-
+tação, o cliente está livre para realizar outras tarefas.
+
+>>Servidor:
+- oferecem serviços a processos usuários, ou seja, executam a tarefa
+solicitada e enviam uma resposta ao cliente que setraduz nos dados 
+solicitados.
+
+>>Vantagens:
+
+>recusos centralizados:
+- pode gerenciar recusos comuns a todos os utilizadores, como por
+exemplo um banco de dados centralizado, a fim de evitar os problemas
+de redundância.
+
+>Maior facilidade de manutenção:
+- é possível substituir, reparar, atualizar ou mesmo realocar um 
+servidor de seus clientes, enquanto que não serão afetados por essa
+mudança.
+
+>>Desvantagens:
+
+>Sobrecarga:
+- um servidor poderá ficar sobrecarregado caso receba mais solicitações
+simultâneas dos clientes do que pode suportar.
+
+>Único nó:
+- (fazendo comporação com as redes P2P), nas redes P2P, os recursos são
+normalmente distribuídos entre vários nos. Mesmo se uma ou mais.
+Agora no caso cliente-servidor, se um servidor crítico falha, os
+pedidos dos clientes não poderão ser cumpridos.
+máquinas falharem no momento de download de um arquivo, por exemplo, 
+as demais ainda terão os dados necessários para completar a referida
+operação.
+
+
+topicos a pesquisar: Saas
+
+SOA - ESB
+
+microservicos - APIs (REST ou SOAP)
+
+

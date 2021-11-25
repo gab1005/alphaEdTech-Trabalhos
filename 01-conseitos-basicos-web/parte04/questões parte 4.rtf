@@ -1,0 +1,142 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\colortbl ;\red0\green0\blue255;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang22 1 - como funciona a arquitetura cliente-servidor? qual sua vantagem?\par
+Existem dois processos, Cliente e Servidor, o Cliente fica respons\'e1vel por solicitar ao Servidor os dados, ap\'f3s fazer o requerimento o Cliente fica livre para realizar outras tarefas necess\'e1rias para a experi\'eancia do usu\'e1rio; j\'e1 o Servidor, cuida justamente do tratamento dos dados, como altera\'e7\'f5es, cria\'e7\'f5es, e exclus\'e3o; al\'e9m de enviar os dados pedidos para o Cliente. As vantagens dessa arquitetura est\'e3o no fato do banco de dados ser centralizado, o que impede problemas de redund\'e2ncia e facilita processos de manuten\'e7\'e3o.\par
+2 - no que consiste a camada de persist\'eancia da arquitetura de 3 camadas? d\'ea exemplos\par
+\'c9 um m\'f3dulo presente na camada de aplica\'e7\'e3o ou de neg\'f3cios (segunda camada), que tem como fun\'e7\'e3o guardar alguns dados que trazem melhor experiencia por usu\'e1rio, mas n\'e3o necessariamente s\'e3o t\'e3o importantes para serem guardados no banco de dados (terceira camada), um bom exemplo desse m\'f3dulo, seria o cache presente nos navegadores de internet, que gravam informa\'e7\'f5es, como senhas, logins, e pre-carregamentos de p\'e1ginas.\par
+3 - explique a vantagem do uso de arquitetura orientada a servi\'e7os (SOA)\par
+No SOA a aplica\'e7\'e3o web \'e9 dividida em v\'e1rios setores, isso \'e9 feito com foco  em tornar a aplica\'e7\'e3o mais solida; pois caso fosse um \'fanico bloco de c\'f3digo bastaria um erro para o servi\'e7o cair; e tamb\'e9m tornar ela mais r\'e1pida, j\'e1 que existe reutiliza\'e7\'e3o de  servi\'e7os; tamb\'e9m \'e9 escal\'e1vel, no sentido de tornar a aplica\'e7\'e3o maior e at\'e9 mesmo com linguagens diferentes, fora facilidade em manuten\'e7\'e3o, podendo alterar camadas pontuais da aplica\'e7\'e3o.\par
+4 - onde e como s\'e3o utilizados os microsservi\'e7os na computa\'e7\'e3o?\par
+Os  microsservi\'e7os s\'e3o usados em aplica\'e7\'f5es que permitem uma divis\'e3o de suas fun\'e7\'f5es em partes menores, chamadas de servi\'e7os ou m\'f3dulos, onde cada um age de forma independente, mas se integram com outras partes quando requisitado para gerar resultados, bastantes semelhantes ao SOA, mas nesse caso se permite a utiliza\'e7\'e3o de APIs (Application Programming Interface) o que traz maior flexibilidade para a equipe de desenvolvimento.\par
+5 - acesse um servi\'e7o de web service e exiba o conte\'fado. Este conte\'fado \'e9 em qual formato (XML/JSON)?\par
+fonte: {{\field{\*\fldinst{HYPERLINK https://www2.camara.leg.br/transparencia/dados-abertos/dados-abertos-legislativo/webservices/comissoes }}{\fldrslt{https://www2.camara.leg.br/transparencia/dados-abertos/dados-abertos-legislativo/webservices/comissoes\ul0\cf0}}}}\f0\fs22\par
+conteudo em XML:\par
+This XML file does not appear to have any style information associated with it. The document tree is shown below.\par
+<wsdl:definitions xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="https://www.camara.gov.br/SitCamaraWS/Comissoes" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="https://www.camara.gov.br/SitCamaraWS/Comissoes">\par
+<wsdl:types>\par
+<s:schema elementFormDefault="qualified" targetNamespace="https://www.camara.gov.br/SitCamaraWS/Comissoes">\par
+<s:element name="ObterMembros">\par
+<s:complexType>\par
+<s:sequence>\par
+<s:element minOccurs="1" maxOccurs="1" name="IDOrgao" type="s:int"/>\par
+</s:sequence>\par
+</s:complexType>\par
+</s:element>\par
+<s:element name="ObterMembrosResponse">\par
+<s:complexType>\par
+<s:sequence>\par
+<s:element minOccurs="0" maxOccurs="1" name="ObterMembrosResult">\par
+<s:complexType mixed="true">\par
+<s:sequence>\par
+<s:any/>\par
+</s:sequence>\par
+</s:complexType>\par
+</s:element>\par
+</s:sequence>\par
+</s:complexType>\par
+</s:element>\par
+</s:schema>\par
+</wsdl:types>\par
+<wsdl:message name="ObterMembrosSoapIn">\par
+<wsdl:part name="parameters" element="tns:ObterMembros"/>\par
+</wsdl:message>\par
+<wsdl:message name="ObterMembrosSoapOut">\par
+<wsdl:part name="parameters" element="tns:ObterMembrosResponse"/>\par
+</wsdl:message>\par
+<wsdl:message name="ObterMembrosHttpGetIn">\par
+<wsdl:part name="IDOrgao" type="s:string"/>\par
+</wsdl:message>\par
+<wsdl:message name="ObterMembrosHttpGetOut">\par
+<wsdl:part name="Body"/>\par
+</wsdl:message>\par
+<wsdl:message name="ObterMembrosHttpPostIn">\par
+<wsdl:part name="IDOrgao" type="s:string"/>\par
+</wsdl:message>\par
+<wsdl:message name="ObterMembrosHttpPostOut">\par
+<wsdl:part name="Body"/>\par
+</wsdl:message>\par
+<wsdl:portType name="ComissoesSoap">\par
+<wsdl:operation name="ObterMembros">\par
+<wsdl:input message="tns:ObterMembrosSoapIn"/>\par
+<wsdl:output message="tns:ObterMembrosSoapOut"/>\par
+</wsdl:operation>\par
+</wsdl:portType>\par
+<wsdl:portType name="ComissoesHttpGet">\par
+<wsdl:operation name="ObterMembros">\par
+<wsdl:input message="tns:ObterMembrosHttpGetIn"/>\par
+<wsdl:output message="tns:ObterMembrosHttpGetOut"/>\par
+</wsdl:operation>\par
+</wsdl:portType>\par
+<wsdl:portType name="ComissoesHttpPost">\par
+<wsdl:operation name="ObterMembros">\par
+<wsdl:input message="tns:ObterMembrosHttpPostIn"/>\par
+<wsdl:output message="tns:ObterMembrosHttpPostOut"/>\par
+</wsdl:operation>\par
+</wsdl:portType>\par
+<wsdl:binding name="ComissoesSoap" type="tns:ComissoesSoap">\par
+<soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>\par
+<wsdl:operation name="ObterMembros">\par
+<soap:operation soapAction="https://www.camara.gov.br/SitCamaraWS/Comissoes/ObterMembros" style="document"/>\par
+<wsdl:input>\par
+<soap:body use="literal"/>\par
+</wsdl:input>\par
+<wsdl:output>\par
+<soap:body use="literal"/>\par
+</wsdl:output>\par
+</wsdl:operation>\par
+</wsdl:binding>\par
+<wsdl:binding name="ComissoesSoap12" type="tns:ComissoesSoap">\par
+<soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>\par
+<wsdl:operation name="ObterMembros">\par
+<soap12:operation soapAction="https://www.camara.gov.br/SitCamaraWS/Comissoes/ObterMembros" style="document"/>\par
+<wsdl:input>\par
+<soap12:body use="literal"/>\par
+</wsdl:input>\par
+<wsdl:output>\par
+<soap12:body use="literal"/>\par
+</wsdl:output>\par
+</wsdl:operation>\par
+</wsdl:binding>\par
+<wsdl:binding name="ComissoesHttpGet" type="tns:ComissoesHttpGet">\par
+<http:binding verb="GET"/>\par
+<wsdl:operation name="ObterMembros">\par
+<http:operation location="/ObterMembros"/>\par
+<wsdl:input>\par
+<http:urlEncoded/>\par
+</wsdl:input>\par
+<wsdl:output>\par
+<mime:content part="Body" type="text/xml"/>\par
+</wsdl:output>\par
+</wsdl:operation>\par
+</wsdl:binding>\par
+<wsdl:binding name="ComissoesHttpPost" type="tns:ComissoesHttpPost">\par
+<http:binding verb="POST"/>\par
+<wsdl:operation name="ObterMembros">\par
+<http:operation location="/ObterMembros"/>\par
+<wsdl:input>\par
+<mime:content type="application/x-www-form-urlencoded"/>\par
+</wsdl:input>\par
+<wsdl:output>\par
+<mime:content part="Body" type="text/xml"/>\par
+</wsdl:output>\par
+</wsdl:operation>\par
+</wsdl:binding>\par
+<wsdl:service name="Comissoes">\par
+<wsdl:port name="ComissoesSoap" binding="tns:ComissoesSoap">\par
+<soap:address location="https://www.camara.leg.br/SitCamaraWS/Comissoes.asmx"/>\par
+</wsdl:port>\par
+<wsdl:port name="ComissoesSoap12" binding="tns:ComissoesSoap12">\par
+<soap12:address location="https://www.camara.leg.br/SitCamaraWS/Comissoes.asmx"/>\par
+</wsdl:port>\par
+<wsdl:port name="ComissoesHttpGet" binding="tns:ComissoesHttpGet">\par
+<http:address location="http://www.camara.leg.br/SitCamaraWS/Comissoes.asmx"/>\par
+</wsdl:port>\par
+<wsdl:port name="ComissoesHttpPost" binding="tns:ComissoesHttpPost">\par
+<http:address location="http://www.camara.leg.br/SitCamaraWS/Comissoes.asmx"/>\par
+</wsdl:port>\par
+</wsdl:service>\par
+</wsdl:definitions>\par
+\par
+}
+ 

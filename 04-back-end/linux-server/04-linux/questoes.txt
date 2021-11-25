@@ -1,0 +1,7 @@
+ubuntu.alphaedtech.org.br
+criar pasta www dentro da sua pasta
+criar aruivo usando vim
+mostrar o conteudo pelo cat
+mudar permissão,  
+
+printar tudo isso

@@ -1,0 +1,12 @@
+ip masquerade (NAT)
+
+iptables
+
+https://datatracker.ietf.org/doc/html/rfc4787#section-4.2.1
+
+https://mateusmuller.me/2018/10/18/o-guia-completo-do-iniciante-em-iptables/
+
+gatway onde  vai ta o halter 
+
+testar: trocar DNS da minha maquina pra ver se funciona.
+

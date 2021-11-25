@@ -1,0 +1,10 @@
+ipv4: são números de 32 bits que permite um máximo de 4.294.967.000 (2^32) combinações
+
+ipv6: desenvolvido em 1998 pela IETF (Internet Engineering Task Force), tratado como
+padrão em 2017, possui 128 bits utilizando hexadecimais e não mais binário, 2^128
+(340 undecilhões), google tem uma pagina so pra coletar a informação da troca do ipv4
+pelo ipv6.
+
+2001:DB8:AD:F:0:0:0:1
+
+2011:DB8:AD:F::1

@@ -1,0 +1,10 @@
+file status lifecycle
+
+untracked unmodified modified stade:
+add the file  remove  the file
+
+edit the file 
+
+stage the file
+
+commit
