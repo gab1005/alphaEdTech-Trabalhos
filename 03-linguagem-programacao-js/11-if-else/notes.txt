@@ -1,0 +1,48 @@
+notes
+
+>>>formulario ajuda o usuario a montar o proprio lanche
+-montar campo de check
+>>>calcular o valor a ser pago
+>>>montar uma ficha para o usuario
+
+pão: Francês (3,00) Australiano (8,00) Brioche(6,00)
+
+hambúrguer: picanha(13,00) costela (10,00) vegano (12,00)
+
+salada: alface(1,50) tomate(1,50) sem salada (0,00)
+
+queijo: mussarela (3,00) prato (3,00) cheddar (5,00)
+
+dica: utilize formulálios, funções e botões
+
+  if (paoEscolhido == 1) {
+    console.log('frances');
+  } else if (paoEscolhido == 2) {
+    console.log("australiano");
+  } else {
+    console.log("briochi");
+  }
+
+  if (paoEscolhido == 1) {
+    console.log('foi escolhido o pao frances');
+  } else if (paoEscolhido == 2) {
+    console.log("australiano");
+  } else {
+    console.log("briochi");
+  }
+
+  if (paoEscolhido == 1) {
+    console.log('foi escolhido o pao frances');
+  } else if (paoEscolhido == 2) {
+    console.log("australiano");
+  } else {
+    console.log("briochi");
+  }
+
+  if (paoEscolhido == 1) {
+    console.log('foi escolhido o pao frances');
+  } else if (paoEscolhido == 2) {
+    console.log("australiano");
+  } else {
+    console.log("briochi");
+  }

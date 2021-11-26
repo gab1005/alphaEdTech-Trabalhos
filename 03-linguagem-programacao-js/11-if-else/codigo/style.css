@@ -1,0 +1,62 @@
+:root {
+  --fundo-principal: #ff7f50;
+  --fonte-cor01: #F9ECE8;
+  --fonte-cor02: #FCC768;
+  --fonte-cor03: #EBB00C;
+  --fonte-cor04: #AC5815;
+  --fonte-titulo-cor01: #7ca50b;
+  --botao-fundo01: #813F27;
+
+}
+
+@font-face {
+  font-family: "fonte-princial";
+  src: url(./public/fonts/Roboto/Roboto-Regular.ttf) format(truetype);
+}
+
+body {
+  background-image: url(./public/imagens/hamburguer02.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--fundo-principal);
+  font-family: "fonte-principal";
+  color: var(--fonte-cor03);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+h2 {
+  color: var(--fonte-titulo-cor01);
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+h3 {
+  color: var(--fonte-cor02);
+}
+
+button {
+  background-color: var(--botao-fundo01);
+  color: var(--fonte-cor01);
+  width: 200px;
+  height: 40px;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+* article {
+  display: flex;
+  flex-flow: column nowrap;
+
+}
+
+* section {
+  display: inline;
+  margin-bottom: 5px;
+}
+
+.ficha {
+  color: var(--fundo-principal)
+}

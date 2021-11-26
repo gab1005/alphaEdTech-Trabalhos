@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+
+  <title>js 11| if else</title>
+</head>
+
+<body>
+  <div>
+    <article class="pao">
+      <h2>Escolha a combinação que lhe agrada</h2>
+      <h3>Pão: </h3>
+      <section>
+        <input id="pao01" type="radio" name="pao-escolhido" value="1">
+        <label for="pao01">Francês</label>
+      </section>
+
+      <section>
+        <input id="pao02" type="radio" name="pao-escolhido" value="2">
+        <label for="pao02">Australiano</label>
+      </section>
+
+      <section>
+        <input id="pao03" type="radio" name="pao-escolhido" value="3">
+        <label for="pao03">Brioche</label>
+      </section>
+    </article>
+
+    <article class="hamburguer">
+      <h3>hambúrguer: </h3>
+      <section>
+        <input id="hamburguer01" type="radio" name="hamburguer-escolhido" value="1">
+        <label for="hamburguer01">Picanha</label>
+      </section>
+
+      <section>
+        <input id="hamburguer02" type="radio" name="hamburguer-escolhido" value="2">
+        <label for="hamburguer02">Costela</label>
+      </section>
+
+      <section>
+        <input id="hamburguer03" type="radio" name="hamburguer-escolhido" value="3">
+        <label for="hamburguer03">Vegano</label>
+      </section>
+    </article>
+
+    <article class="salada">
+      <h3>Salada: </h3>
+      <section>
+        <input id="salada01" type="radio" name="salada-escolhido" value="1">
+        <label for="salada01">Alface</label>
+      </section>
+
+      <section>
+        <input id="salada02" type="radio" name="salada-escolhido" value="2">
+        <label for="salada02">Tomate</label>
+      </section>
+
+      <section>
+        <input id="salada03" type="radio" name="salada-escolhido" value="3">
+        <label for="salada03">Sem Salada </label>
+      </section>
+    </article>
+    <article class="queijo">
+      <h3>Queijo: </h3>
+      <section>
+        <input id="queijo01" type="radio" name="queijo-escolhido" value="1">
+        <label for="queijo01">Mussarela</label>
+      </section>
+
+      <section>
+        <input id="queijo02" type="radio" name="queijo-escolhido" value="2">
+        <label for="queijo02">Prato</label>
+      </section>
+
+      <section>
+        <input id="queijo03" type="radio" name="queijo-escolhido" value="3">
+        <label for="queijo03">Cheddar</label>
+      </section>
+    </article>
+
+
+    <button onclick="criarFicha()">Fazer Pedido</button>
+  </div>
+
+  <aside class="ficha">
+    <h3 class="ficha-titulo"></h3>
+    <p class="ficha-pao"></p>
+    <p class="ficha-hamburguer"></p>
+    <p class="ficha-salada"></p>
+    <p class="ficha-queijo"></p>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
