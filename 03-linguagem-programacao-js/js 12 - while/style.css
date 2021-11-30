@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aliceblue;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container-quadro {
+    width: 80vw;
+    background-color: green;
+    border: solid brown 4px;
+}
+
+.escrever-quadro {
+    word-break: keep-all;
+}
