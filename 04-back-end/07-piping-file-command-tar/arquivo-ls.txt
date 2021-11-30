@@ -1,0 +1,8 @@
+total 24
+drwxrwxr-x  3 gab01 gab01 4096 nov 30 05:17 .
+drwxrwxr-x 10 gab01 gab01 4096 nov 30 04:17 ..
+-rw-rw-r--  1 gab01 gab01    0 nov 30 05:17 arquivo-ls.txt
+drwxrwxr-x  2 gab01 gab01 4096 nov 30 05:13 prints
+-rw-rw-r--  1 gab01 gab01   15 nov 30 04:43 texto01.txt
+-rw-rw-r--  1 gab01 gab01   15 nov 30 04:43 texto02.txt
+-rw-rw-r--  1 gab01 gab01   15 nov 30 04:43 texto03.txt

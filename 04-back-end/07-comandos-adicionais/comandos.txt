@@ -1,6 +1,0 @@
-ls | wv -l
-
-ls | tee list
-
-cat list
-
