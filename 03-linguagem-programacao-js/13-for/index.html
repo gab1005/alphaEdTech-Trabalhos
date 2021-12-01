@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <title>13-js | for</title>
+</head>
+
+<body>
+    <header>
+        <h1>Corrida entre Pedro, Juca, Edna</h1>
+        <p>para mais detales consulte o terminal do seu navegador</p>
+    </header>
+
+    <article>
+        <section>
+            <h2>Pedro</h2>
+            <p>
+                Velocidade Mínima: 150 km/h
+                Velocidade Máxima: 230 km/h
+                Derrapagem: 3%
+            </p>
+        </section>
+        <section>
+            <h2>Juca</h2>
+            <p>
+                Velocidade Mínima: 120 km/h
+                Velocidade Máxima: 260 km/h
+                Derrapagem: 5%
+            </p>
+        </section>
+        <section>
+            <h2>Edna</h2>
+            <p>
+                Velocidade Mínima: 180 km/h
+                Velocidade Máxima: 220 km/h
+                Derrapagem: 1%
+            </p>
+        </section>
+    </article>
+
+    <section>
+        <button onclick="corrida(10)">Corrida rápida (10 voltas)</button>
+        <button onclick="corrida(70)">Grande Prêmio (70 voltas)</button>
+        <button onclick="corrida(160)">Enduro (160 voltas)</button>
+    </section>
+
+    <p class="resultado"></p>
+    <!--
+            <p class="vitorias-pedro">voltas ganhar, Pedro = </p>
+    <p class="vitorias-juca">voltas ganhar, Juca = </p>
+    <p class="vitorias-edna">voltas ganhar, Edna = </p>
+    -->
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
