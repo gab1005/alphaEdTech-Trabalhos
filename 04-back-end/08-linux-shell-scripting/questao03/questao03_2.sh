@@ -7,6 +7,6 @@ read peso
 echo "digite sua altura"
 read altura
 
-echo "pedo=$peso e altura=$altura"
+echo "peso=$peso e altura=$altura"
 
 echo "imc = $(($peso / ($altura*$altura)))"

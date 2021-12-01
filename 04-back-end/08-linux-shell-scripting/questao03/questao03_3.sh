@@ -1,9 +1,12 @@
 #!/bin/bash
 
-echo digite seu peso
-read peso
+read -p "digite seu peso para calculo" peso
+read -p "digite sua altura para calculo" altura
 
-echo digite sua altura
-read altura
+echo $peso
+echo $altura
 
-echo imc = $( $peso / $(( ($altura * $altura)/100 )) )
+
+imc=`echo "scale=2; $peso / ($altura * $altura)" | bc`
+
+echo "seu imc é igual a " $imc
