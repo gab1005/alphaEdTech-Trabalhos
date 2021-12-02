@@ -1,0 +1,24 @@
+:root {
+    --fundo-princial-img: url("./public/images/fundo01.png");
+    --fonte-cor-principal: #eee;
+    --cor-fundo: #222;
+}
+
+@font-face {
+    font-family: fonte-principal;
+    src: url(./public/Roboto/Roboto-Regular.ttf) format(truetype);
+}
+
+body {
+    background-image: var(--fundo-princial-img);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--cor-fundo);
+    font-family: fonte-principal;
+    color: var(--fonte-cor-principal);
+}
+
+input {
+    width: 5vw;
+
+}
