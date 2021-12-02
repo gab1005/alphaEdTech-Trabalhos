@@ -16,9 +16,38 @@ body {
     background-color: var(--cor-fundo);
     font-family: fonte-principal;
     color: var(--fonte-cor-principal);
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+section {
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 input {
     width: 5vw;
+    border-radius: 10px;
+}
+
+.botoes {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.botoes button {
+    margin: 5px;
+    border-radius: 10px;
+
+}
+
+.resultado {
+    background-color: rgba(0, 0, 0, 0.8);
 
 }

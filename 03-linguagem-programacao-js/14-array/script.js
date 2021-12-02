@@ -1,6 +1,7 @@
 let vetor = [];
 
 function armazenar() {
+    const resultado = document.querySelector(".resultado");
     const entrada01 = document.querySelector(".entrada01").value;
     const entrada02 = document.querySelector(".entrada02").value;
     const entrada03 = document.querySelector(".entrada03").value;
@@ -8,9 +9,11 @@ function armazenar() {
 
     vetor = [parseInt(entrada01), parseInt(entrada02), parseInt(entrada03), parseInt(entrada04)];
     console.log(vetor);
+    resultado.innerHTML = vetor;
 }
 
 function inverter() {
+    const resultado = document.querySelector(".resultado");
     let a = vetor[0];
     let b = vetor[1];
     let c = vetor[2];
@@ -22,6 +25,7 @@ function inverter() {
     vetor[3] = a;
 
     console.log(vetor);
+    resultado.innerHTML = vetor;
 
     /**
      *     
@@ -44,4 +48,7 @@ function ordenar() {
             }
         }
     }
+
+    console.log("vetor ordenado = " + vetor)
+    resultado.innerHTML = vetor;
 }
