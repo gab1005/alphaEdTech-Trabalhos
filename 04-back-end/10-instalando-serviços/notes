@@ -1,0 +1,20 @@
+pwd
+cd /var/www/html/
+sudo mkdir nome_pasta
+sudo mkdir nome_pasta02
+ls
+
+sudo chown apache:apache -R "nome_pasta"
+sudo chown apache:apache -R "nome-pasta02"
+sudo vi nome_pasta/index.html
+
+this is site 1 >> :wq!
+
+sudo vi nome_pasta02/index.html
+
+this is site 2 >> :wq!
+
+cd /etc/httpd
+ls
+sudo mkdir sites-available
+sudo mkdir sites-enabled

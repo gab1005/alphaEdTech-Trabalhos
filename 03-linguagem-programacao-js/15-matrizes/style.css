@@ -1,0 +1,9 @@
+@font-face {
+    font-family: fonte-principal;
+    src: url(./public/Roboto/Roboto-Regular.ttf) format(truetype);
+}
+
+body {
+    font-family: fonte-principal;
+    background-color: azure;
+}

@@ -1,0 +1,18 @@
+sudo su
+apt-get install apache2
+
+/etc/init.d/apache2 status
+
+cd /var/www/html/
+ls
+
+rm index.html
+
+vi /etc/hosts
+//criar um ip e nome pro server
+10.10.10.4	www.gabriel.com
+
+//resetar o apache2
+/etc/init.d/apache2 restart
+
+
