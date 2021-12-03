@@ -1,0 +1,12 @@
+>>> Juntar partições
+
+cmd
+- diskpart
+- list disk (ou list volume)
+- select disk "numero"
+- list partition
+- select partition "numero"
+- delete partition override
+
+> apos, bsta ir no gerenciador de disco do windows e lá limpar as partições a esquerda
+da partição que se deseja expandir.
