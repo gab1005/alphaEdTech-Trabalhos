@@ -1,0 +1,23 @@
+Exercícios
+Orientação
+Dicas:
+
+Para instalar o ‘httpd’ do site oficial você poderá ter algumas dificuldades como:
+
+Falta de bibliotecas 
+Erros no momento da execução do ‘./configure’
+De posse do erro, procure na internet copiando o erro e verificando quais bibliotecas devem ser instaladas e instale-as e tente novamente.
+
+Somente após a configuração bem realizada, você poderá executar o comando ‘make’ e depois ‘make install’.
+
+Siga o guia de instalação disponível nas referências e inicialize o servidor.
+
+Caso tenha problemas, veja o erro e procure novamente na internet como resolvê-lo.
+
+ATENÇÃO!
+
+ANOTE todos os comandos que você utilizar e todos os erros que encontrar para facilitar o entendimento e a solução de problemas da instalação.
+
+ 
+
+Não tenha medo de errar! Esta é a hora de tentar e quebrar a cabeça para fazer o servidor funcionar. Em último caso, reinicie o Sistema Operacional e recomece do zero (inclusive a instalação e desinstalação feitas na atividade da aula anterior), suas anotações serão muito úteis nesse caso.

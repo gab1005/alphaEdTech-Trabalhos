@@ -6,4 +6,22 @@
 body {
     font-family: fonte-principal;
     background-color: azure;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    margin: 0px;
+}
+
+button {
+    border-radius: 0px;
+    border: 5px solid black;
+    margin: 0px;
+    width: 5vw;
+    height: 5vw;
+    background-color: black;
+    color: white;
 }
