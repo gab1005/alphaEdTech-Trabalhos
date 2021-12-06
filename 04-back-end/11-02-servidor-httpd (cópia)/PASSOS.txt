@@ -1,0 +1,59 @@
+//preparando para poder usar ifconfig
+sudo apt install net-tools
+
+//configurando maquina virtual para poder usar ctrl+c e ctrl+v
+sudo apt-get installvirtualbox-host-modules
+
+//não funcionou a solução de cima
+//outra solução
+apt-get update
+apt-get install make gcc
+apt-get install linux-headers-$(uname -r)
+init 6
+
+#########
+//baixar versão httpd
+wget https://dlcdn.apache.org//httpd/httpd-2.4.51.tar.bz2
+
+//descompactar
+//////////tar xjvf httpd-2.4.51.tar.bz2	(comentario)
+sudo apt install bunzip2
+bunzip2 httpd-2.4.51.tar.bz2
+tar xvf httpd-2.4.51.tar
+
+
+//mudar para diretorio extraido
+cd httpd-2.4.51
+
+//rodar ./configure, e ver resultado
+./configure
+
+//apresenta erros...
+
+##########
+//baixando bibliotecas
+sudo apt-get install libapr1 libapr1-dev
+./configure
+
+//apresenta erro...
+wget https://dlcdn.apache.org//apr/apr-util-1.6.1.tar.bz2
+
+//descompactar
+tar xjvf apr-util-1.6.1.tar.bz2
+./configure
+
+//erro...
+sudo apt-get install libapr1-dev libaprutil1-dev
+./configure
+
+//erro...
+sudo apt-get install gcc
+
+//erro..
+sudo apt-get install libpcre3
+
+//erro...
+sudo apt-get install libpcre3-dev
+./configure
+
+//sucesso
