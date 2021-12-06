@@ -1,0 +1,60 @@
+o ubunto server vai  vir com  (dhcp) gerando  ip aleatorio
+
+se deve configurar a maquina virtual para usar bried e assim
+poder ter um ip fixo.
+
+(instalar um servidor ssh para poder acessar ubutno server
+de outros lugares)
+
+proxy address
+mirror address
+particionamento do disco (pegar todo pq vai estar em maquina virtual)
+
+baixar snap canonical-livepatch
+
+lembrar de remover a iso (equivalente a remover o pendrive)
+quando a instalação estiver teminada (desligar a maquina virtual e remorver a iso do ubuntu server
+
+################
+depois de  reiniciar a maquina
+usar:
+sudo apt update (para atualizar o sistema)
+
+sudo apt dist-upgrade	(verificar todas atualizações disponiveis)
+
+sudo apt upgrade (não tinha no video, mas server para baixar atualizações)
+
+snap list	(os snap instalados)
+
+snap	(verifica o que o snap está fazendo, no caso ele vai estar instalando o live-patch
+
+#################
+para configurações de ip,  para poder acessar de fora da maquina virtual:
+(detale que é mais facil mudar pela propria maquina virtual do 
+que por linha de comando)
+
+sudo apt install openssh-server (baixando ssh)
+
+sudo service openssh-server start (NÃO FUNCIONOU NO VIDEO DO DIOLINUX)
+
+ls /etc/init.d	(verificar o que tem nesse diretorio
+
+sudo service ssh start
+
+##################
+fecahr o ubunto service, ir nas configurações da maquina virtual, rede, adaptador 1, cnectado a:, mudar de "nat" para placa em modo bridge
+
+iniciar servidor	(agora o  servidro é basicamente uma outra maquina na rede e não uma "maquina virtual")
+
+###################
+depois de iniciar de  novo o  ubuntu service
+
+ps aux | grep ssh	(verificar  boot)
+
+OBS: agr vc pode acessar o ubunto service pelo  terminal (usando ssh) da sua maquina (seja linux ou windows); basta pegar o ip (ipv4 ou ipv6) ou o nome DNS (acho que se chama DNS) do server (ex: www.ubuntoservice.com); e apos lancar o seguinte codigo na sua maquinha desktop (seja linux ou windows):
+
+ssh username@ipserver (ex: ssh gab1005@192.168.0.102)
+ou
+ssh username@DNS	(ex: ssh gab1005@www.gabriel.com)
+
+OBS_02: é necessário verificar qual porta padrão ele vai usar para fazer a conexão, provavelmente sera a porta padrão

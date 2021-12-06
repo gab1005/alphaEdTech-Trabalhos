@@ -1,0 +1,65 @@
+-não precisa ir no modo avançado nem se preocupar com o nome
+da maquina virtual. So escolhe um nome qq, e carrega a .iso
+baixada ja no pc
+
+-disco rigido:
+o ideal é criar um novo, escolhe qual o tipo de disco rigido,
+o padrão do virtual box é o vti
+
+-armazenamento em disco rígido físico:
+é interessante colocar "dinamicamente alocado", dessa forma não se toma memoria de imediato, no video (diolinux) ele colocou espaço alocado no valor de 500gb,eu vou colocar no valor de 20gb;
+
+-quando confirmar a maquina vai ser criada, agora se deve fazer configurações adicionais nela
+###########
+-clicar na maquina e ir em configurações, na aba sistema pode-se
+modificar o valor que foi definido la atras;
+
+##########################
+-instalando ubunto no virtual box!!!:
+-basta eguir os passos padroes, citados em "notes-ubunto-server"
+-quando terminar as configurações e reiniciar o servidor, é bom espserar um pouco pois vão ter varias atualizações e depois logar normalmente com user name e senha;
+
+-sudo apt update (para atualizar as listas)
+-logo a pos usar:
+-sudo apt upgrade (para fazer downoads)
+
+-apos esperar usar:
+-sudo apt full-upgrade
+
+OBS: comandos uteis:
+-uname -a	(utiliza o kenel em uma versão atualizada/avançada)
+
+-cat /etc/lsb-release	(informações)
+
+-cat /etc/os-release
+
+###################
+COMANDOS UTEIS:
+ifconfig
+sudo apt update
+sudo apt  dist-upgrade
+sudo apt upgrade
+
+snap list
+
+sudo apt install openssh-server
+sudo service ssh start
+
+ps aux | grep ssh	(verificar se o ssh esta rodando)
+
+agora pode-se usar um terminal qq para ter acesso a maquina
+
+ssh name@ip	(provavelmente vai usar porta padrao)
+
+agora esta dentro  do ubunto server e pode trabalhar livremente com ele
+
+no server:
+cd /home/name-user/
+touch arquivo-qualquer
+
+no client:
+cd /home/name-user/
+ls
+(ira  mostar o arquivo criado)
+
+

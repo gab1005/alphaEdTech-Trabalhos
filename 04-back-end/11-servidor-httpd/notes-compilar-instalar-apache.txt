@@ -1,0 +1,70 @@
+//verificar entre os serviços se o apache está rodando
+ps -ef | grep apache
+
+//verifica a versão do apache2
+apache2 -v
+
+//atualizar sistema
+sudo apt-get update
+
+//para remover todo que tenha conexão com apache
+apt-get remove apache*
+
+/etc/init.d/apache2 stop
+
+ps -ef | grep apache
+
+#####
+//agora vamos baixar as dependencias necesarias para poder baixar o apache:
+apt-get install autoconf libtool build-essential libpcre3-dev zlib1g-dev libssl-dev
+
+//trocar pasta
+cd /usr/src
+
+//pegar pelo site o principal
+wget http://apache.mirrors.lucidnetworks.net/httpd/httpd-2.4.3.tar.gz
+
+//baixar as dependencias
+wget http://apache.mirrors.lucidnetworks.net/httpd/httpd-2.4.3-deps.tar.gz
+
+//descompactar
+tar xvfz httpd-2.4.3.tar.gz
+
+//descompactar
+tar xvfz httpd-2.4.3-deps.tar.gz
+
+//trocar diretorio
+cd httpd-2.4.3/srclib
+
+wget https://mirror.netcologne.de/apache.org//apr/apr-iconv-1.2.1.tar.gz
+
+tar xvfz apr-iconv-1.2.1.tar.gz
+
+mv apr-iconv-1.2.1 apr-iconv
+
+wget https://zlib.net/zlib-1.2.7.tar.gz
+
+tar xvfz zlib-1.2.7.tar.gz
+
+mv zlib-1.2.7 zlib
+
+//algum tipo de licensa
+wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.31.tar.gz
+
+tar xvfz pcre-8.31.tar.gz
+
+mv pcre-8.31 pcre
+
+cd ..
+
+//verificar que todas as dependencias estão  de acordo
+./buildconf
+
+
+//configurar o apache
+./configure --enable-mods-shared=all --enable-mpms-shared=all --with-mpm=event --enable-ssl --enable-deflate --enable-headers --enable-expires --enable-rewrite --enable-proxy --enable-unique-id --with-z=/usr/src/httpd-2.4.3/srclib/zlib --with-included-apr
+
+make 
+
+make install
+

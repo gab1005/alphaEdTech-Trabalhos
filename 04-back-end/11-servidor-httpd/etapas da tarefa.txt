@@ -1,0 +1,17 @@
+- ver video de como baixar ubunto server
+
+- baixar ubunto server
+
+- ver video como baixar ftp server no linux
+
+- baixar ftp server
+
+##########
+
+- desistalar httpd
+
+- baixar pelas referencias do kenji o httpd
+
+- configurar (parte dificil)
+
+- criar pagina e upar no pages do httpd
