@@ -1,0 +1,20 @@
+cd /usr/local/apache2
+cd bin
+ls
+cd ..
+ls
+cd htdocs/
+ls
+vi index.html
+rm index.html
+ls
+sudo rm index.html
+ls
+touch index.html
+sudo touch index.html
+ls
+vim index.html
+chmod 777 index.html
+sudo chmod 777 index.html
+vi index.html
+ls

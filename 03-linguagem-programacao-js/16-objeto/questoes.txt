@@ -1,0 +1,45 @@
+1 - Os amigos Pedro e Juca não se conformaram, pois o carrinho da Edna ganhava a maioria das corridas no joguinho que desenvolveram, então eles tiveram uma ideia para resolver este problema: gerar os carrinhos de forma aleatória. 
+
+Então elaboraram as seguintes regras: 
+
+Cada carrinho gerado pode ser de uma das 3 raridades abaixo: 
+
+a. Popular: 60% de chances; 
+b. Sport: 35% de chances; 
+c. Super Sport: 5% de chances; 
+
+Cada carrinho possui 3 atributos: 
+
+a. Velocidade máxima; 
+• Popular: Min.: 180 km/h | Máx.: 200 km/h 
+• Sport: Min.: 195 km/h | Máx.: 215 km/h 
+• Super Sport: Min.: 210 km/h | Máx.: 230 km/h 
+
+b. Velocidade mínima; 
+• Popular: Min.: 110 km/h | Máx.: 130 km/h 
+• Sport: Min.: 125 km/h | Máx.: 145 km/h 
+• Super Sport: Min.: 140 km/h | Máx.: 160 km/h 
+
+c. Derrapagem (%); 
+• Popular: Min.: 3% | Máx.: 4% 
+• Sport: Min.: 2% | Máx.: 3% 
+• Super Sport: Min.: 1%| Máx.: 1.75% 
+
+Os carrinhos de Pedro, Juca e Edna devem ser gerados de forma aleatória e respeitando as regras de montagem acima citadas. 
+
+O vencedor da corrida é determinado pelo carrinho que terminar mais vezes em primeiro lugar
+
+A fórmula para determinar quem ganhou cada volta é a seguinte: 
+Sortear, utilizando o Math.random(), um número entre a Velocidade mínima e a Velocidade máxima, em seguida deve-se subtrair o percentual de derrapagem. O carro com o maior valor vence a volta. 
+
+Regras: 
+
+a. O jogo possui 3 modos de corrida previamente programadas: Corrida rápida (10 voltas), Grande Prêmio (70 voltas) e Enduro (160 voltas). 
+b. Utilizar objetos para o armazenamento dos dados dos carros. 
+
+Desafio opcional: Permitir que cada jogador crie até 5 carros e possa escolher qual carro participará daquela corrida. 
+Desafio opcional 2: Determinar através de um formulário, o número de voltas da corrida.
+
+Resposta:
+
+2 - Publique o material do exercício 1 no seu GitHub.
