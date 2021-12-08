@@ -231,9 +231,9 @@ function corrida(voltas) {
         //controle em caso de erro
         else {
             console.log("erro no calculo das voltas")
-            console.log("velocidade dos carros = " + pedro, juca, edna);
+            console.log("velocidade dos carros = ", pedro, juca, edna);
         }
-        console.log("contagem das voltas pedro, juca, edna =" + pedroV, jucaV, ednaV);
+        console.log("contagem das voltas pedro, juca, edna = ", pedroV, jucaV, ednaV);
     }
 
     //calcular quem ganhou a corrida###########################
@@ -288,9 +288,12 @@ function corrida(voltas) {
 
     //colocar resultado de quem ganhou a corrida  no html
     const testeResultado = document.querySelector(".resultado");
+
+    /** 
     const vitoriasPedro = document.querySelector(".vitorias-pedro");
     const vitoriasJuca = document.querySelector(".vitorias-Juca");
     const vitoriasEdna = document.querySelector(".vitorias-edna");
+     */
 
     testeResultado.textContent = vencedor;
 
