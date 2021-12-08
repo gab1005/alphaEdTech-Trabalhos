@@ -1,0 +1,74 @@
+//referencia:
+"https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-18-04-pt"
+
+//Passo 1 — Criando o certificado SSL
+//atenção que deve-se especificar o diretorio de criação do .key e do .crt
+"sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt"
+
+//aparecera um campo de perguntas, a unica obrigatoria (que tem importancia para o funcionamento) é a que pede o nome ou ip do seu site
+
+//Preencha os prompts devidamente. A linha mais importante é aquela que solicita o Nome comum (por exemplo, o servidor FQDN ou o SEU nome). Você precisa digitar o nome do domínio associado ao seu servidor ou, mais provável, o endereço IP público do seu servidor.
+
+//Output
+/*
+Country Name (2 letter code) [AU]:US
+State or Province Name (full name) [Some-State]:New York
+Locality Name (eg, city) []:New York City
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:Bouncy Castles, Inc.
+Organizational Unit Name (eg, section) []:Ministry of Water Slides
+Common Name (e.g. server FQDN or YOUR name) []:server_IP_address
+Email Address []:admin@your_domain.com
+*/
+"10.0.0.4"
+
+//Passo 2 — Configurando o Apache para usar o SSL
+/*
+1 - Criaremos um snippet de configuração para especificar configurações padrão robustas do SSL.
+2 - Vamos modificar o arquivo SSL Apache Host Virtual incluso para apontar para nossos certificados SSL gerados.
+3 - (Recomendado) Modificaremos o arquivo de Host Virtual não criptografado para redirecionar automaticamente as solicitações para o Host Virtual criptografado.
+*/
+//Criando um snippet de configuração do Apache com configurações de criptografia robustas
+//Crie um novo snippet no diretório /etc/apache2/conf-available. Vamos nomear o arquivo ssl-params.conf para deixar seu objetivo claro:
+
+//OBS: no caso eu não tinha o /apache2 no /etc/ entao copiei ele para la:
+"sudo cp -r /usr/local/apache2 /etc"
+
+//criando ssl-params.conf e  abrindo ele com nano
+"sudo nano /etc/apache2/conf-available/ssl-params.conf"
+
+//no caso  eu usei o vim, ficando:
+"sudo vi /etc/apache2/conf-available/ssl-params.conf"
+
+//OBS: os comandos para criar "ssl-params.conf" não deram certo pois aparentemente (pelo menos usando o vim) eu teria que configurar o chmod (permissão) do arquivo; como alternativa eu criei as pastar o arquivo e depois mudei permissão com chmod
+"sudo mkdir /etc/apache2/conf-available/"
+
+"cd conf-available/"
+
+"sudo touch ssl-params.conf"
+
+"sudo chmod 777 ssl-params.conf"
+
+"vi ssl-params.conf"
+
+//dentro de ssl-params.conf, adicionei o sequinte conteudo
+"atenção: copiar o comentario a baixo"
+/*
+SSLCipherSuite EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH
+SSLProtocol All -SSLv2 -SSLv3 -TLSv1 -TLSv1.1
+SSLHonorCipherOrder On
+# Disable preloading HSTS for now.  You can use the commented out header line that includes
+# the "preload" directive if you understand the implications.
+# Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+Header always set X-Frame-Options DENY
+Header always set X-Content-Type-Options nosniff
+# Requires Apache >= 2.4
+SSLCompression off
+SSLUseStapling on
+SSLStaplingCache "shmcb:logs/stapling-cache(150000)"
+# Requires Apache >= 2.4.11
+SSLSessionTickets Off
+*/
+
+//Modificando o arquivo padrão de Host Virtual SSL do Apache
+
+

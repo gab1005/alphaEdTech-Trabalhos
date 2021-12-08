@@ -57,7 +57,7 @@ sudo apt-get install libpcre3-dev
 ./configure
 
 //sucesso no ./configure
-###########3
+###########
 //agora usar o make e make install
 make
 

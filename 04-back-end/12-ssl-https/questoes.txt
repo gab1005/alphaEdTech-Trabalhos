@@ -1,0 +1,8 @@
+1 - Qual a vantagem do uso do OpenSSL para servidores web?
+resporta:
+o protocolo SSL (Secure Sockets Layer) ou TLS (Transport Layer Security), versão 'evoluída' do  SSL; trabalha criptografando as mensagens trocadas entre cliente e servidor, ele que altera o http para https (onde o "s" de security).
+
+2 - Crie chaves auto assinadas utilizando OpenSSL.
+Envie a imagem da resolução do exercício.
+
+3 - Altere a configuração do Apache 2 (httpd) incluindo as chaves e faça o teste de acesso seguro HTTPS (porta 443).
