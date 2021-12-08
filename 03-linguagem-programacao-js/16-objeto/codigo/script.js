@@ -5,17 +5,17 @@ const carros = {
     "popular": {
         "vMax": [180, 200],
         "vMin": [110, 130],
-        "der": [parseFloat(0.03), parseFloat(0.04)]
+        "der": [parseFloat(0.03), parseFloat(0.04)],
     },
     "esporte": {
         "vMax": [195, 215],
         "vMin": [125, 145],
-        "der": [parseFloat(0.02), parseFloat(0.03)]
+        "der": [parseFloat(0.02), parseFloat(0.03)],
     },
     "superEsporte": {
         "vMax": [210, 230],
         "vMin": [140, 160],
-        "der": [parseFloat(0.01), (0.0175)]
+        "der": [parseFloat(0.01), parseFloat(0.0175)],
     },
 };
 
@@ -24,22 +24,23 @@ const carrosMedias = {
     "popular": {
         "vMax": Math.random() * (carros.popular.vMax[1] - carros.popular.vMax[0]) + carros.popular.vMax[0],
         "vMin": Math.random() * (carros.popular.vMin[1] - carros.popular.vMin[0]) + carros.popular.vMin[0],
-        "der": (Math.random() * ((carros.popular.der[1] - carros.popular[0]) * 100) + (carros.popular.der[0] * 100)) / 100,
+        "der": Math.random() * (carros.popular.der[1] - carros.popular.der[0]) + carros.popular.der[0],
     },
     "esporte": {
         "vMax": Math.random() * (carros.esporte.vMax[1] - carros.esporte.vMax[0]) + carros.esporte.vMax[0],
         "vMin": Math.random() * (carros.esporte.vMin[1] - carros.esporte.vMin[0]) + carros.esporte.vMin[0],
-        "der": Math.random() * (carros.esporte.der[1] - carros.esporte[0]) + carros.esporte.der[0]
+        "der": Math.random() * (carros.esporte.der[1] - carros.esporte.der[0]) + carros.esporte.der[0],
     },
     "superEsporte": {
         "vMax": Math.random() * (carros.superEsporte.vMax[1] - carros.superEsporte.vMax[0]) + carros.superEsporte.vMax[0],
         "vMin": Math.random() * (carros.superEsporte.vMin[1] - carros.superEsporte.vMin[0]) + carros.superEsporte.vMin[0],
-        "der": Math.random() * (carros.superEsporte.der[1] - carros.superEsporte[0]) + carros.superEsporte.der[0]
+        "der": Math.random() * (carros.superEsporte.der[1] - carros.superEsporte.der[0]) + carros.superEsporte.der[0],
     }
-}
+};
 
 console.log(carros);
 console.log(carrosMedias);
+console.log(carrosMedias.popular.der);
 
 //função para sortear carro de acordo com probabilidade, retornar carroSorteado
 let carroSorteado = 0;
@@ -76,7 +77,7 @@ function carrosPedro() {
         der = carrosMedias.popular.der;               //ja pega  o valor random  da DERRAPAPGEM, de acordo com o objeto  "carrosMedias"
 
         vMedia = Math.random() * (vMax - vMin) + vMin;  //valor random da velocidade, calculada de acordo com o intervalo entre vMaxima e v Minima
-        velocidadeFinal = vMedia - der;                         //vMedia menos o valor de derrapagme (o random da derrapagem ja foi  calculado e passado para "der")
+        velocidadeFinal = vMedia - (vMedia * der);              //calcula velocidade menos derrapagem
 
         return parseFloat(velocidadeFinal);
     } else if (numeroCarro == 2) {
@@ -85,7 +86,7 @@ function carrosPedro() {
         der = carrosMedias.esporte.der;
 
         vMedia = Math.random() * (vMax - vMin) + vMin;
-        velocidadeFinal = vMedia - der;
+        velocidadeFinal = vMedia - (vMedia * der);
 
         return parseFloat(velocidadeFinal);
     } else if (numeroCarro == 3) {
@@ -94,7 +95,7 @@ function carrosPedro() {
         der = carrosMedias.superEsporte.der;
 
         vMedia = Math.random() * (vMax - vMin) + vMin;
-        velocidadeFinal = vMedia - der;
+        velocidadeFinal = vMedia - (vMedia * der);
 
         return parseFloat(velocidadeFinal);
     }
@@ -114,7 +115,7 @@ function carrosJuca() {
         der = carrosMedias.popular.der;
 
         vMedia = Math.random() * (vMax - vMin) + vMin;
-        velocidadeFinal = vMedia - der;
+        velocidadeFinal = vMedia - (vMedia * der);
 
         return parseFloat(velocidadeFinal);
     } else if (numeroCarro == 2) {
@@ -123,7 +124,7 @@ function carrosJuca() {
         der = carrosMedias.esporte.der;
 
         vMedia = Math.random() * (vMax - vMin) + vMin;
-        velocidadeFinal = vMedia - der;
+        velocidadeFinal = vMedia - (vMedia * der);
 
         return parseFloat(velocidadeFinal);
     } else if (numeroCarro == 3) {
@@ -132,7 +133,7 @@ function carrosJuca() {
         der = carrosMedias.superEsporte.der;
 
         vMedia = Math.random() * (vMax - vMin) + vMin;
-        velocidadeFinal = vMedia - der;
+        velocidadeFinal = vMedia - (vMedia * der);
 
         return parseFloat(velocidadeFinal);
     }
@@ -152,7 +153,7 @@ function carrosEdnas() {
         der = carrosMedias.popular.der;
 
         vMedia = Math.random() * (vMax - vMin) + vMin;
-        velocidadeFinal = vMedia - der;
+        velocidadeFinal = vMedia - (vMedia * der);
 
         return parseFloat(velocidadeFinal);
     } else if (numeroCarro == 2) {
@@ -161,7 +162,7 @@ function carrosEdnas() {
         der = carrosMedias.esporte.der;
 
         vMedia = Math.random() * (vMax - vMin) + vMin;
-        velocidadeFinal = vMedia - der;
+        velocidadeFinal = vMedia - (vMedia * der);
 
         return parseFloat(velocidadeFinal);
     } else if (numeroCarro == 3) {
@@ -170,7 +171,7 @@ function carrosEdnas() {
         der = carrosMedias.superEsporte.der;
 
         vMedia = Math.random() * (vMax - vMin) + vMin;
-        velocidadeFinal = vMedia - der;
+        velocidadeFinal = vMedia - (vMedia * der);
 
         return parseFloat(velocidadeFinal);
     }
@@ -293,10 +294,12 @@ function corrida(voltas) {
 
     testeResultado.textContent = vencedor;
 
+
     /**
     vitoriasPedro.textContent += pedroV;
     vitoriasJuca.textContent += jucaV;
     vitoriasEdna.textContent += ednaV;
      */
+
 
 }
