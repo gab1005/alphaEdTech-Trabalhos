@@ -1,7 +1,7 @@
 //referencia:
 "https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-18-04-pt"
 
-//Passo 1 — Criando o certificado SSL
+Passo 1 — Criando o certificado SSL
 //atenção que deve-se especificar o diretorio de criação do .key e do .crt
 "sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt"
 
@@ -19,9 +19,10 @@ Organizational Unit Name (eg, section) []:Ministry of Water Slides
 Common Name (e.g. server FQDN or YOUR name) []:server_IP_address
 Email Address []:admin@your_domain.com
 */
+//Colocar no "Common Name"
 "10.0.0.4"
 
-//Passo 2 — Configurando o Apache para usar o SSL
+Passo 2 — Configurando o Apache para usar o SSL
 /*
 1 - Criaremos um snippet de configuração para especificar configurações padrão robustas do SSL.
 2 - Vamos modificar o arquivo SSL Apache Host Virtual incluso para apontar para nossos certificados SSL gerados.
@@ -70,5 +71,137 @@ SSLSessionTickets Off
 */
 
 //Modificando o arquivo padrão de Host Virtual SSL do Apache
+"cd /etc/apache2"
 
+"mkdir sites-available"
+
+"cd sites-available"
+
+"sudo touch default-ssl.conf"
+
+"sudo chmod 777 default-ssl.conf"
+
+"vi default-ssl.conf"
+
+//Antes de continuar, vamos voltar para o arquivo de Host Virtual SSL original:
+
+"sudo cp /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-available/default-ssl.conf.bak"
+
+"cd /etc/apache2/sites-available/"
+
+"sudo chmod 777 default-ssl.conf.bak"
+
+//colar isto nos dois arquivos:
+//abra-os com 
+"vi default-ssl.conf.bak"
+"vi default-ssl.conf"
+//cole:
+/*
+<IfModule mod_ssl.c>
+        <VirtualHost _default_:443>
+                ServerAdmin webmaster@localhost
+
+                DocumentRoot /var/www/html
+
+                ErrorLog ${APACHE_LOG_DIR}/error.log
+                CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+                SSLEngine on
+
+                SSLCertificateFile      /etc/ssl/certs/ssl-cert-snakeoil.pem
+                SSLCertificateKeyFile /etc/ssl/private/ssl-cert-snakeoil.key
+
+                <FilesMatch "\.(cgi|shtml|phtml|php)$">
+                                SSLOptions +StdEnvVars
+                </FilesMatch>
+                <Directory /usr/lib/cgi-bin>
+                                SSLOptions +StdEnvVars
+                </Directory>
+
+        </VirtualHost>
+</IfModule>
+*/
+
+fazer as sequintes alterações no documento "default-ssl.conf",  nos textos que estao entre 3 tags.
+
+/*
+<IfModule mod_ssl.c>
+        <VirtualHost _default_:443>
+                ServerAdmin <<<your_email@example.com>>>
+	     <<<ServerName server_domain_or_IP>>>
+                DocumentRoot /var/www/html
+
+                ErrorLog ${APACHE_LOG_DIR}/error.log
+                CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+                SSLEngine on
+
+                SSLCertificateFile      /etc/ssl/certs/<<<apache-selfsigned.crt>>>
+                SSLCertificateKeyFile /etc/ssl/private/<<<apache-selfsigned.key>>>
+
+                <FilesMatch "\.(cgi|shtml|phtml|php)$">
+                                SSLOptions +StdEnvVars
+                </FilesMatch>
+                <Directory /usr/lib/cgi-bin>
+                                SSLOptions +StdEnvVars
+                </Directory>
+
+        </VirtualHost>
+</IfModule>
+*/
+
+//Recomendado: Modificando o arquivo de host HTTP para redirecionar para HTTPS
+
+"cd /etc/apache2/sites-available/"
+
+"sudo touch 000-default.conf"
+
+"sudo chmod 777 000-default.conf"
+
+"vi 000-default.conf"
+
+//Lá, dentro dos blocos de configuração VirtualHost, precisamos adicionar uma diretiva Redirect, que direciona todo o tráfego para a versão SSL do site:
+
+/*
+<VirtualHost *:80>
+        . . .
+
+        Redirect "/" "https://your_domain_or_IP/"
+
+        . . .
+</VirtualHost>
+*/
+
+Passo 3 — Como ajustar o Firewall
+//Podemos ver os perfis disponíveis digitando:
+"sudo ufw app list"
+
+//Você pode verificar a configuração atual do firewall digitando:
+"sudo ufw status"
+
+//dependendo do  status entre inactive e active, mostrarar apenas
+status: inactive
+ou
+/*Output
+Status: active
+
+To                         Action      From
+--                         ------      ----
+OpenSSH                    ALLOW       Anywhere
+Apache                     ALLOW       Anywhere
+OpenSSH (v6)               ALLOW       Anywhere (v6)
+Apache (v6)                ALLOW       Anywhere (v6)
+*/
+//no caso meu firewall estava desabilitado, lancei  esse comando pra habilitar ele.
+"sudo ufw enable"
+
+//liberar todas instancias do apache
+"sudo ufw allow 'Apache Full'"	//deu erro, não encontrado
+
+//retirar o(s) que tenham apenas Apache no nome
+"sudo ufw delete allow 'Apache'"	//deu erro, não encontrado
+
+//No caso vou desabilitar o fire wall para ver se funciona
+
+Passo 4 — Habilitando as alterações no Apache
 

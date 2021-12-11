@@ -1,0 +1,13 @@
+:root {
+    --fundo-cor: tomato;
+}
+
+@font-face {
+    font-family: font-main;
+    src: url(./public/fonts/Roboto/Roboto-Regular.ttf);
+}
+
+body {
+    font-family: font-main;
+    background-color: var(--fundo-cor);
+}

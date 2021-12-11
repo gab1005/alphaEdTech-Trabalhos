@@ -1,0 +1,14 @@
+1 - v2 - Os amigos Pedro, Juca e Edna continuam trabalhando em seu joguinho de corrida e dessa vez eles resolveram incluir uma função de evolução dos carrinhos. 
+
+Distribuição de pontos de experiência por corrida: 
+a. Primeiro Lugar: 200 pontos; 
+b. Segundo Lugar: 120 pontos; 
+c. Terceiro Lugar: 50 pontos; 
+
+Para que um carrinho passe de nível, são necessários 450 pontos. Cada vez que um carrinho passar de nível, adicione 1% da pontuação atual às velocidades Mínima e Máxima. O maior nível possível é 10. 
+
+Ex.: Velocidade mínima de 150 + 1% = 151,5. 
+
+Para a atualização do joguinho, os carrinhos de cada jogador devem ser armazenados em um vetor de objetos. 
+
+Adicione um botão para evoluir os carrinhos para cada jogador. O botão deve percorrer os carrinhos daquele jogador utilizando o método forEach() e executar as ações de atualização necessárias. 

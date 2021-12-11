@@ -38,11 +38,13 @@ const carrosMedias = {
     }
 };
 
-console.log(carros);
+/**
+ * console.log(carros);
 console.log(carrosMedias);
 console.log(carrosMedias.popular.der);
+ */
 
-//função para sortear carro de acordo com probabilidade, retornar carroSorteado
+//sorteia os carros, retorna um numero (1,2,3) 
 let carroSorteado = 0;
 function selecionarCarro() {
     let prob = parseFloat(Math.random() * 100);
@@ -62,7 +64,7 @@ function selecionarCarro() {
     return carroSorteado;
 }
 
-//a partir do carro selecionado tem a velocidade do carro
+//(selecionarCarro() + carrosMedias) => velocidade dos corredores
 function carrosPedro() {
     numeroCarro = selecionarCarro();
     let vMax;
@@ -79,7 +81,6 @@ function carrosPedro() {
         vMedia = Math.random() * (vMax - vMin) + vMin;  //valor random da velocidade, calculada de acordo com o intervalo entre vMaxima e v Minima
         velocidadeFinal = vMedia - (vMedia * der);              //calcula velocidade menos derrapagem
 
-        return parseFloat(velocidadeFinal);
     } else if (numeroCarro == 2) {
         vMax = carrosMedias.esporte.vMax;
         vMin = carrosMedias.esporte.vMin;
@@ -88,7 +89,6 @@ function carrosPedro() {
         vMedia = Math.random() * (vMax - vMin) + vMin;
         velocidadeFinal = vMedia - (vMedia * der);
 
-        return parseFloat(velocidadeFinal);
     } else if (numeroCarro == 3) {
         vMax = carrosMedias.superEsporte.vMax;
         vMin = carrosMedias.superEsporte.vMin;
@@ -97,8 +97,8 @@ function carrosPedro() {
         vMedia = Math.random() * (vMax - vMin) + vMin;
         velocidadeFinal = vMedia - (vMedia * der);
 
-        return parseFloat(velocidadeFinal);
     }
+    return parseFloat(velocidadeFinal);
 }
 
 function carrosJuca() {
@@ -178,7 +178,7 @@ function carrosEdnas() {
     console.log("carrosEdna funciona", velocidadeFinal);
 }
 
-//esse obj carrosVeocidades retorna a veolocidade de cada corredor, em cada volta
+//RECEBE: (carrosPedro, ...Juca, ...Ednas) => RETORNA: velocidade dos corredores
 const carrosVelocidade = {
     pedro() {
         let resultado = 0;
@@ -187,12 +187,12 @@ const carrosVelocidade = {
     },
     juca() {
         let resultado = 0;
-        resultado = carrosPedro();
+        resultado = carrosJuca();
         return parseFloat(resultado);
     },
     edna() {
         let resultado = 0;
-        resultado = carrosPedro();
+        resultado = carrosEdnas();
         return parseFloat(resultado);
     }
 };
@@ -212,9 +212,9 @@ function corrida(voltas) {
     for (var i = 0; i < voltas; i++) {
         //calcula quem ganhou a volta
         //pegando velocidades de ada volta, de cada carro
-        var pedro = carrosVelocidade.pedro();
-        var juca = carrosVelocidade.juca();
-        var edna = carrosVelocidade.edna();
+        let pedro = carrosVelocidade.pedro();
+        let juca = carrosVelocidade.juca();
+        let edna = carrosVelocidade.edna();
 
         if (pedro > juca && pedro > edna) {
             //adicionando vitorias ao pedro, 
@@ -234,6 +234,7 @@ function corrida(voltas) {
             console.log("velocidade dos carros = ", pedro, juca, edna);
         }
         console.log("contagem das voltas pedro, juca, edna = ", pedroV, jucaV, ednaV);
+        console.log("velocidade dos carros = ", pedro, juca, edna);
     }
 
     //calcular quem ganhou a corrida###########################
@@ -274,7 +275,7 @@ function corrida(voltas) {
 
     }
 
-    //contagem de quem foi o vencedor da corrida
+    //contagem de quem foi o vencedor da corrida**********************
     if (pedroV > jucaV && pedroV > ednaV) {
         vencedor = "pedro";
     } else if (jucaV > pedroV && jucaV > ednaV) {
@@ -288,21 +289,16 @@ function corrida(voltas) {
 
     //colocar resultado de quem ganhou a corrida  no html
     const testeResultado = document.querySelector(".resultado");
+    testeResultado.textContent = vencedor;
 
-    /** 
+    /** adicionar vitorias dos corredores, deu erro
     const vitoriasPedro = document.querySelector(".vitorias-pedro");
     const vitoriasJuca = document.querySelector(".vitorias-Juca");
     const vitoriasEdna = document.querySelector(".vitorias-edna");
      */
-
-    testeResultado.textContent = vencedor;
-
-
     /**
     vitoriasPedro.textContent += pedroV;
     vitoriasJuca.textContent += jucaV;
     vitoriasEdna.textContent += ednaV;
      */
-
-
 }
