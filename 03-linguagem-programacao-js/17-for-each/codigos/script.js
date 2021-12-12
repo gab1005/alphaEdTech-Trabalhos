@@ -96,6 +96,10 @@ function selecionarCarro() {
     return carroSorteado;
 }
 
+let pedroValores = { velocidade: 0, level: parseInt(0), xp: parseInt(0) };
+let jucaValores = { velocidade: 0, level: parseInt(0), xp: parseInt(0) };
+let ednaValores = { velocidade: 0, level: parseInt(0), xp: parseInt(0) };
+
 //(selecionarCarro() + carrosMedias) => velocidade dos corredores
 function carrosPedro() {
     numeroCarro = selecionarCarro();
@@ -205,29 +209,42 @@ function carrosEdnas() {
     return parseFloat(velocidadeFinal);
 }
 
+
 //RECEBE: (carrosPedro, ...Juca, ...Ednas) => RETORNA: velocidade dos corredores
 const carrosVelocidade = {
     pedro() {
         let resultado = 0;
         resultado = carrosPedro();
+        resultado = resultado + ((resultado / 100.0) * pedroValores.level);
         return parseFloat(resultado);
     },
     juca() {
         let resultado = 0;
         resultado = carrosJuca();
+        resultado = resultado + ((resultado / 100.0) * jucaValores.level);
         return parseFloat(resultado);
     },
     edna() {
         let resultado = 0;
         resultado = carrosEdnas();
+        resultado = resultado + ((resultado / 100.0) * ednaValores.level);
         return parseFloat(resultado);
     }
 };
+
+pedroValores.velocidade = carrosVelocidade.pedro();
+jucaValores.velocidade = carrosVelocidade.juca();
+ednaValores.velocidade = carrosVelocidade.edna();
 
 //variaveis para guardar as vitorias dos carros  de CADA VOLTA
 var pedroV = 0;
 var jucaV = 0;
 var ednaV = 0;
+
+//soma das vitorias
+let totalpv = 0;
+let totaljv = 0;
+let totalev = 0;
 
 //funcao da corrida
 function corrida(voltas) {
@@ -399,66 +416,68 @@ function corrida(voltas) {
 
     console.log("vitorias de voltas de cada corredor: \n", "pedro =", pedroV, "juca =", jucaV, "edna =", ednaV);
     console.log("podio: \n", "vencedor=", vencedor, "segundo=", segundo, "terceiro=", terceiro);
+
     //#########NIVEL E XP - METODO forEach
-    //consegui definir o podio
-    //falta acressentar o xp a cada corredor
-    const corredeoresXp = [
-        {
-            "pedro": {
-                'xp': pedroXp,
-                'level': 0,
-            }
-        },
+    /**
+     *   let pedroXp = 0;
+    let jucaXp = 0;
+    let ednaXp = 0;
+     *///passando xp para os objetos
 
-        {
-            "juca": {
-                'xp': jucaXp,
-                'level': 0,
-            }
-        },
 
-        {
-            "edna": {
-                'xp': ednaXp,
-                'level': 0,
-            }
-        },
-    ];
-    var marcas = [{ marca: 'Ford', modelo: 'Focus' },
-    { marca: 'BMW', modelo: 'BMW Z4' },
-    { marca: 'Fiat', modelo: 'Palio' },
-    { marca: 'Audi', modelo: 'A3' }];
+    //array quer  sera chamado pelo metodo forEach().
+    let podio = [pedroValores, jucaValores, ednaValores];
 
-    marcas.forEach((elemento) => {
-        console.log("Marca: " + elemento.marca + " - modelo: " + elemento.modelo);
-    })
+    pedroValores.xp += parseInt(pedroXp);
+    jucaValores.xp += parseInt(jucaXp);
+    ednaValores.xp += parseInt(ednaXp);
 
-    function levelUp(array) {
-        console.log(array.pedro.xp);
+    //Os objetos pedroValores, jucaValores, ednaValores  recebem velocidade final, ja calculada
+
+
+    function levelUp(item) {
+        if (item.xp >= 450) {
+            item.level += parseInt(1);
+            item.xp -= parseInt(450);
+        }
+        if (item.level >= 10) {
+            item.level = 10;
+        }
     }
-    corredeoresXp.forEach(levelUp);
 
+    podio.forEach(levelUp);
 
+    function modificarVelocidade(item) {
+        item.velocidade = item.velocidade + ((item.velocidade / 100.0) * item.level);
+    }
 
-    //colocar resultado de quem ganhou a corrida  no html
+    podio.forEach(modificarVelocidade);
+
+    console.log(podio);
+
+    //colocando resultado no html
     const testeResultado = document.querySelector(".resultado");
-    testeResultado.textContent = vencedor;
+    testeResultado.textContent = "vencedor = " + vencedor + ", Segundo = " + segundo + ", terceiro = " + terceiro;
 
-    /**
-    a. Primeiro Lugar: 200 pontos; 
-    b. Segundo Lugar: 120 pontos; 
-    c. Terceiro Lugar: 50 pontos; 
-     */
+    const pedrohtml = document.querySelector("#pedro");
+    const jucahtml = document.querySelector("#juca");
+    const ednahtml = document.querySelector("#edna");
 
-    /** adicionar vitorias dos corredores, deu erro
-    const vitoriasPedro = document.querySelector(".vitorias-pedro");
-    const vitoriasJuca = document.querySelector(".vitorias-Juca");
-    const vitoriasEdna = document.querySelector(".vitorias-edna");
-     */
-    /**
-    vitoriasPedro.textContent += pedroV;
-    vitoriasJuca.textContent += jucaV;
-    vitoriasEdna.textContent += ednaV;
-     */
+    pedrohtml.textContent = "pedro xp = " + pedroValores.xp + ", pedro lv = " + pedroValores.level;
+    jucahtml.textContent = "juca xp = " + jucaValores.xp + ", juca lv = " + jucaValores.level;
+    ednahtml.textContent = "edna xp = " + ednaValores.xp + ", edna lv = " + ednaValores.level;
+
+    const vitoriasPedro = document.querySelector("#vitorias-pedro");
+    const vitoriasJuca = document.querySelector("#vitorias-Juca");
+    const vitoriasEdna = document.querySelector("#vitorias-edna");
+
+    totalpv += pedroV;
+    totaljv += jucaV;
+    totalev += ednaV;
+
+    vitoriasPedro.textContent = "Pedro =" + totalpv;
+    vitoriasJuca.textContent = "juca =" + totaljv;
+    vitoriasEdna.textContent = "Edna" + totalev;
+
 }
 
