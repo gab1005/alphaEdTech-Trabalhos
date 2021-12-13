@@ -18,3 +18,16 @@ vi httpd.conf
 cd /usr/local/apache2/htdocs
 vi index.html
 //tem a mensagem que aparece em 10.0.0.4
+
+###########3
+//se tudo der errado, lembrar de reiniciar o servidor
+//provavelmente vai estar em:
+"cd /etc/init.d/apche2"
+//use o comando
+"/etc/init.d/apche2 restart"
+//ou 
+... start
+ou
+... stop
+ou
+... status
