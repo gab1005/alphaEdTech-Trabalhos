@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <title>18-js | map</title>
+</head>
+
+<body>
+    <header>
+        <h1>planinha da Joana</h1>
+    </header>
+
+    <main>
+        <article>
+            <form action="">
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Nome do Cliente</th>
+                            <th>Data de Compra</th>
+                            <th>Data de Vencimento</th>
+                            <th>Valor do Produto</th>
+                        </tr>
+
+                        <tr>
+                            <td><input class="tabela-nome" type="text" name="nome-cliente" value=""></td>
+                            <td><input class="tabela-data-compra" type="date" name="data-compra" value=""></td>
+                            <td><input class="tabela-data-vencimento" type="date" name="data-vencimento" value="">
+                            </td>
+                            <td><input class="tabela-valor" type="number" name="valor-produto" value=""></td>
+                        </tr>
+                    </thead>
+
+                    <tbody class="tabela-resultado">
+
+                    </tbody>
+
+                    <tfoot class="clientes-juros">
+                        <tr>
+                            <th>Nome Cliente</th>
+                            <th>Juros Acumulados</th>
+                            <th>Total a Pagar</th>
+                            <th>----------------------</th>
+                        </tr>
+                    </tfoot>
+                </table>
+
+                <button type="reset" onclick="mostrarValores()">adicionar</button>
+                <button type="button" onclick="mostrarJuros()">Mostra juros</button>
+            </form>
+        </article>
+    </main>
+
+</body>
+
+</html>

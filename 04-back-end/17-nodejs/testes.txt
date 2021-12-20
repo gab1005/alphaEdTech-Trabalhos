@@ -1,0 +1,34 @@
+mkdir tes-expresss
+
+cd test-express
+
+npm init
+
+//enter em tudo
+
+//criou acote jason
+
+cat package.jason
+
+//mostrar insformações
+
+npm install expresss --save
+//instalando o pacote do express
+
+//agr temos 3 arquivos
+
+//entre eles o node_modules
+
+cat package.json
+
+//dependencies foram  adicionadas
+
+//se apagar o node modules que tem o express, no arquivo json salva as dependencias, assim quando baixar do github, fica salvo no json as dependencias, basta dar um
+
+npm install
+
+//e ele instala todas as dependencias presentes no arquivo json.
+
+node index.js
+
+//roda na porta 3000
