@@ -1,0 +1,16 @@
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+th, td{
+    padding: 10px 20px;
+    border: 1px solid #000;
+}
+
+tfoot{
+    background-color: blanchedalmond;
+}
+
+section{
+    margin-top: 15px;
+}
