@@ -1,0 +1,12 @@
+{
+  "name": "serve-node",
+  "version": "1.0.0",
+  "description": "testando serve node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "gabriel de sousa",
+  "license": "ISC"
+}

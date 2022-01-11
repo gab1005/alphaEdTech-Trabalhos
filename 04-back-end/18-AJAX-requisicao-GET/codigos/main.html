@@ -1,0 +1,23 @@
+<html><input type="text" name="id" /> <input type="button" value="consultar" onclick="cliked()" /> <br />
+<div id="result"></div>
+<script>function reqListener() {
+        console.log(this.responseText);
+        document.getElementById("result").innerHTML = this.responseText;
+    };
+
+    function clicked() {
+        var oReq = new XMLHttpRequist();
+        oReq.onload = reqListener;
+        oReq.open("get", "/teste", true);
+        oReq.send();
+    }</script>
+
+</html>`
+return false;
+} else {
+fs.readFile("arquivo.txt" function (err, data) {
+res.setHeader("content-type", "text/html");
+res.send(data);
+return false;
+});
+})

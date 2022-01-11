@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "19-ajax-fetch",
+  "version": "1.0.0",
+  "description": "requisição get que retorna tabela de clientes",
+  "main": "server.js",
+  "author": "gabriel de sousa",
+  "license": "ISC"
+}

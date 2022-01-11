@@ -1,0 +1,14 @@
+{
+  "name": "teste01",
+  "version": "1.0.0",
+  "description": "testando ajax com XmlHttpRequest",
+  "main": "xhr.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "gabriel de sousa",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}

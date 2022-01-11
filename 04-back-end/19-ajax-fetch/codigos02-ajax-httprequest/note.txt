@@ -1,0 +1,15 @@
+//nomes importanes de lembrar do XMLHttpRequest
+
+xhr.onreadystatechange
+
+this.readyState
+
+this.status
+
+JSON.parse(this.responseText)
+
+---
+
+xhr.open
+
+xhr.send
