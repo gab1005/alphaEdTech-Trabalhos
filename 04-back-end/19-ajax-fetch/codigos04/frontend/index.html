@@ -7,17 +7,21 @@
 </head>
 
 <body>
-    <h1>fazer pedido para o servidor</h1>
+    <h1>testando varios retrornos</h1>
 
-    <input type="text" placeholder="escreva sua pesquisa aqui">
-    <select name="selecionar-tipo" id="opcoes">
-        <option value="id">id</option>
-        <option value="name">nome</option>
-        <option value="email">E-mail</option>
-    </select>
+    <button onclick="home()">home</button>
 
-    <button onclick="solicitacao()">fazer pedido</button>
-    <p class="resposta"></p>
+    <button onclick="designs()">designs</button>
+
+    <button onclick="devFrontEnd()">dev front end</button>
+
+    <button onclick="devBackEnd()">dev back end</button>
+
+    <table border="1" id="tabela-resposta">
+        <tr>
+            <td id="bloco-resposta"></td>
+        </tr>
+    </table>
 
     <script src="front-script.js"></script>
 </body>
