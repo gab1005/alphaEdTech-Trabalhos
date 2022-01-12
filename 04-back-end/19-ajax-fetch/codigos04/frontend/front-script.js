@@ -1,36 +1,32 @@
-const url = "'http:/localhost:8080'";
-// const tabela = document.getElementById("tabela-resposta");
-// const criarLinhas = document.createElement("tr");
-// const criarColuna = document.createElement("td");
+const url = "http://localhost:8080/";
 
-// criarColuna.innerHTML = data;
-// criarLinhas.appendChild(criarColuna);
-// tabela.appendChild(criarLinhas);
-// console.log("data = ", data);
-function home() {
-    fetch(url)
+function enviar() {
+    const inputId = document.querySelector("#id-input").value;
+    fetch(url + `:${inputId}`)
         .then(res => res.text())
-        .then(resposta => console.log(resposta))
-        .catch(erro => console.log("deu erro em /" + erro));
+        .then(respostaTexto => console.log(respostaTexto));
 }
 
+
+
+//#################
 function designs() {
     fetch(url + "/designs")
-        .then(res => res.text())
+        .then(res => res.json())
         .then(resposta => console.log(resposta))
         .catch(erro => console.log("erro em Designs: " + erro));
 }
 
 function devFrontEnd() {
-    fetch(url + "/devFrontEnd")
-        .then(res => res.text())
+    fetch(url + "/devfrontend")
+        .then(res => res.json())
         .then(resposta => console.log(resposta))
         .catch(erro => console.log("erro em devFrontEnd: " + erro));
 }
 
 function devBackEnd() {
-    fetch(url + "/devBackEnd")
-        .then(res => res.text())
+    fetch(url + "/devbackend")
+        .then(res => res.json())
         .then(resposta => console.log(resposta))
         .catch(erro => console.log(`erro em devBackEnd: ${erro}`));
 }

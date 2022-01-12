@@ -11,7 +11,16 @@ const configCors = {
 
 app.use(cors(configCors))
 
-
+const produtos = [
+    {
+        "id": 1,
+        "name": "primeiro produto"
+    },
+    {
+        "id": 2,
+        "name": "segundo produto"
+    }
+]
 
 const Designs = [{
     "id": 1,
@@ -113,19 +122,28 @@ const devBackEnd = [
     }]
 
 app.get("/", (req, res) => {
-    console.log(req);
     res.send("pgaina principal esta funcionando");
 });
 
+//############################
+
+
+app.get("/:inputId", (req, res) => {
+    res.send(produtos);
+});
+
+
+
+//###########################
 app.get("/designs", (req, res) => {
     res.send(Designs);
 });
 
-app.get("/devFrontEnd", (req, res) => {
+app.get("/devfrontend", (req, res) => {
     res.send(devFrontEnd);
 });
 
-app.get("/devBackEnd", (req, res) => {
+app.get("/devbackend", (req, res) => {
     res.send(devBackEnd);
 });
 
