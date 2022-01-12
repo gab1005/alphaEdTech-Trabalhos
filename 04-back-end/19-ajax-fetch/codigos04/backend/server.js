@@ -11,17 +11,108 @@ const configCors = {
 
 app.use(cors(configCors))
 
-const produtos = [
+//
+//app.use(express.static("paginas/oi.html"))
+
+const clientes = [
     {
         "id": 1,
-        "name": "primeiro produto"
-    },
-    {
+        "name": "Antonio",
+        "email": "asawfoot0@arstechnica.com"
+    }, {
         "id": 2,
-        "name": "segundo produto"
-    }
-]
+        "name": "Daffi",
+        "email": "dgadsden1@addtoany.com"
+    }, {
+        "id": 3,
+        "name": "Colin",
+        "email": "cmcisaac2@usa.gov"
+    }, {
+        "id": 4,
+        "name": "Frederique",
+        "email": "fwanden3@vinaora.com"
+    }, {
+        "id": 5,
+        "name": "Gunner",
+        "email": "gmerdew4@so-net.ne.jp"
+    }, {
+        "id": 6,
+        "name": "Patty",
+        "email": "phaversham5@nymag.com"
+    }, {
+        "id": 7,
+        "name": "Zsa zsa",
+        "email": "zfogt6@ifeng.com"
+    }, {
+        "id": 8,
+        "name": "Hayward",
+        "email": "hrawles7@accuweather.com"
+    }, {
+        "id": 9,
+        "name": "Reamonn",
+        "email": "rfarny8@meetup.com"
+    }, {
+        "id": 10,
+        "name": "Hayden",
+        "email": "hstucksbury9@telegraph.co.uk"
+    }, {
+        "id": 11,
+        "name": "Culver",
+        "email": "cimminsa@livejournal.com"
+    }, {
+        "id": 12,
+        "name": "Marley",
+        "email": "misakowiczb@twitpic.com"
+    }, {
+        "id": 13,
+        "name": "Tripp",
+        "email": "thouldinc@indiegogo.com"
+    }, {
+        "id": 14,
+        "name": "Herb",
+        "email": "hdybled@nationalgeographic.com"
+    }, {
+        "id": 15,
+        "name": "Janaye",
+        "email": "jbromeheade@dell.com"
+    }, {
+        "id": 16,
+        "name": "Lucio",
+        "email": "lsidebottonf@ca.gov"
+    }, {
+        "id": 17,
+        "name": "Inglis",
+        "email": "isherborng@sohu.com"
+    }, {
+        "id": 18,
+        "name": "Avie",
+        "email": "aconnahh@smugmug.com"
+    }, {
+        "id": 19,
+        "name": "Jacquenette",
+        "email": "jlococki@hexun.com"
+    }, {
+        "id": 20,
+        "name": "Carri",
+        "email": "cmclarenj@omniture.com"
+    }]
 
+app.get("/", (req, res) => {
+    res.send(clientes);
+});
+
+app.get("/:idRecebido", (req, res) => {
+    const idReq = req.params.idRecebido;
+    //res.send(`produtos= ${produtos} req... = ${reqCliente}`);
+    //if (typeof (idReq) == Number) {
+    const resServidor = clientes.filter(elemento => elemento.id == idReq);
+    res.send(resServidor[0]);
+    //}
+});
+
+
+
+//###########################
 const Designs = [{
     "id": 1,
     "first_name": "Hulda",
@@ -121,20 +212,6 @@ const devBackEnd = [
         "experience": 5
     }]
 
-app.get("/", (req, res) => {
-    res.send("pgaina principal esta funcionando");
-});
-
-//############################
-
-
-app.get("/:inputId", (req, res) => {
-    res.send(produtos);
-});
-
-
-
-//###########################
 app.get("/designs", (req, res) => {
     res.send(Designs);
 });

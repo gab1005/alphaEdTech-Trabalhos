@@ -1,6 +1,7 @@
 - [x] resolver problema de cors
-- [] consequir valores do frontend e tratar eles no backend (pegar pelos valores enviados na url, pelo metodo GET)
+- [x] consequir valores do frontend e tratar eles no backend (pegar pelos valores enviados na url, pelo metodo GET)
 - [] pesquisar staticFile, ou usar app.sendFile(__dirname + "caminho")
 - [] escrever um elemento html no frontend, vindo do backend
 - [] imprimir uma tabela simples
 - [] impririmir a tabela completa
+- [] ordenar a tabela por nome, id, email
