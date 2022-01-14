@@ -11,6 +11,37 @@ const configCors = {
 
 app.use(cors(configCors))
 
+app.get("/", (req, res) => {
+    res.send(clientes);
+});
+
+app.get("/pesquisar", (req, res) => {
+    const id = req.query.id;
+    const name = req.query.name;
+    const email = req.query.email;
+    console.log(id, name, email);//
+
+    const vetRes = [];
+
+        const arrayRes = clientes.filter(elem => {
+        if (parseInt(elem.id) == id || elem.name.includes(name) || elem.email.includes(email)) {
+            console.log("esta funcionando o filter");//
+            return true;
+        }
+        //return (parseInt(elem.id) == id || elem.name.includes(name) || elem.email.includes(email)) ? true : false
+    });
+
+    console.log(vetRes);//
+
+    if (vetRes.length > 0) {
+        res.send(vetRes);
+    } else {
+        res.send(clientes);
+    }
+});
+
+app.listen(8080);
+
 const clientes = [
     {
         "id": 1,
@@ -93,60 +124,4 @@ const clientes = [
         "name": "Carri",
         "email": "cmclarenj@omniture.com"
     }]
-
-app.get("/", (req, res) => {
-    res.send(clientes);
-});
-
-// app.get("/:idRecebido", (req, res) => {
-//     const idReq = req.params.idRecebido;
-
-//     if (idReq == "") {
-//         res.send(clientes);
-//     }
-//     else {
-
-//         const resServidor = clientes.filter(elemento => elemento.id == idReq); //
-//         res.send(resServidor); //
-//     }
-// });
-
-app.get("/pesquisar", (req, res) => {
-    const id = req.query.id;
-    const name = req.query.name;
-    const email = req.query.email;
-    console.log(id, name, email);//
-
-    const vetRes = [];
-
-    // const arrayRes = clientes.filter(elem => {
-    //     if (elem.id == id) { }
-    //     else if (elem.name == name) { }
-    //     else if (elem.email == email) { }
-    // });
-
-    for (i = 0; i < clientes.length; i++) {
-        if (parseInt(clientes[i].id) == id) {
-            vetRes.push(clientes[i]);
-            console.log("esta funcionando o for");//
-        }
-        if (clientes[i].name.includes(name)) {
-            vetRes.push(clientes[i]);
-            console.log("esta funcionando o for");//
-        } if (clientes[i].email.includes(email)) {
-            vetRes.push(clientes[i]);
-            console.log("esta funcionando o for");//
-        }
-    }
-
-    console.log(vetRes);//
-
-    if (vetRes.length > 0) {
-        res.send(vetRes);
-    } else {
-        res.send(clientes);
-    }
-
-});
-
-app.listen(8080);
+    
