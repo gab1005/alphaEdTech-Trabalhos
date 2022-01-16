@@ -1,0 +1,31 @@
+//spread operator: separa elementos de um array.
+
+//ex1:
+
+const vetor = [1,2,3];
+
+function print(a,b,c){
+	console.log(a);
+	console.log(b);
+	console.log(c);
+}
+print(...vetor);
+//1
+//2
+//3
+
+//Copiando um array
+var arr = [1, 2, 3];
+var arr2 = [...arr]; // like arr.slice()
+arr2.push(4);
+
+// arr2 becomes [1, 2, 3, 4]
+// arr remains unaffected
+
+
+//apply##########
+/*O método apply() chama uma função com um dado valor this e arguments providos como uma array (ou um objeto parecido com um array).*/
+
+/*Nota: A sintaxe desta função é quase idêntica a essa da call(), a diferença é que call() aceita uma  lista de argumentos, enquanto apply() aceita um array de argumentos*/
+//referencia: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/Apply
+
