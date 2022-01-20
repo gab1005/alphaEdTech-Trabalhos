@@ -4,7 +4,7 @@ const app = express();
 
 //configuração do cors para permitir troca de informações em url's semelhantes
 const configCors = {
-    origin: '*',
+    origin: '*',    
     credentials: true,
     optionSuccessStatus: 200,
 }

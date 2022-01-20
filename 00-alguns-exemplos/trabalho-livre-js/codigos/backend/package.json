@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "fs": "^0.0.1-security"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "desafio-joana-01",
+  "version": "1.0.0",
+  "description": "aplicação back e front que trata envio e recebimento de dados de clientes",
+  "main": "server.js",
+  "author": "gabriel de sousa",
+  "license": "ISC"
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Loja Juana</title>
+</head>
+
+<body>
+    <h1>planilha de clientes</h1>
+    <table class="table-data">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>data de compra</th>
+                <th>data de vencimento</th>
+                <th>valor do produto</th>
+            </tr>
+            <tr>
+                <td><input class="input-name" type="text" placeholder="nomde do cliente"></td>
+                <td><input class="input-buy" type="date" placeholder="data de compra"></td>
+                <td><input class="input-due" type="date" placeholder="data de vencimento"></td>
+                <td><input class="input-value" type="number" placeholder="valor do produto"></td>
+            </tr>
+        </thead>
+
+        <tr>
+            <td>
+                <button class="button-request">Enviar</button>
+            </td>
+        </tr>
+
+        <tbody class="tbody-result">
+
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

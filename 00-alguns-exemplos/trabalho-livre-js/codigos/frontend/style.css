@@ -1,0 +1,14 @@
+body{
+    background-color: bisque;
+    margin: 0;
+    padding: 0;
+    color: #222222;
+}
+.table-data, th, td{
+    border: 1px solid gray;
+    /* padding: 2px; */
+    margin: 2px;
+}
+.tbody-result{
+    background-color:#80ff0055
+}

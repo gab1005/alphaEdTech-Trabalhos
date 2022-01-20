@@ -1,0 +1,637 @@
+//url: localhost:8080
+const express = require("express");
+const cors = require("cors");
+// const fs = require("fs");
+
+const app = express();
+
+const configCors = {
+    origin: '*',
+    credentials: true,
+    optionSuccessStatus: 200,
+}
+app.use(cors(configCors));
+
+// app.use('/static', express.static(__dirname + '/public'));
+// app.use(express.json());
+
+// const resJson = fs.readFile('./public/clientes01.json',
+//     { encoding: 'utf8', flag: 'r' },
+//     function (err, data) {
+//         if (err)
+//             console.log(err);
+//         else
+//             // console.log(data);
+//             return JSON.parse(data);
+//     });
+
+const urlStatic = "/pegar/clientes01";
+app.get(urlStatic, (req, res) => {
+    res.send(clientes01);
+    // res.status(200).json(resJson);
+});
+
+app.listen(8080);
+
+const clientes01 = [
+    {
+        "name": "Erin Felmingham",
+        "date-buy": "10/06/2021",
+        "date-due": "05/04/2022",
+        "value": 620.56
+    },
+    {
+        "name": "Reeba Mendonca",
+        "date-buy": "25/03/2021",
+        "date-due": "03/03/2023",
+        "value": 800.81
+    },
+    {
+        "name": "Fenelia Kinge",
+        "date-buy": "03/10/2021",
+        "date-due": "21/01/2023",
+        "value": 539.41
+    },
+    {
+        "name": "Phillida Condell",
+        "date-buy": "05/09/2021",
+        "date-due": "17/02/2024",
+        "value": 925.54
+    },
+    {
+        "name": "Archy Friese",
+        "date-buy": "15/11/2021",
+        "date-due": "09/10/2023",
+        "value": 478.21
+    },
+    {
+        "name": "Ericka Sharpling",
+        "date-buy": "07/09/2021",
+        "date-due": "29/05/2022",
+        "value": 162.65
+    },
+    {
+        "name": "Toma Brodhead",
+        "date-buy": "20/03/2021",
+        "date-due": "17/08/2023",
+        "value": 158.94
+    },
+    {
+        "name": "Janela Roddie",
+        "date-buy": "18/11/2021",
+        "date-due": "07/07/2024",
+        "value": 839.69
+    },
+    {
+        "name": "Stanley Cortese",
+        "date-buy": "09/05/2021",
+        "date-due": "30/03/2023",
+        "value": 419.44
+    },
+    {
+        "name": "Tasia Duell",
+        "date-buy": "27/09/2021",
+        "date-due": "06/11/2023",
+        "value": 629.87
+    },
+    {
+        "name": "Jessie Palffy",
+        "date-buy": "14/03/2021",
+        "date-due": "25/01/2022",
+        "value": 855.95
+    },
+    {
+        "name": "Guilbert Tovey",
+        "date-buy": "07/05/2021",
+        "date-due": "11/03/2023",
+        "value": 610.95
+    },
+    {
+        "name": "Mara Richt",
+        "date-buy": "18/02/2021",
+        "date-due": "14/01/2022",
+        "value": 699.58
+    },
+    {
+        "name": "Andonis Bullough",
+        "date-buy": "02/08/2021",
+        "date-due": "22/05/2023",
+        "value": 550.92
+    },
+    {
+        "name": "Janice Breakspear",
+        "date-buy": "27/01/2021",
+        "date-due": "16/01/2023",
+        "value": 143.2
+    },
+    {
+        "name": "Andre Valencia",
+        "date-buy": "21/08/2021",
+        "date-due": "20/06/2024",
+        "value": 748.78
+    },
+    {
+        "name": "Kim Duckham",
+        "date-buy": "26/09/2021",
+        "date-due": "16/03/2022",
+        "value": 252.93
+    },
+    {
+        "name": "Christophe Petegree",
+        "date-buy": "08/11/2021",
+        "date-due": "08/10/2024",
+        "value": 326.56
+    },
+    {
+        "name": "Hermy Hugh",
+        "date-buy": "13/05/2021",
+        "date-due": "14/08/2022",
+        "value": 491.27
+    },
+    {
+        "name": "Rita Munson",
+        "date-buy": "21/02/2021",
+        "date-due": "12/09/2024",
+        "value": 815.2
+    },
+    {
+        "name": "Tomkin Dedenham",
+        "date-buy": "13/06/2021",
+        "date-due": "30/08/2023",
+        "value": 21.59
+    },
+    {
+        "name": "Tobias Powers",
+        "date-buy": "29/01/2021",
+        "date-due": "18/04/2024",
+        "value": 622.4
+    },
+    {
+        "name": "Jacques Tommen",
+        "date-buy": "13/02/2021",
+        "date-due": "09/12/2022",
+        "value": 782.94
+    },
+    {
+        "name": "Michele Dahlman",
+        "date-buy": "03/10/2021",
+        "date-due": "09/08/2024",
+        "value": 250.92
+    },
+    {
+        "name": "Timi Lapley",
+        "date-buy": "05/03/2021",
+        "date-due": "21/07/2024",
+        "value": 444.92
+    },
+    {
+        "name": "Esme Llewellen",
+        "date-buy": "25/09/2021",
+        "date-due": "23/10/2024",
+        "value": 667.02
+    },
+    {
+        "name": "Cosette Dudding",
+        "date-buy": "07/12/2021",
+        "date-due": "27/11/2023",
+        "value": 553.55
+    },
+    {
+        "name": "Jacinta Westmancoat",
+        "date-buy": "09/05/2021",
+        "date-due": "25/04/2023",
+        "value": 164.3
+    },
+    {
+        "name": "Normie Andrzejczak",
+        "date-buy": "19/08/2021",
+        "date-due": "14/09/2022",
+        "value": 87.74
+    },
+    {
+        "name": "Justen Alcorn",
+        "date-buy": "20/08/2021",
+        "date-due": "17/05/2023",
+        "value": 520.49
+    },
+    {
+        "name": "Byram Tomkowicz",
+        "date-buy": "13/10/2021",
+        "date-due": "18/04/2023",
+        "value": 376.84
+    },
+    {
+        "name": "Elisabet Avramovic",
+        "date-buy": "16/04/2021",
+        "date-due": "22/01/2022",
+        "value": 895.19
+    },
+    {
+        "name": "Xymenes Neeson",
+        "date-buy": "17/10/2021",
+        "date-due": "25/11/2024",
+        "value": 381.69
+    },
+    {
+        "name": "Nial Boneham",
+        "date-buy": "29/11/2021",
+        "date-due": "08/10/2024",
+        "value": 726.74
+    },
+    {
+        "name": "Herta Sanpher",
+        "date-buy": "26/09/2021",
+        "date-due": "23/02/2023",
+        "value": 842.87
+    },
+    {
+        "name": "Kip Jemmison",
+        "date-buy": "19/11/2021",
+        "date-due": "07/06/2022",
+        "value": 246.98
+    },
+    {
+        "name": "Jasmina Norres",
+        "date-buy": "14/06/2021",
+        "date-due": "26/08/2022",
+        "value": 380.65
+    },
+    {
+        "name": "Dido Cobbald",
+        "date-buy": "05/12/2021",
+        "date-due": "06/08/2022",
+        "value": 771.34
+    },
+    {
+        "name": "Dasie Petrillo",
+        "date-buy": "30/05/2021",
+        "date-due": "06/07/2022",
+        "value": 957.99
+    },
+    {
+        "name": "Cirilo De Bernardis",
+        "date-buy": "01/09/2021",
+        "date-due": "11/05/2024",
+        "value": 477.86
+    },
+    {
+        "name": "Reinwald Dutt",
+        "date-buy": "08/08/2021",
+        "date-due": "18/01/2024",
+        "value": 912.21
+    },
+    {
+        "name": "Lissi Oboy",
+        "date-buy": "03/04/2021",
+        "date-due": "03/05/2024",
+        "value": 350.52
+    },
+    {
+        "name": "Dodie Footer",
+        "date-buy": "05/02/2021",
+        "date-due": "28/09/2022",
+        "value": 600.52
+    },
+    {
+        "name": "Sherwood Tredwell",
+        "date-buy": "23/12/2021",
+        "date-due": "24/02/2024",
+        "value": 381.66
+    },
+    {
+        "name": "Fabio McMakin",
+        "date-buy": "24/12/2021",
+        "date-due": "12/07/2022",
+        "value": 544.33
+    },
+    {
+        "name": "Cynthia Calam",
+        "date-buy": "24/04/2021",
+        "date-due": "31/03/2024",
+        "value": 485.53
+    },
+    {
+        "name": "Eugenie Baines",
+        "date-buy": "06/06/2021",
+        "date-due": "17/09/2024",
+        "value": 140.29
+    },
+    {
+        "name": "Bryan Treend",
+        "date-buy": "23/03/2021",
+        "date-due": "07/07/2024",
+        "value": 739.58
+    },
+    {
+        "name": "Klarika Hallgate",
+        "date-buy": "04/12/2021",
+        "date-due": "03/11/2024",
+        "value": 398.97
+    },
+    {
+        "name": "Tiena Fassum",
+        "date-buy": "22/03/2021",
+        "date-due": "15/08/2022",
+        "value": 185.32
+    },
+    {
+        "name": "Teddie Palke",
+        "date-buy": "09/05/2021",
+        "date-due": "02/09/2022",
+        "value": 314.42
+    },
+    {
+        "name": "Sayers Kippen",
+        "date-buy": "26/05/2021",
+        "date-due": "04/01/2023",
+        "value": 947.58
+    },
+    {
+        "name": "Pennie Wadlow",
+        "date-buy": "30/08/2021",
+        "date-due": "14/03/2023",
+        "value": 709.67
+    },
+    {
+        "name": "Zandra Purton",
+        "date-buy": "24/02/2021",
+        "date-due": "19/09/2022",
+        "value": 392.89
+    },
+    {
+        "name": "Amabelle Lockney",
+        "date-buy": "03/08/2021",
+        "date-due": "04/02/2023",
+        "value": 649.43
+    },
+    {
+        "name": "Nickie Ashment",
+        "date-buy": "23/07/2021",
+        "date-due": "02/11/2022",
+        "value": 691.96
+    },
+    {
+        "name": "Arluene Moy",
+        "date-buy": "22/03/2021",
+        "date-due": "04/06/2023",
+        "value": 481.0
+    },
+    {
+        "name": "Misti Rushworth",
+        "date-buy": "21/01/2021",
+        "date-due": "30/04/2023",
+        "value": 361.73
+    },
+    {
+        "name": "Frederic Vevers",
+        "date-buy": "15/06/2021",
+        "date-due": "08/10/2024",
+        "value": 239.0
+    },
+    {
+        "name": "Colan Uglow",
+        "date-buy": "03/03/2021",
+        "date-due": "26/01/2023",
+        "value": 544.86
+    },
+    {
+        "name": "Doloritas Izatson",
+        "date-buy": "03/01/2021",
+        "date-due": "03/12/2023",
+        "value": 156.42
+    },
+    {
+        "name": "Olympe Sarver",
+        "date-buy": "06/08/2021",
+        "date-due": "08/05/2023",
+        "value": 533.03
+    },
+    {
+        "name": "Cristina Bader",
+        "date-buy": "24/09/2021",
+        "date-due": "13/11/2022",
+        "value": 767.48
+    },
+    {
+        "name": "Elden Berndtssen",
+        "date-buy": "25/11/2021",
+        "date-due": "29/10/2022",
+        "value": 792.49
+    },
+    {
+        "name": "Quent Skace",
+        "date-buy": "27/01/2021",
+        "date-due": "11/03/2022",
+        "value": 239.4
+    },
+    {
+        "name": "Patrick Feldstein",
+        "date-buy": "15/02/2021",
+        "date-due": "15/02/2022",
+        "value": 638.42
+    },
+    {
+        "name": "Brigid Scad",
+        "date-buy": "20/02/2021",
+        "date-due": "27/08/2022",
+        "value": 926.73
+    },
+    {
+        "name": "Gilly Shoebridge",
+        "date-buy": "23/07/2021",
+        "date-due": "07/06/2024",
+        "value": 754.84
+    },
+    {
+        "name": "Hieronymus Abrahamowitcz",
+        "date-buy": "02/12/2021",
+        "date-due": "31/01/2023",
+        "value": 740.06
+    },
+    {
+        "name": "Wit Baptist",
+        "date-buy": "02/05/2021",
+        "date-due": "07/05/2023",
+        "value": 927.64
+    },
+    {
+        "name": "Jamison Pratley",
+        "date-buy": "16/06/2021",
+        "date-due": "27/01/2022",
+        "value": 284.74
+    },
+    {
+        "name": "Orsa Bambrough",
+        "date-buy": "07/06/2021",
+        "date-due": "15/08/2022",
+        "value": 471.62
+    },
+    {
+        "name": "Uriah Briddle",
+        "date-buy": "12/07/2021",
+        "date-due": "22/12/2024",
+        "value": 162.33
+    },
+    {
+        "name": "Sadye Doige",
+        "date-buy": "08/03/2021",
+        "date-due": "23/12/2024",
+        "value": 351.43
+    },
+    {
+        "name": "Nikolai Dickson",
+        "date-buy": "03/11/2021",
+        "date-due": "22/08/2023",
+        "value": 806.41
+    },
+    {
+        "name": "Thorndike Camerello",
+        "date-buy": "17/09/2021",
+        "date-due": "26/03/2023",
+        "value": 49.66
+    },
+    {
+        "name": "Darby Holgan",
+        "date-buy": "17/03/2021",
+        "date-due": "12/07/2024",
+        "value": 231.56
+    },
+    {
+        "name": "Bourke Wagnerin",
+        "date-buy": "19/02/2021",
+        "date-due": "20/08/2023",
+        "value": 647.1
+    },
+    {
+        "name": "Martita Holehouse",
+        "date-buy": "19/12/2021",
+        "date-due": "27/03/2024",
+        "value": 258.55
+    },
+    {
+        "name": "Maribel Scutts",
+        "date-buy": "14/06/2021",
+        "date-due": "17/10/2022",
+        "value": 974.62
+    },
+    {
+        "name": "Rhys Holsall",
+        "date-buy": "13/08/2021",
+        "date-due": "28/09/2023",
+        "value": 408.82
+    },
+    {
+        "name": "Llewellyn Reany",
+        "date-buy": "11/05/2021",
+        "date-due": "14/02/2023",
+        "value": 465.53
+    },
+    {
+        "name": "Ethelbert Trathen",
+        "date-buy": "26/10/2021",
+        "date-due": "06/01/2023",
+        "value": 577.21
+    },
+    {
+        "name": "Madella Henningham",
+        "date-buy": "22/03/2021",
+        "date-due": "19/12/2022",
+        "value": 851.94
+    },
+    {
+        "name": "Aila Simcox",
+        "date-buy": "16/01/2021",
+        "date-due": "06/05/2024",
+        "value": 664.66
+    },
+    {
+        "name": "Mavra Derks",
+        "date-buy": "06/06/2021",
+        "date-due": "27/03/2024",
+        "value": 175.19
+    },
+    {
+        "name": "Romeo Tinston",
+        "date-buy": "24/03/2021",
+        "date-due": "03/06/2023",
+        "value": 637.84
+    },
+    {
+        "name": "Claudina Dundin",
+        "date-buy": "25/10/2021",
+        "date-due": "25/09/2024",
+        "value": 428.82
+    },
+    {
+        "name": "Elsi Scurrer",
+        "date-buy": "17/07/2021",
+        "date-due": "12/05/2022",
+        "value": 109.29
+    },
+    {
+        "name": "Jenelle Sponder",
+        "date-buy": "29/09/2021",
+        "date-due": "04/01/2023",
+        "value": 410.52
+    },
+    {
+        "name": "Jeramey Lavrick",
+        "date-buy": "05/12/2021",
+        "date-due": "17/12/2022",
+        "value": 616.55
+    },
+    {
+        "name": "Lucilia Penniall",
+        "date-buy": "30/12/2021",
+        "date-due": "24/09/2022",
+        "value": 161.15
+    },
+    {
+        "name": "Barby Graybeal",
+        "date-buy": "04/02/2021",
+        "date-due": "06/09/2022",
+        "value": 615.82
+    },
+    {
+        "name": "Virge Ericssen",
+        "date-buy": "09/07/2021",
+        "date-due": "08/10/2023",
+        "value": 461.71
+    },
+    {
+        "name": "Robby Gillino",
+        "date-buy": "23/12/2021",
+        "date-due": "19/11/2023",
+        "value": 719.74
+    },
+    {
+        "name": "Toddy Koschke",
+        "date-buy": "09/06/2021",
+        "date-due": "16/01/2023",
+        "value": 234.04
+    },
+    {
+        "name": "Jarrad Myles",
+        "date-buy": "26/02/2021",
+        "date-due": "29/05/2024",
+        "value": 381.7
+    },
+    {
+        "name": "Kean Regitz",
+        "date-buy": "29/06/2021",
+        "date-due": "14/10/2024",
+        "value": 794.02
+    },
+    {
+        "name": "Zach Shailer",
+        "date-buy": "17/03/2021",
+        "date-due": "20/05/2024",
+        "value": 675.14
+    },
+    {
+        "name": "Nananne Covill",
+        "date-buy": "09/04/2021",
+        "date-due": "04/08/2023",
+        "value": 213.5
+    }
+]

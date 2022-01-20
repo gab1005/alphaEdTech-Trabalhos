@@ -1,0 +1,4 @@
+[] - definir uma url para o server (dirname)
+[] - exportar a pagina html por meio de staticFile
+[] - manter os dados em um json
+[] - usar fs para manter permanente os dados
