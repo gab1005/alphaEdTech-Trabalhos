@@ -1,0 +1,17 @@
+//instalar globalmente
+npm install pm2 -g
+
+//parar servers
+pm2 delete all
+
+//deveria parar os serves, mas não funcionou
+pm2 stop all
+
+//verificar "pagina web"
+curl localhost:8080
+
+
+
+//pm2 start "arquivo-config.js"
+//no caso
+pm2 start process.config.js
