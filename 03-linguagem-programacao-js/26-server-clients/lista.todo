@@ -1,0 +1,5 @@
+[x] -armazenar dados de funcionários (Número de Matrícula, Nome, Ramal,
+Email, Setor e Data de Nascimento.).
+[] -retornar os aniversariantes do mes digitado (1 a 12).
+[] -retornar os funcionários de um determinado Setor.
+[] -retornar os ramos ordenados alfabeticamente.
