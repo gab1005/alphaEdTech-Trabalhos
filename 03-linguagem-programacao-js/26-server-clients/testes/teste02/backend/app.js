@@ -32,9 +32,9 @@ app.get("/tudo", (req, res) => {
     // console.log(...tudo.nome);
 });
 
-app.get("/aniversarioGrupo:aniversario", (req, res) => {
+app.get("/aniversarioGrupo?mes", (req, res) => {
     //codigo
-    const parametro = req.params.aniversario;
+    const parametro = req.query.mes;
     const resposta = aniversarioGrupo(parametro);
     res.send(resposta);
 });

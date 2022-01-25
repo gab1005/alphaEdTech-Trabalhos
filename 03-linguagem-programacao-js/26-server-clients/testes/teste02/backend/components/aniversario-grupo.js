@@ -20,5 +20,5 @@ function aniversariantes(_mes) {
     return arrAniversariantes;
 }
 
-//testar como exportar a função.
+//exportando a função.
 module.exports = aniversariantes;

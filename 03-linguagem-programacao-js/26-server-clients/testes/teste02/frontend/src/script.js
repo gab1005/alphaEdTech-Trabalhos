@@ -30,11 +30,14 @@ function getAniversario() {
         alert("digite um numero entre 1 e 12");
         console.log("erro na digitação");
         return false;
+    } else {
+        fetch(urlServer + `/aniversarioGrupo?mes=${inputAniversario}`)
+            .then(res => res.json())
+            .then(resJson => {
+                console.log("resposta do servidor");
+                console.log(resJson);
+            });
     }
-
-    fetch(urlServer + `/aniversarioGrupo:${inputAniversario}`)
-        .then(res => res.json())
-        .then(resJson => console.log(`resposta do server: ${resJson}`));
 }
 
 function getSetor() {

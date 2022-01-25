@@ -1,0 +1,11 @@
+1 - pegar varios valores de um objeto (obg com 100 atributo)
+
+2 - caminho passado em express.static("./src");
+
+3 -  aonde eu coloco o script pra esperar o DOM carregar, e se eu posso colocar o script fora do  body
+
+4 - melhor usar byId, class name ou querySelector
+
+5 - event  listener n escuta  constate com funcao associada
+
+6 - qual a diferenca de res.json() e JSON.parse()

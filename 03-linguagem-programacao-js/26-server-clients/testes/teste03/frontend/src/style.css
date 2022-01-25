@@ -1,0 +1,20 @@
+body{
+	margin:  0px;
+	padding:  0px;
+	background-color: #444444;
+	color:  #eeeeee;
+}
+
+button{
+	background-color: blue;
+	color: #eeeeee;
+}
+
+input{
+	width: 250px;
+}
+
+input::placeholder{
+	color: red;
+	opacity: 0.5;
+}
