@@ -13,10 +13,12 @@ const configCors = {
     optionSuccessStatus: 200
 };
 app.use(cors(configCors));
+//#########################
 
 app.get("/", (req, res) => {
     res.send("oi, esta funcionando");
 });
+
 
 app.get("/tudo", (req, res) => {
     res.send(dados);
@@ -25,12 +27,14 @@ app.get("/tudo", (req, res) => {
 app.get("/aniversariantes", (req, res) => {
     const parametro = req.query.mes
     const resp = aniversario(parametro);
+    // const resp = req.body;
     res.send(resp);
 });
 
 app.get("/teste", (req, res) => {
-    const parametro = req.query.entrada;
-    res.send(`o valor foi: ${parametro}`);
+    const parametro = req.query.mes;
+    // res.send(parametro);
+    // res.send(`o valor foi: ${parametro}`);
 });
 
 app.listen(port, () => console.log(`esta rodando na porta: ${port}`));

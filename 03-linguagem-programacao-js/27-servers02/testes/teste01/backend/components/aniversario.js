@@ -5,6 +5,7 @@ function aniversariantes(_mes) {
     // const mes = parseInt(_mes);
     const mes = String(_mes);
     let arrAniversariantes = [];
+
     arrAniversariantes = data.filter(elem => {
         const mesData = elem.nascimento.slice(3, 5);
         if (mesData == mes || mesData == `0${mes}`) {

@@ -3,15 +3,16 @@ const tudo = require("./tudo.js")
 
 function aniversariantes(_mes) {
     // const mes = parseInt(_mes);
-    const mes = _mes;
+    const mes = String(_mes);
 
-    const arrAniversariantes = [];
+    let arrAniversariantes = [];
 
     if (mes) {
-        ;
         arrAniversariantes = tudo.filter(elem => {
             const mesData = elem.nascimento.slice(3, 5);
-            if (mesData == mes || mesData == `0${mes}`);
+            if (mesData == mes || mesData == `0${mes}`){
+                return true;
+            }
         });
     }
     if (arrAniversariantes.length <= 0) {

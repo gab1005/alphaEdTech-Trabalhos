@@ -17,24 +17,24 @@ app.get("/", (req, res) => {
 
 app.get("/pesquisar", (req, res) => {
     const id = req.query.id;
-    const name = req.query.name;
-    const email = req.query.email;
-    console.log(id, name, email);//
+    const name = String(req.query.name);
+    const email = String(req.query.email);
+    console.log(`valor id,name,email: ${id}, ${name}, ${email}`);//
 
-    const vetRes = [];
+    // let arrResponse = [];
 
-        const arrayRes = clientes.filter(elem => {
-        if (parseInt(elem.id) == id || elem.name.includes(name) || elem.email.includes(email)) {
-            console.log("esta funcionando o filter");//
-            return true;
+        let arrResponse = clientes.filter(elem => {
+            if (parseInt(elem.id) == id || elem.name.includes(name) || elem.email.includes(email)) {
+                console.log("esta funcionando o filter");//
+                return true;
         }
         //return (parseInt(elem.id) == id || elem.name.includes(name) || elem.email.includes(email)) ? true : false
     });
 
-    console.log(vetRes);//
+    console.log(arrResponse);//
 
-    if (vetRes.length > 0) {
-        res.send(vetRes);
+    if (arrResponse.length > 0) {
+        res.send(arrResponse);
     } else {
         res.send(clientes);
     }

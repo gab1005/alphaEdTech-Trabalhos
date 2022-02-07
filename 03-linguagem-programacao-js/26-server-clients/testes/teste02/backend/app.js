@@ -1,9 +1,11 @@
 //chamando o json completo.
 const tudo = require("./components/tudo.js");
+
 //tratamento de dados (tudo).
 const aniversarioGrupo = require("./components/aniversario-grupo.js");
 const setorGrupo = require("./components/setor-grupo.js");
 const ramoGrupo = require("./components/ramo-grupo.js");
+
 //definições do express.
 const port = 3000;
 const express = require("express");
@@ -32,22 +34,26 @@ app.get("/tudo", (req, res) => {
     // console.log(...tudo.nome);
 });
 
-app.get("/aniversarioGrupo?mes", (req, res) => {
-    //codigo
+
+
+app.get("/aniversarioGrupo", (req, res) => {
     const parametro = req.query.mes;
     const resposta = aniversarioGrupo(parametro);
     res.send(resposta);
 });
 
 app.get("/setorGrupo", (req, res) => {
-    //codigo
-    console.log("setor grupo");
+    const parametro = req.query.setor;
+    const resposta = setorGrupo(parametro);
+    res.send(resposta);
 });
 
 app.get("/ramoGrupo", (req, res) => {
-    //codigo
-    console.log("ramo grupo");
+    const parametro = req.query.ramo;
+    const resposta = ramoGrupo(parametro);
+    res.send(resposta);
 });
+
 
 
 //############

@@ -3,10 +3,21 @@ body{
     padding: 0;
     background-color: #222222;
     color: #eeeeee;
+    
 }
 
 button{
     color: #eeeeee;
     background-color: blue;
+    font-size: 24px;
+    border: 2px pink solid;
 }
 
+input::placeholder{
+    color: red;
+    opacity: 0.8;
+    font-size: 24px;
+}
+input{
+    font-size: 24px;
+}

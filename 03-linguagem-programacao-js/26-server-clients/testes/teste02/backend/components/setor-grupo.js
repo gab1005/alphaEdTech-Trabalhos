@@ -2,7 +2,7 @@
 //setor
 const tudo = require("./tudo.js");
 
-const arrSetor = [];
+let arrSetor = [];
 
 function funcionariosSetor(setor) {
     arrSetor = tudo.filter(elem => {

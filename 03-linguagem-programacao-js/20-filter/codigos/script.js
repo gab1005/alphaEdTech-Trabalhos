@@ -25,9 +25,6 @@ function mostrarValores() {
         "c": "",
         "d": ""
     });
-
-    console.log("elementos de arrayResultado", arrayResultado);
-    console.log("tamanho de arrayResultado", arrayResultado.length);
 }
 
 function criarObjeto(a, b, c, d) {
@@ -60,21 +57,6 @@ function valoresLinha(a, b, c, d) {
     elementoTr.appendChild(elementoTd4);
 
     elementoTbody.appendChild(elementoTr)
-
-    //########################3
-    //console.log("testando leitura do map() com arrrayClientes");
-    /**
-    function teste02(item) {
-        console.log(item.a);
-        console.log(item.b);
-        console.log(item.c);
-        console.log(item.d);
-        let tempo = diferencaDatas(item.b, item.c);
-        console.log(tempo);
-    }
-    arrayClientes.map(teste02)
-     */
-
 }
 
 //transformar tudo  em segundo e calcular o resultado.
@@ -82,53 +64,24 @@ function diferencaDatas(b, c) {
     let diaMili = 60 * 60 * 24;
     let mesMili = diaMili * 30;
     let anoMili = mesMili * 12;
-    /**
-    console.log(b);
-    console.log("verificando dia, mes, ano em milisegundos: ", diaMili, mesMili, anoMili);
-     */
 
     let diaB = b.getDate() * diaMili;
     let mesB = b.getMonth() * mesMili;
     let anoB = b.getFullYear() * anoMili;
     let tempoB = diaB + mesB + anoB;
 
-    /**
-    console.log("b.getDate() ", b.getDate());
-    console.log("b.getMonth() ", b.getMonth());
-    console.log("b.getFullYear() ", b.getFullYear());
-     */
-
     let diaC = c.getDate() * diaMili;
     let mesC = c.getMonth() * mesMili;
     let anoC = c.getFullYear() * anoMili;
     let tempoC = diaC + mesC + anoC;
 
-    //##########depois retirar
-    /**
-    console.log("diferencaDatas() foi chamada")
-    console.log("-------------");
-    console.log("valor de b=", b);
-    console.log("valor de c=", c);
-    console.log("-------------");
-    console.log("valores de  tempoB", (diaB), (mesB), (anoB));
-    console.log("valores de tempoC", diaC, mesC, anoC);
-    console.log("-------------");
-    console.log("tempoB =", tempoB);
-    console.log("tempoC =", tempoC);
-     */
-    //let resultado = Math.round((tempoC - tempoB) / diaMili);
     let resultado = (tempoC - tempoB) / diaMili;
 
-    /**
-    console.log("-------------");
-    console.log("(tempoC-tempoB) / diamili =", resultado);
-     */
     return resultado;
 }
 
 
 function mostrarJuros() {
-
     function calcularJuros(item, index, array) {
         //let  juros = C*I*T
         item.d = parseFloat(item.d);
@@ -140,7 +93,7 @@ function mostrarJuros() {
         //##########mandar montantes para array.
         arrayMontante.push(montante);
 
-        //criar  parte "tfoot" da tabela com os resultados de nome, juros, montante.
+        //conectar parte "tfoot" da tabela com os resultados de nome, juros, montante.
         let tFoot = document.querySelector(".clientes-juros");
 
         //resultado de cada coluna
@@ -161,7 +114,7 @@ function mostrarJuros() {
         tFoot.appendChild(elementoTr);
     }
     //#################----map()----########################
-    let resultado = arrayClientes.map(calcularJuros);
+    arrayClientes.map(calcularJuros);
 }
 
 
@@ -176,16 +129,11 @@ function ordemAlfabetica() {
             return true;
         }
     });
-
-    console.log("array ordenado alfabeticamente com sucesso");
-
     function apagarCampo() {
         let tbody = document.querySelector(".tabela-resultado");
         tbody.textContent = "";
-        console.log("campo apagado com sucesso");
     }
     apagarCampo();
-
     function reescreverCampo() {
         let tbody = document.querySelector(".tabela-resultado");
 
@@ -211,12 +159,8 @@ function ordemAlfabetica() {
 
             tbody.appendChild(elementoTr);
         }
-
         arrayClientes.forEach(criarLinhas);
-
-        console.log("campo reescrevido com sucesso!!!");
     }
-
     reescreverCampo();
 }
 
@@ -230,16 +174,11 @@ function ordemVencimento() {
             return true;
         }
     });
-
-    console.log("array ordenado por data de  vencimento com sucesso");
-
     function apagarCampo() {
         let tbody = document.querySelector(".tabela-resultado");
         tbody.textContent = "";
-        console.log("campo apagado com sucesso");
     }
     apagarCampo();
-
     function reescreverCampo() {
         let tbody = document.querySelector(".tabela-resultado");
 
@@ -265,12 +204,8 @@ function ordemVencimento() {
 
             tbody.appendChild(elementoTr);
         }
-
         arrayClientes.forEach(criarLinhas);
-
-        console.log("campo reescrevido com sucesso!!!");
     }
-
     reescreverCampo();
 }
 
@@ -298,64 +233,62 @@ function totalMontante() {
 }
 
 //parte do codigo que trabalha com filter(), ordenando por data e valor, referente a arrayClientes[].
+//referente a data de vencimento.
 function filtrarData() {
     let dataInicial = new Date(document.querySelector(".filtro-data-inicio").value);
     let dataFinal = new Date(document.querySelector(".filtro-data-final").value);
 
     function funcaoSort(item) {
-        console.log("item  dentro  de funcaoSort() =", item);
-        console.log("item.c = ", item.c);
-        console.log("valor de dataInicial =", dataInicial);
-        console.log("valor dataFinal", dataFinal);
-
-        console.log("------------------");
+        // C - B
         let resultadoInicial = diferencaDatas(dataInicial, item.c);
         let resultadoFinal = diferencaDatas(item.c, dataFinal);
-        console.log("resultadoInicial =", resultadoInicial);
-        console.log("resultadoFinal =", resultadoFinal);
 
         if (resultadoInicial > 0 && resultadoFinal > 0) {
-            console.log("entrou no if");
             return true;
         } else if (resultadoInicial <= 0 || resultadoFinal <= 0) {
-            console.log("entrou no else if");
-
             return false;
         } else {
-            console.log("erro na estrutura if else da funcao filtroData()");
             return false;
         }
     }
-
+    // array com os elementos que devem ser printados no html
     arrayResultado = arrayClientes.filter(funcaoSort);
-    //let arrayClientes = arrayResultado;
 
-    console.log("arrayResultado =", arrayResultado);;
+    // conectar elemento pai no html
+    let resFilter = document.querySelector(".resposta-filter");
 
-    function escreverValores() {
-        //escrever valores
-        //linkar  elementos
+    // apagar valores
+    resFilter.innerHTML = "";
+
+    function escreverValores(elemento) {
+        //elementos filhos
         let elementoTr = document.createElement("tr");
+
         let elementoTdNome = document.createElement("td");
         let elementoTdDataCompra = document.createElement("td");
         let elementoTdDataVencimento = document.createElement("td");
         let elementoTdVAlor = document.createElement("td");
 
-        //adicionar valor aos elementosTd:
-        elementoTdNome.innerHTML = "";
+        elementoTdNome.innerHTML += elemento.a;
+        elementoTdDataCompra.innerHTML += elemento.b;
+        elementoTdDataVencimento.innerHTML += elemento.c;
+        elementoTdVAlor.innerHTML += elemento.d;
 
-        //adicionar elementos ao  elementoTr
         elementoTr.appendChild(elementoTdNome);
         elementoTr.appendChild(elementoTdDataCompra);
         elementoTr.appendChild(elementoTdDataVencimento);
         elementoTr.appendChild(elementoTdVAlor);
 
-        //apagar valores
+        resFilter.appendChild(elementoTr);
     }
+    arrayResultado.map(elem => escreverValores(elem));
 }
 
 //funão para ordenar por valor do produto.
 function filtrarValor() {
     let valorMinimo = document.querySelector(".filtro-numero-minimo").value;
     let valorMaximo = document.querySelector(".filtro-numero-maximo").value;
+    console.log(`valor minimo = ${valorMinimo}, valor maximo = ${valorMaximo}`);
+
+
 }

@@ -39,3 +39,5 @@ function teste() {
         .then(promisse => promisse.text())
         .then(resText => console.log(resText));
 }
+
+

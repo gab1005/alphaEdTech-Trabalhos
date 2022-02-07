@@ -1,10 +1,10 @@
 //receber nome do ramo (no caso numero); e retornar
-//os funcionarios dauquele ramo ordenado de forma
+//os funcionarios daquele ramo ordenado de forma
 //alfabetica
-const funcionariosSetor = require("./setor-grupo");
+// const funcionariosSetor = require("./setor-grupo");
 const tudo = require("./tudo");
 
-const arrRamo = [];
+let arrRamo = [];
 
 function funcionariosRamo(ramo) {
     const arrRamo = tudo.filter(elem => {
@@ -27,4 +27,4 @@ function funcionariosRamo(ramo) {
     return arrRamo;
 }
 
-module.exports = funcionariosSetor;
+module.exports = funcionariosRamo;

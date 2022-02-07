@@ -1,0 +1,5 @@
+Separar a aplicacao em duas partes baseado no exemplo do Monorepo-example.
+https://github.com/pimentelleo/monorepo-example
+Coloque seu backend anteriormente feito, pra ser executado na pasta do backend, e todos os arquivos do frontend dentro da pasta frontend/src/
+No frontend, crie uma interface para adicionar usuários, e uma outra parte da aplicação para visualizar os dados solicitados no exercício anterior.
+No backend, passe a usar a base de dados em um arquivo .json separado e use o fs para escrever diretamente neste arquivo.
