@@ -1,0 +1,14 @@
+body{
+    background-color: #444444;
+    color: #33bb77;
+
+    display: flex;
+    flex-flow: column nowrap;
+
+    justify-content: center;
+    align-items: center;
+}
+
+p{
+    padding: 20px;
+}

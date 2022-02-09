@@ -1,0 +1,4 @@
+A página deve ser bem elaborada visualmente (UI);
+A obtenção dos dados de moedas disponível pela API pública: https://docs.awesomeapi.com.br/api-de-moedas
+Utilizar a biblioteca jQuery para manipulação de DOM e requisição AJAX, isto é, o resultado deve vir em formato de lista que contenha um título e uma tabela que contenha a moeda;
+Tratar os erros para melhoria da experiência do usuário (UX).

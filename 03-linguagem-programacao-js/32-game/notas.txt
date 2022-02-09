@@ -1,1 +1,0 @@
-fazer create e read e não fazer delete

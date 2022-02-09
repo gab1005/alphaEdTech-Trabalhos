@@ -1,0 +1,26 @@
+body{
+    background-color: #222222;
+    color: #eeeeee;
+    
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+form{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+form input{
+    margin: 5px;
+}
+
+form select{
+    margin: 10px;
+}
