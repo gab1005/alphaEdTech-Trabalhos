@@ -290,5 +290,52 @@ function filtrarValor() {
     let valorMaximo = document.querySelector(".filtro-numero-maximo").value;
     console.log(`valor minimo = ${valorMinimo}, valor maximo = ${valorMaximo}`);
 
+    console.log(`valorMinimo = ${typeof (valorMinimo)}  e valorMaximo = ${typeof (valorMaximo)}`)
 
+    function ordenar(elem) {
+        // verificação do valor minimo
+
+        if (valorMinimo === "") {
+            valorMinimo = parseInt(0);
+        }
+        // verificação do valor maximo
+        if (valorMaximo === "") {
+            console.log(`valorMaximo = ${typeof (valorMaximo)}`)
+            if (valorMinimo <= elem) {
+                console.log("deu if")
+                return true;
+            } else {
+                console.log("deu else")
+                return false;
+            }
+        }
+        // caso os dois estejam preenchidos, segue a seguinte formula
+        else {
+            console.log(`valorMaximo = ${typeof (valorMaximo)}`)
+            if (valorMinimo <= elem && elem <= valorMaximo) {
+                console.log("deu if")
+                return true;
+            } else {
+                console.log("deu else")
+                return false;
+            }
+        }
+
+    }
+    // não deu certo quando usei const, para "resetar"
+    //  o array quando arrayMontante não tinha recebido os valores ainda
+    let resFilterValor = arrayMontante.filter(ordenar);
+
+    const elemPai = document.querySelector(".tabela-filter");
+    function escreverHTML(elem) {
+        const elemTR = document.createElement("tr");
+        const elemTD = document.createElement("td");
+        elemTD.innerHTML = elem;
+
+        elemTR.appendChild(elemTD);
+
+        elemPai.appendChild(elemTR);
+    }
+    elemPai.innerHTML = "";
+    resFilterValor.map(escreverHTML);
 }

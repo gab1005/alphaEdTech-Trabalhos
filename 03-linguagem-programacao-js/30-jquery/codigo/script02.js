@@ -8,7 +8,9 @@ class Calculadoura {
         this.op = op;
     }
 
-    public  int resultado;
+    set res() {
+        this.resultado;
+    }
 
     switch(operacao) {
         case "+":
