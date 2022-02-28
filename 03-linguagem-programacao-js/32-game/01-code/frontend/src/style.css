@@ -24,3 +24,8 @@ form input{
 form select{
     margin: 10px;
 }
+
+button{
+    margin: 30px;
+
+}

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+
     <title>01-code</title>
 </head>
 
@@ -22,42 +22,46 @@
                 <label for="genero">gênero</label>
                 <input type="text" id="genero">
 
-                <div>
+                <div class="multiplay-div">
                     <label for="">multiplayer</label>
 
-                    <input type="radio" name="multiplay" value="true" id="mult-true">
+                    <input checked type="radio" name="multiplay" value="true" id="mult-true">
                     <label for="mult-true">sim</label>
 
                     <input type="radio" name="multiplay" value="false">
                     <label for="mult-false">não</label>
                 </div>
 
-                <div>
+                <div class="offline-div">
                     <label for="offline">offline</label>
                     <select name="offline" id="offline">
-                        <option value="true">sim</option>
+                        <option selected value="true">sim</option>
                         <option value="false">não</option>
                     </select>
                 </div>
 
-                <div>
+                <div class="cross-plataform-div">
                     <label for="">cross plataform</label>
 
-                    <input type="radio" name="crossplataform" value="true" id="cross-true">
+                    <input checked type="radio" name="cross-plataform" value="true" id="cross-true">
                     <label for="corss-true">sim</label>
 
-                    <input type="radio" name="crossplataform" value="false" id="cross-false">
+                    <input type="radio" name="cross-plataform" value="false" id="cross-false">
                     <label for="cross-false">não</label>
                 </div>
-            </form>
 
-            <button class="button-forms">enviar dados</button>
+            </form>
+            <section class="botoes">
+                <button class="button-forms">enviar dados</button>
+                <button class="button-portifolio">mostrar portifolio</button>
+            </section>
         </article>
 
         <article class="game-portfolio">
 
         </article>
     </main>
+    <script defer src="script.js"></script>
 </body>
 
 </html>

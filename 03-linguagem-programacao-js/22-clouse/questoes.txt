@@ -1,0 +1,12 @@
+1 - Crie uma closure que receba como parâmetro um número inteiro que será utilizado como multiplicador na função a ser retornada.
+
+2 - Crie uma página html contando uma historinha infantil à sua escolha. 
+
+Adicione nesta página um botão para aumentar a fonte do texto e outro botão para diminuir a fonte do texto.
+
+Ambos os botões devem funcionar utilizando uma closure.
+
+ATENÇÃO!
+
+Estruture o seu trabalho como um projeto (arquivos separados para html, css e javascript).
+Publique o material do exercício no seu github (envie o link do repositório).
