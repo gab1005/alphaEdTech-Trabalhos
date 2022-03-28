@@ -1,0 +1,47 @@
+OBS: definir o tipo de plataforma (alpha ou udemy)
+caso seja udemy => compra e venda, dados de empresas
+
+PERGUTAS:
+- quantos campos no telefone, cpf, cnpj (e como tratar (int/ varchar))?
+- a gente conecta as tabelas somente pelos 'ids'?
+- date ja tem tamanho setado?
+- serial não precisa definir tamanho
+- como relacionar materias e cursos?
+- como eu chamo  essas 'conexões (professor_curso, mateira_curso)
+- como trabalhar ao mesmo tempo no grupo
+- matricula substitui id?
+
+
+- empresas
+    => funcionalidades:
+    - criar conta
+    - cadastrar curso
+    - cadastrar professor
+    - aceitar matricula do aluno
+
+- professor
+    => funcionalidades:
+    - sobir material
+    - controle de presença
+    - criar atv
+    - entrega de atv
+    - acesso a turmas de forma separada
+    - sorteio de grupo
+    - ter acesso a quem abriu a atv/vizualizou
+
+- alunos
+    => funcionalidades:
+    - acessar atividades:
+        - vizualizar atv
+        - entregar atv
+    - calendário das materias:
+        - entregar atv
+        - aulas
+        - provas 
+        
+#############################
+
+
+
+
+

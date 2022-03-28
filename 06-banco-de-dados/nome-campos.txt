@@ -1,0 +1,27 @@
+a. Usuários => usuarios
+b. Clientes => aluno
+c. Fornecedores => empresas/professores
+
+d. Produtos => curso
+e. Grupos de Produtos => materia
+
+h. Estoque => todos os cursos disponiveis (possibilidade)
+
+
+OBS: se for semelhante a UDEMY/ALURA
+- Cabeçalho da Venda => todas informações da venda
+
+- Itens da Venda;
+
+- Contas a Receber => professor (porcentagem dos cursos deles); empresas (porcentagem dos cursos deles)
+
+- Contas a Pagar => alunos (comprando cursos); professor (passasse o numero de cursos na plataforma); empresa (pagaria desde o começo)
+
+
+=> opções:
+1 - PLATAFORMA DE AJUDA PARA OS ALUNOS E PROFESSORES DA ALPHA
+	- facilidade é que não precisaria guardar aulas online
+	- poderia focar em 'coisas' que ajudam a gente
+	
+2 - 'CLONE' DA UDEMY OU DA ALURA
+	- é mais dificil (aprender coisas novas)

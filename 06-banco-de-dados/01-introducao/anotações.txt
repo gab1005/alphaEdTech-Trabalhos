@@ -1,0 +1,10 @@
+=>tipos de relacionamento:
+
+- 1-1
+ex: pessoas e usuarios
+
+- 1-n
+
+- n-n
+se cria uma outra tabela que relaciona os dois daddos
+ex: alunos e cursos.

@@ -1,0 +1,30 @@
+=> ENTIDADES:
+- empresas
+	- id
+	- nome
+	- cnpj
+	- setor
+	
+- professores
+	- id
+	- nome
+	- cpf
+	- materia
+
+- alunos
+	- id
+	- nome
+	- cpf
+	- matricula
+
+- materias
+	- id
+	- nome
+	- descrição
+	
+
+- cursos
+	- id
+	- nome
+	- descrição
+
