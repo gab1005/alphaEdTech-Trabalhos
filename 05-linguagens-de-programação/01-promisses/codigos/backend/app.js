@@ -11,13 +11,19 @@ const configCors = {
 
 app.use(cors(configCors));
 
+// resposta padão para testar o back
 app.get('/', (req, res) => {
     res.send('funcionou!');
 });
 
+// settimeout random
 app.get('/random-num', (req, res) => {
     const num = parseInt(Math.random() * 6);
-    res.send(num.toString());
+
+    // demora um valor aleatorio entre 0 e 5 para enviar a requisição
+    setTimeout(() => {
+        res.send(num.toString());
+    }, num);
 });
 
 app.listen(port, () => {

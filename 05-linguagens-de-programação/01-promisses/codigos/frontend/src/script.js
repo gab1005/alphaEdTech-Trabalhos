@@ -17,6 +17,7 @@ function comprimento() {
         });
 }
 
+// identificar a DEMORA na resposta do backend
 function randomNum() {
     fetch(`${urlServer}/random-num`)
         .then(res => res.text())
