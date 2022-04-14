@@ -1,0 +1,1 @@
+01 - Você pode treinar os comandos TRUNCATE TABLE e DROP TABLE no seu banco de dados se quiser, mas lembre-se, precisamos de todas as tabelas para o nosso sistema de vendas.

@@ -1,0 +1,9 @@
+01 -
+1. No Visual Studio, crie um projeto para o nosso sistema de gestão; 
+2. Instale o módulo “pg” e o módulo “express”; 
+3. Crie um objeto “connect” do tipo “pg”; 
+4. Escolha um fluxo operacional do sistema planejado para criação do back-end. As seguintes especificações devem ser atendidas: 
+             a. CRUD de usuários; 
+             b. Login de usuários; 
+             c. Operações que trabalham em mais de uma tabela por vez devem utilizar transactions; 
+             d. Pelo menos 1 relatório com filtros dinâmicos para o resultado do fluxo operacional escolhido.

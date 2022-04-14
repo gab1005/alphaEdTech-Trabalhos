@@ -1,0 +1,33 @@
+01 como deveria se apresentqar o elemnto abaixo em uma constante JSX de nome elemento?
+
+<h1 className="greeting">
+	hello, aspirantes!
+</h1>
+
+R:
+const element = <h1 className="greeting"> hello, aspirantes! </h1>;
+
+ReactDOM.render(
+  element,
+  document.getElementById('root')
+);
+
+02 como criar o elemento da questão anterior usando React.createElement?
+
+R:
+const element = React.createElement(
+  'h1',
+  {className: 'greeting'},
+  ' hello, aspirantes! '
+);
+
+03 usando o React.createElement, qual seria o  objeto resultante do uso desse método, com o elemnte da primeira questão?
+
+R:
+const element = {
+  type: 'h1',
+  props: {
+    className: 'greeting',
+    children: 'hello, aspirantes!'
+  }
+};

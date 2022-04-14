@@ -1,0 +1,21 @@
+01 - QT7N2-00001490
+Execute consultas na tabela de usuários utilizando os seguintes recursos:
+
+a. LIKE para o nome do usuário;
+
+b. BETWEEN para a data de criação do usuário;
+
+c. IN para o tipo do usuário;
+
+d. NOT IN para tipo do usuário;
+
+Salve e envie o código SQL que você executou na Query Tool do pgAdmin.
+
+
+02 -Atualize o registro de um ou mais usuários com o comando UPDATE.
+
+Não se esqueça de preencher os campos de data da atualização e usuário da atualização.
+
+ 
+
+Salve e envie o código SQL que você executou na Query Tool do pgAdmin.

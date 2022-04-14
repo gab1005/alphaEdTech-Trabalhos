@@ -24,7 +24,5 @@ function randomNum() {
         .then(res => {
             console.log(res);
             const resNum = parseInt(res);
-
-
         });
 }

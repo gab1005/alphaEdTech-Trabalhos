@@ -1,0 +1,13 @@
+01 - Exporte o SQL na plataforma DB DESIGNER e execute no pgAdmin.
+
+Não se esqueça de verificar se todas as tabelas foram criadas adequadamente, bem como suas CONSTRAINTS.
+
+Salve e envie o código SQL que você executou na Query Tool do pgAdmin.
+
+P.S.: Para esta atividade, opcionalmente, você pode criar um tablespace e um schema para armazenar as tabelas. 
+
+02 - Execute pelo menos 2 comandos INSERT INTO para cada tabela criada.
+
+Muita atenção com as FOREING KEYS. 
+
+Salve e envie o código SQL que você executou na Query Tool do pgAdmin.

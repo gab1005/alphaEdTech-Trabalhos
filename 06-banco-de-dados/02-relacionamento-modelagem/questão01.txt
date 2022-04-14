@@ -1,0 +1,36 @@
+Ao final deste módulo, teremos desenvolvido um sistema completo para gestão de vendas.
+
+Para isso, iniciaremos as atividades a partir da modelagem de dados do nosso sistema.
+
+1. No DB Designer, crie representações para as seguintes Entidades:
+
+A. Usuários;
+B. Clientes;
+C. Fornecedores;
+D. Produtos;
+E. Grupos de Produtos;
+F. Cabeçalho da Venda;
+G. Itens da Venda;
+H. Estoque;
+I. Contas a Receber;
+J. Contas a Pagar.
+
+2. No DB Designer, crie os seguintes Relacionamentos:
+
+A. Produtos x Grupo de Produtos;
+B. Cabeçalho da Venda x Clientes;
+C. Cabeçalho da Venda x Usuários;
+D. Itens da Venda x Cabeçalho da Venda;
+E. Estoque x Produto;
+F. Contas a Receber x Cliente;
+G. Contas a Receber x Cabeçalho da Venda;
+H. Contas a Pagar x Fornecedores.
+
+3. Todas as tabelas devem conter obrigatoriamente os seguintes campos:
+
+A. Data e Hora da criação;
+B. Usuário da criação;
+C. Data e Hora da atualização;
+D. Usuário da atualização.
+
+Entregue prints de tela mostrando o que foi feito. (use um arquivo zip, caso precise mandar mais de um print)

@@ -1,0 +1,5 @@
+01 - explique com as suas palavras qual a diferença entre Tablespaces e Schemas.
+
+02 - Crie um Schema com um nome que represente a sua.
+
+Envie um print de tela para mostrar o Schema criado.

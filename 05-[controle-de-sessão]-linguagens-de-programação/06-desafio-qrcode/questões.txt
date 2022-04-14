@@ -1,0 +1,11 @@
+Desenvolver uma aplicação web que permita ao administrador o cadastro de usuários com no mínimo ‘fullname’, ‘username’ e ‘password’ como dados pessoais. 
+
+Também deverá permitir ao administrador o cadastro de um evento com ‘title’, ‘description’, ‘date’, ‘time’ e mais dados que achar necessários. 
+
+Esta aplicação permitirá ao usuário cadastrado acessar o sistema com seu ‘username’ e ‘password’ e, após autenticação com sucesso, possa se cadastrar em um evento previamente cadastrado pelo administrador.
+Ao clicar no evento e confirmar o seu cadastro, mostrar ao usuário um formulário com o QR Code que deverá ser apresentado na entrada do evento.
+Na data do evento, haverá pessoas que, com o celular, farão a leitura do QR Code apresentado para liberar o acesso.
+O QR Code deve conter o endereço web com o ‘query string’ que representa o ‘hash’ (ou ‘token’) identificador do usuário. Assim, ao fazer a leitura, uma página de internet abrirá autorizando (ou não) e registrando o uso do ticket pelo usuário.
+O QR Code só poderá ser utilizado uma vez, impossibilitando a apresentação mais de uma vez.
+É interessante que, após a leitura, além de mostrar os dados do evento, autorizar e contabilizar, mostre os dados do usuário para validação (casos no qual há a necessidade de apresentação de documentos pessoais).
+A aplicação web deverá ter o nome da empresa fictícia, ser bem construída visualmente e com boa experiência ao usuário.

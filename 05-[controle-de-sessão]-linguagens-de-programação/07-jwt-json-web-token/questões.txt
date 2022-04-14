@@ -1,0 +1,15 @@
+01Quais as vantagens do uso da estrutura JWT?
+
+02Quais as desvantagens do uso da estrutura JWT?
+
+03Elabore uma página que permita ao usuário introduzir seu ‘username’ e seu ‘password’ e possua um botão para login, sendo que: 
+
+Um usuário administrador (“userType”: “adm”) já deve estar pré-cadastrado no servidor;
+O usuário possui os atributos: “name”, “username”, “password”, “userType”;
+O atributo ‘userType’ pode ser do tipo ‘adm’ ou ‘user’;
+Deve haver validação pelo servidor nodeJS se o usuário e a senha são válidos;
+Após validação, criar um objeto JSON com o ‘username’ e ‘userType’ e convertê-lo em uma estrutura JWT com senha privada e enviar este JWT como ‘cookie’ de sessão ao navegador do usuário;
+O usuário do tipo ‘adm’ poderá cadastrar mais usuários do tipo ‘user’ e poderá visualizar todos os usuários;
+O usuário do tipo ‘user’ não poderá cadastrar mais usuários mas poderá visualizar quais usuários estão cadastrados;
+A validação da permissão de sessão deverá ser realizada pela leitura direta do JWT fornecido pelo ‘cookie’ do navegador quando existente e não deve ser utilizado o registro do usuário para consulta do seu ‘userType’.
+

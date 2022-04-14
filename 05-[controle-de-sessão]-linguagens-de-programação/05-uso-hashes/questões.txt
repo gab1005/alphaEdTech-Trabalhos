@@ -1,0 +1,7 @@
+01O que é e para que serve um ‘hash’?
+
+02Qual a importância do tipo de ‘hash’ escolhido? Dê exemplos.
+
+03Qual a vantagem/desvantagem da utilização de ‘bcrypt’? Quando escolher o seu uso?
+
+04Crie uma página no qual o usuário, ao fazer login, receba um cookie no qual contenha um ‘hash’ de identificação gerado utilizando-se ‘crypto’ e ‘bcrypt’.

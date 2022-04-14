@@ -1,0 +1,3 @@
+01Crie uma página web que peça ao usuário o nome e senha e que, ao clicar no botão ‘Entrar’ ele receba um ‘token’ de identificação que será utilizado nas próximas requisições.
+
+02Validar a página criada de forma que todas as requisições sejam únicas para o usuário conectado, isto é, dependendo do usuário, os retornos às requisições sejam personalizadas.

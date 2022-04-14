@@ -1,0 +1,3 @@
+01 - Explique com as suas palavras o que são as constraints e qual a finalidade de uso delas no banco de dados.
+
+02 - No DB Designer, ajuste as CONSTRAINTS adequadamente para cada uma das Entidades que compõe o seu banco de dados.

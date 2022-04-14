@@ -1,0 +1,14 @@
+01 - Analise o banco de dados criado por você e planeje no mínimo 3 views com dados relevantes para o seu negócio. 
+
+Ex.: Utilizando o conceito de Aging List, podemos obter uma VIEW para uma carteira de títulos a pagar ou títulos a receber, capaz de listar os seguintes dados: 
+
+a. ID do Cliente; 
+b. Nome do Cliente; 
+c. Data de Vencimento; 
+d. Subcategoria: 
+            i. A vencer; 
+            ii. Não quitados (vencidos a menos de 30 dias a partir da data atual); 
+            iii. 30 dias (Entre 30 e 59 dias a partir da data atual); 
+            iv. 60 dias (Entre 60 e 89 dias a partir da data atual); 
+            v. 90 dias (Entre 90 e 119 dias a partir da data atual); 
+            vi. 120 dias (A partir de 120 dias da data atual)
