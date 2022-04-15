@@ -1,0 +1,3 @@
+01 No seu projeto my-alpha-react, crie uma calculadora!
+
+02 Suba suas alterações para o projeto my-alpha-app com o commit “Atividade React parte 03”. Envie o link do commit como comentário nesta resposta, além do upload dos arquivos necessários.
