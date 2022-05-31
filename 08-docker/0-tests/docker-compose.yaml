@@ -1,0 +1,30 @@
+version: '3.3'
+
+services:
+  mysql01:
+    image: mysql:8
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    ports:
+      - 4444:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=12345678
+      # user padrao root
+      # ler no node:
+      # process.env.NOME_VARIAVEL
+      # - NOME_VARIAVEL=VALOR
+    volumes:
+      # 3 tipos
+      # não nomeado (UMA PORRA SEGUNDO O ANDERSON)
+      # nomeado (MELHOR DOS MUNDOS SEGUNDO O ANDERSON) (econdido)
+      # bind mount (cria um volume, em vez de ser gerenciado pelo docker, linka com uma pasta do seu pc) (NÃO RECOMENDANDO PELO ANDERSON PARA PRODUÇÃO)
+      - /home/gabrielsousa-e14/Alpha-EdTech/alphaEdTech-Trabalhos/08-docker/0-tests/mysql:/var/lib/mysql
+
+  nginx:
+    # build: .
+    image: nginx
+    restart: always
+    volumes:
+      - /home/gabrielsousa-e14/Alpha-EdTech/alphaEdTech-Trabalhos/08-docker/0-tests/page-test:/usr/share/nginx/html
+    ports:
+      - 4000:80
