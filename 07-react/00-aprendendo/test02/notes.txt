@@ -1,0 +1,3 @@
+criei primeiro os arquivos: index.html, index.js, App.js.
+Depois baixei pelo npm o react, react-dom, rect-scripts, fiz algumas configurações
+simpes no package.json colocando os "scripts" para rodar o projeto em react, e funcionou

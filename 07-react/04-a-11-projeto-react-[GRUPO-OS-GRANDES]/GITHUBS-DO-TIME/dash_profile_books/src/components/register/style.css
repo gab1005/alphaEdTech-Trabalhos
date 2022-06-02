@@ -1,0 +1,86 @@
+* {
+  margin: 0 auto;
+}
+
+.Layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  background-image: linear-gradient(to bottom right, #123d1175, #1a5819);
+}
+
+.register--panel {
+  display: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+  flex-direction: column;
+  width: 460px;
+  height: 600px;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid #1a581950;
+}
+
+.register--title {
+  font-size: 2.0rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 0;
+}
+
+.register--subtitle {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.input--field {
+  margin-bottom: 16px;
+  border: 1px solid #60606025;
+  border-radius: 5px;
+  width: 70%;
+  height: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 1.1rem;
+}
+
+.input--field:focus {
+  outline: none;
+  border: 1px solid #1a581975;
+  transition: border 0.2s;
+}
+
+.input--submit {
+  margin-top: 6px;
+  margin-bottom: 12px;
+  border: 1px solid #fafafa;
+  background-color: #267c24;
+  color: white;
+  border-radius: 5px;
+  width: 40%;
+  height: 38px;
+  font-size: 1.1rem;
+}
+
+.input--submit:focus,
+.input--submit:hover {
+  outline: 1px solid #123d11;
+  cursor: pointer;
+  background-color: #1a5819;
+  transition: background-color 0.4s;
+}
+
+.has--account {
+  text-decoration: none;
+  color: #1a5819;
+  font-size: 0.9rem;
+}
+
+.has--account:focus,
+.has--account:hover {
+  outline: none;
+  cursor: pointer;
+  color: #000000;
+}

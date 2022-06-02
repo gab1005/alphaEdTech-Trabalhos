@@ -1,0 +1,36 @@
+.booklist {
+    display: inherit;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+    height: 100%;
+    text-align: justify;
+    /*background-image: linear-gradient(to bottom right, #123d1135, #1a5819a3);*/
+  }
+
+.booklist__title{
+    /* background-color: rgba(71, 108, 218, 0.621); */
+    color: rgba(32, 35, 34, 1);
+    border: 0px 0px 1px 0px solid black;
+    margin-bottom: 10px;
+}
+
+th {
+    width: 140px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+tr {
+    height: 10px;
+    border: 1px solid black;
+    white-space: none;
+}
+
+td {
+    padding: 2px;
+    height: 30px;
+    white-space: none;
+}

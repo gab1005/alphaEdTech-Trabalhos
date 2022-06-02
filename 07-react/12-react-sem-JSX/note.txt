@@ -1,0 +1,1 @@
+no repositorio do hugo de react, na branch de 'sem-jsx'

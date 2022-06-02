@@ -1,0 +1,80 @@
+* {
+  margin: 0 auto;
+}
+
+.Layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  background-image: linear-gradient(to bottom right, #123d1175, #1a5819);
+}
+
+.user--panel {
+  margin: 0;
+  display: inherit;
+  align-items: inherit;
+  justify-content: center;
+  flex-direction: column;
+  width: 400px;
+  height: 600px;
+  background-color: #123d11;
+  border-radius: 10px 0 0 10px;
+}
+
+.prof--picture {
+  width: 160px;
+  height: 160px;
+  background-color: #dddddd;
+  border-radius: 100%;
+  margin-bottom: 20px;
+  background-image: url(../../../public/src/profpic.png);
+  background-size: 180px;
+}
+
+.username {
+  font-size: 1.4rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.user--menu {
+  display: inherit;
+  flex-direction: inherit;
+  width: 300px;
+}
+
+.user--menu > button {
+  text-align: center;
+  vertical-align: center;
+  width: 260px;
+  height: 36px;
+  background-color: #dddddd;
+  color: black;
+  font-size: 1.05rem;
+  border: none;
+  margin-bottom: 6px;
+}
+
+.user--menu > button:hover {
+  outline: 1px solid #123d11;
+  cursor: pointer;
+  background-color: #202020;
+  color: #dddddd;
+  transition: background-color, color 0.4s;
+}
+
+.main--panel {
+  margin: 0;
+  display: inherit;
+  align-items: inherit;
+  justify-content: center;
+  flex-direction: column;
+  width: 900px;
+  height: 600px;
+  background-color: white;
+  border-radius: 0 10px 10px 0;
+  border: 1px solid #1a581950;
+}
