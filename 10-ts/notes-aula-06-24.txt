@@ -1,0 +1,13 @@
+- endpoint cria conta e usuario
+- consulta de extrato
+deposito 1% sobre o valor
+sque 4$
+trasn 1$
+
+------------
+banco de dados postgres
+dao = data axios object
+
+protected em Class permite que outras classes que dao extend, tenha acesso a variavel
+
+client pode ser pool

@@ -1,0 +1,12 @@
+instalar:
+- dotenv
+- express
+- 
+
+src/config/index.ts:
+importar tudo de 'dotenv'
+
+obs: api basica para cadastro de usuario
+
+
+dotenv => porta 8080

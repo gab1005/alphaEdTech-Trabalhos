@@ -1,0 +1,5 @@
+- backend crud
+- insomnia
+- banco de dados postgre
+- classes
+- ts
